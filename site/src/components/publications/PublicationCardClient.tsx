@@ -162,86 +162,21 @@ export function PublicationCardClient({
                 <div className="flex-1">
                   <h4 className="text-sm font-semibold text-foreground mb-1">Author Contribution</h4>
                   {publication.contributionStatement && (
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-2">
                       {publication.contributionStatement.replace(/\s*\([CDIAWcdiaw\s=/\d%\\]+\)\s*$/, '')}
                     </p>
                   )}
                   {publication.contributions && Object.keys(publication.contributions).length > 0 && (
-                    <div className="space-y-2">
-                      <div className="text-xs font-medium text-foreground/80 mb-2">Contribution Percentages:</div>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-                        {publication.contributions.conceptualization !== undefined && (
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Conceptualization</span>
-                            <div className="flex items-center gap-1.5">
-                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                                <div
-                                  className="h-full bg-primary transition-all"
-                                  style={{ width: `${publication.contributions.conceptualization}%` }}
-                                />
-                              </div>
-                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.conceptualization}%</span>
-                            </div>
-                          </div>
-                        )}
-                        {publication.contributions.dataProduction !== undefined && (
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Data Production</span>
-                            <div className="flex items-center gap-1.5">
-                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                                <div
-                                  className="h-full bg-primary transition-all"
-                                  style={{ width: `${publication.contributions.dataProduction}%` }}
-                                />
-                              </div>
-                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.dataProduction}%</span>
-                            </div>
-                          </div>
-                        )}
-                        {publication.contributions.analysis !== undefined && (
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Analysis</span>
-                            <div className="flex items-center gap-1.5">
-                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                                <div
-                                  className="h-full bg-primary transition-all"
-                                  style={{ width: `${publication.contributions.analysis}%` }}
-                                />
-                              </div>
-                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.analysis}%</span>
-                            </div>
-                          </div>
-                        )}
-                        {publication.contributions.interpretation !== undefined && (
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Interpretation</span>
-                            <div className="flex items-center gap-1.5">
-                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                                <div
-                                  className="h-full bg-primary transition-all"
-                                  style={{ width: `${publication.contributions.interpretation}%` }}
-                                />
-                              </div>
-                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.interpretation}%</span>
-                            </div>
-                          </div>
-                        )}
-                        {publication.contributions.writing !== undefined && (
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Writing</span>
-                            <div className="flex items-center gap-1.5">
-                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                                <div
-                                  className="h-full bg-primary transition-all"
-                                  style={{ width: `${publication.contributions.writing}%` }}
-                                />
-                              </div>
-                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.writing}%</span>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      <span className="font-medium text-foreground/80">Contribution Percentages: </span>
+                      {[
+                        publication.contributions.conceptualization !== undefined && `Conceptualization ${publication.contributions.conceptualization}%`,
+                        publication.contributions.dataProduction !== undefined && `Data Production ${publication.contributions.dataProduction}%`,
+                        publication.contributions.analysis !== undefined && `Analysis ${publication.contributions.analysis}%`,
+                        publication.contributions.interpretation !== undefined && `Interpretation ${publication.contributions.interpretation}%`,
+                        publication.contributions.writing !== undefined && `Writing ${publication.contributions.writing}%`
+                      ].filter(Boolean).join(', ')}
+                    </p>
                   )}
                 </div>
               </div>
