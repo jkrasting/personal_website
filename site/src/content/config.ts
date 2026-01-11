@@ -20,6 +20,14 @@ const publicationsCollection = defineCollection({
     softwarePercent: z.number().optional(),
     writingPercent: z.number().optional(),
     description: z.string().optional(),
+    contributionStatement: z.string().optional(),
+    contributions: z.object({
+      conceptualization: z.number().optional(),
+      dataProduction: z.number().optional(),
+      analysis: z.number().optional(),
+      interpretation: z.number().optional(),
+      writing: z.number().optional(),
+    }).optional(),
   }),
 });
 
