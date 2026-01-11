@@ -197,6 +197,35 @@ CV (PDF) → Agent 1 → JSON Data → Agent 2 → Component Map → Agent 3 →
 - **No third-party tracking** - Privacy-respecting analytics only
 - **No slow loading** - Optimize everything
 
+## Git Repository
+
+**Repository**: https://github.com/jkrasting/personal_website (private)
+**Remote**: `git@github.com:jkrasting/personal_website.git`
+**Branch**: `main`
+
+### Git Workflow Guidelines
+
+**IMPORTANT: Commit Attribution**
+- **DO NOT** add co-author attribution to commits (no `Co-Authored-By: Claude` tags)
+- Keep all commits attributed solely to the repository owner
+- This applies to all git operations including initial commits, feature additions, and bug fixes
+
+**What's Tracked:**
+- All source code in `site/` directory
+- Docker deployment configs (docker-compose.yml, Dockerfile, nginx.conf)
+- Documentation (all .md files)
+- Agent workflow outputs (`.agents-output/`)
+
+**What's Excluded (see `.gitignore`):**
+- `template-code/` - Reference templates and CV PDF (155M)
+- `site-backup/` - Old backup directory (310M)
+- `site/node_modules/` - Dependencies (250M)
+- `site/dist/` - Build artifacts (1.2M)
+- `photo.png`, `issue-badge-color.png` - Duplicate/reference files
+- `site/public/assets/preview.png`, `mockup*.png` - Template mockup images
+
+**Repository Size**: ~3-4M (optimized for essential files only)
+
 ## File Organization
 
 **Note**: As of January 1, 2026, all project files have been consolidated into a single directory.
