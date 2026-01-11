@@ -383,6 +383,12 @@ The final website must:
 - **Watchtower**: Excluded from auto-updates (no `com.centurylinklabs.watchtower.enable` label)
   - Reason: Custom-built site requiring manual testing before deployment
   - Updates require: content changes → rebuild → manual deployment
+- **Basic Authentication**: HTTP basic auth enabled for preview/staging access
+  - Configured in `nginx.conf` with `auth_basic "Preview Access"`
+  - Credentials stored in `.htpasswd` file (git-ignored)
+  - Protects entire site including PDFs
+  - Generate new credentials: `htpasswd -c .htpasswd username`
+  - Note: Remove for production launch
 - Comprehensive documentation in README-DEPLOYMENT.md
 
 ## Next Steps
