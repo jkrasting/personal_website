@@ -41,10 +41,15 @@
 - All 44 publication JSON files - Added contribution data
 - `extract_contributions.py` - Data extraction script
 
-### Next Steps
-- Debug toggle functionality issue
-- Verify contribution data displays correctly when shown
-- Test on live site
+### Additional Fixes
+3. **FIXED**: Contribution label visibility issue
+   - **Issue**: "Writing" label (last contribution) not displaying in some layouts
+   - **Root Cause**: Grid/flex layout causing label text to be hidden or cut off
+   - **Fix (Commit: ad401ca)**:
+     - Added `min-w-0` to flex containers to allow proper shrinking
+     - Added `whitespace-nowrap` to labels to prevent wrapping
+     - Increased grid gap from 2 to 3 for better spacing
+   - **Status**: RESOLVED
 
 ### Deployment Status
 - Container: healthy and running
