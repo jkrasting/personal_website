@@ -169,10 +169,10 @@ export function PublicationCardClient({
                   {publication.contributions && Object.keys(publication.contributions).length > 0 && (
                     <div className="space-y-2">
                       <div className="text-xs font-medium text-foreground/80 mb-2">Contribution Percentages:</div>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                         {publication.contributions.conceptualization !== undefined && (
-                          <div className="flex flex-col">
-                            <span className="text-xs text-muted-foreground mb-1">Conceptualization</span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Conceptualization</span>
                             <div className="flex items-center gap-1.5">
                               <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
                                 <div
@@ -185,8 +185,8 @@ export function PublicationCardClient({
                           </div>
                         )}
                         {publication.contributions.dataProduction !== undefined && (
-                          <div className="flex flex-col">
-                            <span className="text-xs text-muted-foreground mb-1">Data Production</span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Data Production</span>
                             <div className="flex items-center gap-1.5">
                               <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
                                 <div
@@ -199,8 +199,8 @@ export function PublicationCardClient({
                           </div>
                         )}
                         {publication.contributions.analysis !== undefined && (
-                          <div className="flex flex-col">
-                            <span className="text-xs text-muted-foreground mb-1">Analysis</span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Analysis</span>
                             <div className="flex items-center gap-1.5">
                               <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
                                 <div
@@ -213,8 +213,8 @@ export function PublicationCardClient({
                           </div>
                         )}
                         {publication.contributions.interpretation !== undefined && (
-                          <div className="flex flex-col">
-                            <span className="text-xs text-muted-foreground mb-1">Interpretation</span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Interpretation</span>
                             <div className="flex items-center gap-1.5">
                               <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
                                 <div
@@ -227,8 +227,8 @@ export function PublicationCardClient({
                           </div>
                         )}
                         {publication.contributions.writing !== undefined && (
-                          <div className="flex flex-col">
-                            <span className="text-xs text-muted-foreground mb-1">Writing</span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs text-muted-foreground mb-1 whitespace-nowrap">Writing</span>
                             <div className="flex items-center gap-1.5">
                               <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
                                 <div
