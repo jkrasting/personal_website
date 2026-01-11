@@ -1,0 +1,32 @@
+{
+  "id": "stock-2020-ocean-biogeochemistry-gfdls",
+  "title": "Ocean biogeochemistry in GFDL's Earth System Model 4.1 and its response to increasing atmospheric CO2",
+  "authors": [
+    "Stock, C. A.",
+    "Dunne, J. P.",
+    "Fan, S.",
+    "Ginoux, P.",
+    "John, J.",
+    "Krasting, J. P.",
+    "Laufk\u00f6tter, C.",
+    "Paulot, F.",
+    "Zadeh, N."
+  ],
+  "year": 2020,
+  "journal": "Journal of Advances in Modeling Earth Systems",
+  "impactFactor": 4.6,
+  "doi": "10.1029/2019MS002043",
+  "status": "published",
+  "researchAreas": [
+    "carbon-cycle",
+    "esm-development"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 80,
+    "analysis": 10,
+    "interpretation": 10,
+    "writing": 5
+  }
+}

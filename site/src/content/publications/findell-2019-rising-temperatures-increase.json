@@ -1,0 +1,27 @@
+{
+  "id": "findell-2019-rising-temperatures-increase",
+  "title": "Rising temperatures increase importance of oceanic evaporation as a source for continental precipitation",
+  "authors": [
+    "Findell, K. L.",
+    "Keys, P. W.",
+    "Ent, R. J. V. D.",
+    "Lintner, B. R.",
+    "Berg, A.",
+    "Krasting, J. P."
+  ],
+  "year": 2019,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-19-0145.1",
+  "status": "published",
+  "researchAreas": [
+    "ocean-dynamics"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 30,
+    "interpretation": 15,
+    "writing": 5
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "neelin-2023-processoriented-diagnostics-principles",
+  "title": "Process-oriented diagnostics: principles, practice, community development, and common standards",
+  "authors": [
+    "Neelin, J. D.",
+    "Krasting, J. P.",
+    "Radhakrishnan, A.",
+    "Liptak, J.",
+    "Jackson, T.",
+    "Ming, Y.",
+    "Dong, W.",
+    "Gettelman, A.",
+    "Coleman, D. R.",
+    "Maloney, E. D.",
+    "Wing, A. A.",
+    "Kuo, Y.",
+    "Ahmed, F.",
+    "Ullrich, P.",
+    "Bitz, C. M.",
+    "Neale, R. B.",
+    "Ordonez, A.",
+    "Maroon, E. A."
+  ],
+  "year": 2023,
+  "journal": "Bulletin of the American Meteorological Society",
+  "impactFactor": 4.5,
+  "doi": "10.1175/BAMS-D-21-0268.1",
+  "status": "published",
+  "researchAreas": [
+    "model-diagnostics"
+  ],
+  "featured": true,
+  "firstAuthor": false,
+  "coPI": true,
+  "contributions": {
+    "conceptualization": 35,
+    "interpretation": 30,
+    "writing": 30
+  }
+}

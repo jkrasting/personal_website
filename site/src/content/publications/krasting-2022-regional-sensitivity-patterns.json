@@ -1,0 +1,30 @@
+{
+  "id": "krasting-2022-regional-sensitivity-patterns",
+  "title": "Regional sensitivity patterns of Arctic Ocean acidification revealed with machine learning",
+  "authors": [
+    "Krasting, J. P.",
+    "Palma, M. D.",
+    "Sonnewald, M.",
+    "Dunne, J. P.",
+    "John, J. G."
+  ],
+  "year": 2022,
+  "journal": "Communications Earth & Environment",
+  "impactFactor": 8.9,
+  "doi": "10.1038/s43247-022-00419-4",
+  "status": "published",
+  "researchAreas": [
+    "carbon-cycle",
+    "ocean-dynamics"
+  ],
+  "featured": true,
+  "firstAuthor": true,
+  "mentoredUndergrad": true,
+  "contributions": {
+    "conceptualization": 70,
+    "dataProduction": 50,
+    "analysis": 90,
+    "interpretation": 80,
+    "writing": 90
+  }
+}

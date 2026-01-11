@@ -1,0 +1,27 @@
+{
+  "id": "turner-2025-uncovering-seasonality-stormdriven",
+  "title": "Uncovering the seasonality of storm-driven Southern Ocean heat and carbon uptake",
+  "authors": [
+    "Turner, K. E.",
+    "Krasting, J. P.",
+    "J. Russell",
+    "Stouffer, R. J."
+  ],
+  "year": 2025,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-24-0642.1",
+  "status": "published",
+  "researchAreas": [
+    "ocean-dynamics",
+    "carbon-cycle"
+  ],
+  "featured": true,
+  "firstAuthor": false,
+  "mentoredPostdoc": true,
+  "contributions": {
+    "conceptualization": 80,
+    "interpretation": 30,
+    "writing": 35
+  }
+}

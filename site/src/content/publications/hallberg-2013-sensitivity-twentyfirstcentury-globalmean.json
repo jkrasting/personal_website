@@ -1,0 +1,28 @@
+{
+  "id": "hallberg-2013-sensitivity-twentyfirstcentury-globalmean",
+  "title": "Sensitivity of twenty-first-century global-mean steric sea level rise to ocean model formulation",
+  "authors": [
+    "Hallberg, R.",
+    "Adcroft, A.",
+    "Dunne, J. P.",
+    "Krasting, J. P.",
+    "Stouffer, R. J."
+  ],
+  "year": 2013,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-12-00506.1",
+  "status": "published",
+  "researchAreas": [
+    "sea-level-rise",
+    "ocean-dynamics"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 50,
+    "analysis": 10,
+    "interpretation": 10,
+    "writing": 5
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "takano-2023-simulations-ocean-deoxygenation",
+  "title": "Simulations of ocean deoxygenation in the historical era: insights from forced and coupled models",
+  "authors": [
+    "Takano, Y.",
+    "Ilyina, T.",
+    "Tjiputra, J.",
+    "Eddebbar, Y. A.",
+    "Berthet, S.",
+    "Bopp, L.",
+    "Buitenhuis, E.",
+    "Butensch\u00f6n, M.",
+    "Christian, J. R.",
+    "Dunne, J. P.",
+    "Gr\u00f6ger, M.",
+    "Hayashida, H.",
+    "Hieronymus, J.",
+    "Koenigk, T.",
+    "Krasting, J. P.",
+    "Long, M. C.",
+    "Lovato, T.",
+    "Nakano, H.",
+    "Palmieri, J.",
+    "Schwinger, J.",
+    "S\u00e9f\u00e9rian, R.",
+    "Suntharalingam, P.",
+    "Tatebe, H.",
+    "Tsujino, H.",
+    "Urakawa, S.",
+    "Watanabe, M.",
+    "Yool, A."
+  ],
+  "year": 2023,
+  "journal": "Frontiers in Marine Science",
+  "impactFactor": 3.7,
+  "doi": "10.3389/fmars.2023.1139917",
+  "status": "published",
+  "researchAreas": [
+    "ocean-dynamics",
+    "carbon-cycle"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 5,
+    "interpretation": 5,
+    "writing": 5
+  }
+}
