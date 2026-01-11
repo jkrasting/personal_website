@@ -239,8 +239,12 @@ documents/
 ```
 
 **PDF Locations:**
-- CV: `documents/cv/resume.pdf` (compiled by GitHub Actions in CV2025 repo)
-- Teaching Portfolio: `documents/teaching/teaching_portfolio.pdf`
+- CV: `documents/cv/resume.pdf` (17 pages, 309K)
+  - Compiled by GitHub Actions in CV2025 repo, or locally with latexmk
+  - Note: May show LaTeX warnings about incomplete conditionals (non-fatal)
+- Teaching Portfolio: `documents/teaching/teaching_portfolio.pdf` (42 pages, 2.1M)
+  - Compiled locally with xelatex
+  - Note: May show undefined control sequence errors (ignored by XeLaTeX, PDF still generates correctly)
 
 **Docker Build Integration:**
 The `Dockerfile` automatically copies these PDFs to `site/public/` during the build:
@@ -273,12 +277,24 @@ The `Dockerfile` automatically copies these PDFs to `site/public/` during the bu
    - Ensure `documents/cv/resume.pdf` exists (compile locally or pull from CV2025 repo)
    - Ensure `documents/teaching/teaching_portfolio.pdf` exists
 
-4. **Compiling CV Locally (if needed):**
+4. **Compiling Documents Locally:**
+
+   **CV (pdflatex):**
    ```bash
    cd documents/cv
-   latexmk -pdf resume.tex
+   latexmk -pdf -file-line-error -halt-on-error -interaction=nonstopmode resume.tex
    cd ../..
    ```
+
+   **Teaching Portfolio (xelatex):**
+   ```bash
+   cd documents/teaching
+   xelatex -interaction=nonstopmode teaching_portfolio.tex
+   xelatex -interaction=nonstopmode teaching_portfolio.tex  # Run twice for references
+   cd ../..
+   ```
+
+   Note: LaTeX is installed on the server (TeX Live 2025) for local compilation when needed.
 
 5. **Committing Submodule Updates:**
    When you update submodules, commit the new submodule pointer:
