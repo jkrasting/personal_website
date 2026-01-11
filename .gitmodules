@@ -1,0 +1,6 @@
+[submodule "documents/cv"]
+	path = documents/cv
+	url = git@github.com:jkrasting/CV2025.git
+[submodule "documents/teaching"]
+	path = documents/teaching
+	url = git@github.com:jkrasting/teaching_portfolio.git

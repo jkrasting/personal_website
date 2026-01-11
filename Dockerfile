@@ -13,6 +13,12 @@ RUN npm ci --only=production
 # Copy source files
 COPY site/ ./
 
+# Copy PDFs from submodules to public directory
+# CV PDF (compiled by GitHub Actions in the submodule)
+COPY documents/cv/resume.pdf ./public/Krasting_CV.pdf
+# Teaching Portfolio PDF
+COPY documents/teaching/teaching_portfolio.pdf ./public/
+
 # Build the site
 RUN npm run build
 

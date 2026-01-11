@@ -215,6 +215,7 @@ CV (PDF) → Agent 1 → JSON Data → Agent 2 → Component Map → Agent 3 →
 - Docker deployment configs (docker-compose.yml, Dockerfile, nginx.conf)
 - Documentation (all .md files)
 - Agent workflow outputs (`.agents-output/`)
+- Git submodules (CV and teaching portfolio LaTeX repositories)
 
 **What's Excluded (see `.gitignore`):**
 - `template-code/` - Reference templates and CV PDF (155M)
@@ -225,6 +226,67 @@ CV (PDF) → Agent 1 → JSON Data → Agent 2 → Component Map → Agent 3 →
 - `site/public/assets/preview.png`, `mockup*.png` - Template mockup images
 
 **Repository Size**: ~3-4M (optimized for essential files only)
+
+### Git Submodules (LaTeX Documents)
+
+This repository uses **Git submodules** to keep CV and teaching portfolio documents in sync with their source LaTeX repositories.
+
+**Submodule Structure:**
+```
+documents/
+├── cv/           → git@github.com:jkrasting/CV2025.git
+└── teaching/     → git@github.com:jkrasting/teaching_portfolio.git
+```
+
+**PDF Locations:**
+- CV: `documents/cv/resume.pdf` (compiled by GitHub Actions in CV2025 repo)
+- Teaching Portfolio: `documents/teaching/teaching_portfolio.pdf`
+
+**Docker Build Integration:**
+The `Dockerfile` automatically copies these PDFs to `site/public/` during the build:
+- `documents/cv/resume.pdf` → `site/public/Krasting_CV.pdf`
+- `documents/teaching/teaching_portfolio.pdf` → `site/public/teaching_portfolio.pdf`
+
+**Important Workflow Notes:**
+
+1. **Cloning This Repository:**
+   ```bash
+   git clone --recurse-submodules git@github.com:jkrasting/personal_website.git
+   # Or if already cloned without submodules:
+   git submodule update --init --recursive
+   ```
+
+2. **Updating CV or Teaching Portfolio:**
+   - Make changes in the respective submodule repository (CV2025 or teaching_portfolio)
+   - The CV PDF is compiled automatically by GitHub Actions on push
+   - Pull updated submodules in this repo:
+     ```bash
+     git submodule update --remote
+     ```
+   - Rebuild and redeploy the website to pick up changes:
+     ```bash
+     docker compose build
+     docker compose up -d
+     ```
+
+3. **Before Building the Website:**
+   - Ensure `documents/cv/resume.pdf` exists (compile locally or pull from CV2025 repo)
+   - Ensure `documents/teaching/teaching_portfolio.pdf` exists
+
+4. **Compiling CV Locally (if needed):**
+   ```bash
+   cd documents/cv
+   latexmk -pdf resume.tex
+   cd ../..
+   ```
+
+5. **Committing Submodule Updates:**
+   When you update submodules, commit the new submodule pointer:
+   ```bash
+   git add documents/cv documents/teaching
+   git commit -m "Update CV and teaching portfolio submodules"
+   git push
+   ```
 
 ## File Organization
 
