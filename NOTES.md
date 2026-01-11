@@ -51,8 +51,15 @@
    - **Benefits**: No layout issues, cleaner, easier to read
    - **Status**: RESOLVED
 
+### UI Refinements
+4. **Toggle Button Improvements (Commit: df1cdbf)**:
+   - Moved from top (right-aligned) to bottom (centered) of page
+   - Reduced size: text-xs, smaller padding, smaller icon
+   - Changed active state from red (bg-primary) to subtle gray (bg-muted)
+   - Better positioning after users have reviewed publications
+
 ### Deployment Status
 - Container: healthy and running
 - Site: https://johnkrasting.com
 - Basic auth: enabled (preview mode)
-- Last deploy: January 11, 2026 22:54 UTC
+- Last deploy: January 11, 2026 23:19 UTC
