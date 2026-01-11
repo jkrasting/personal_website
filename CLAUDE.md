@@ -4,7 +4,39 @@
 
 This project is a professional academic website for **Dr. John P. Krasting**, a climate scientist at NOAA's Geophysical Fluid Dynamics Laboratory. The site serves as a professional portfolio showcasing research, publications, and teaching.
 
-**CURRENT STATUS (January 3, 2026)**: ✅ Site is LIVE at https://johnkrasting.com. Now in **iterative refinement phase** - see CURRENT-STATUS.md for edit-and-deploy workflow.
+**CURRENT STATUS (January 11, 2026)**: ✅ Site is LIVE at https://johnkrasting.com. Now in **iterative refinement phase** - see CURRENT-STATUS.md for edit-and-deploy workflow.
+
+## Recent Major Updates (January 2026)
+
+### Publication ID Migration (January 11, 2026)
+- **Old Format**: Numbered IDs (`pub-001`, `pub-002`, etc.)
+- **New Format**: Semantic IDs (`krasting-2024-steric-sea-level`, `dunne-2012-gfdls-esm2-global`)
+- **Format**: `lastname-year-keyword` for better readability and SEO
+- **Tool**: `convert_publication_ids.py` - Automated conversion script with ID mapping
+- **Result**: All 45 publications migrated, Git history preserved via rename detection
+
+### Author Contributions Feature (January 11, 2026)
+- **Data Source**: Extracted from CV LaTeX (`documents/cv/my_publications.tex`)
+- **Fields Added**: `contributionStatement` (narrative) and `contributions` (percentages)
+- **Categories**: Conceptualization, Data Production, Analysis, Interpretation, Writing
+- **UI**: Toggle button at bottom of publications page (default: OFF)
+- **Display**: Single-line comma-separated format (e.g., "Conceptualization 80%, Writing 25%")
+- **Tool**: `extract_contributions.py` - Automated extraction script
+
+### CRITICAL: Build and Development Constraints
+
+**⚠️ NEVER RUN LOCAL BUILDS** - The server has limited memory and `npm run build` will crash it during Astro's TypeScript checking phase. Always use Docker builds:
+
+```bash
+# ✅ CORRECT - Use Docker build (has adequate memory)
+docker compose build
+docker compose up -d
+
+# ❌ WRONG - Will crash server (runs out of memory)
+cd site && npm run build
+```
+
+**Why Docker works**: The containerized build environment handles memory allocation differently and completes successfully. The local build process gets killed during type checking and can destabilize the server.
 
 ## Key Context
 
