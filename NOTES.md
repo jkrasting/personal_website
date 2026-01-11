@@ -42,13 +42,13 @@
 - `extract_contributions.py` - Data extraction script
 
 ### Additional Fixes
-3. **FIXED**: Contribution label visibility issue
-   - **Issue**: "Writing" label (last contribution) not displaying in some layouts
-   - **Root Cause**: Grid/flex layout causing label text to be hidden or cut off
-   - **Fix (Commit: ad401ca)**:
-     - Added `min-w-0` to flex containers to allow proper shrinking
-     - Added `whitespace-nowrap` to labels to prevent wrapping
-     - Increased grid gap from 2 to 3 for better spacing
+3. **RESOLVED**: Contribution label visibility issue → Simplified to single-line format
+   - **Issue**: "Writing" label (last contribution) not displaying in grid layout
+   - **Initial Fix Attempt (Commit: ad401ca)**: CSS adjustments (min-w-0, whitespace-nowrap)
+   - **Final Solution (Commit: 40e780e)**: Replaced complex grid with progress bars
+   - **New Format**: Simple comma-separated list on one line
+     - Example: "Conceptualization 80%, Data Production 50%, Analysis 90%, Interpretation 85%, Writing 85%"
+   - **Benefits**: No layout issues, cleaner, easier to read
    - **Status**: RESOLVED
 
 ### Deployment Status
