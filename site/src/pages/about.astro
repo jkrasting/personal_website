@@ -1,0 +1,103 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const pageTitle = "About | Dr. John P. Krasting";
+const pageDescription = "Climate scientist at NOAA GFDL specializing in sea level rise, ocean dynamics, and Earth system modeling.";
+---
+
+<PageLayout title={pageTitle} description={pageDescription}>
+  <div class="max-w-3xl mx-auto">
+    <!-- Hero Section -->
+    <div class="flex flex-col md:flex-row gap-10 items-center mb-16">
+      <div class="w-48 h-48 rounded-lg overflow-hidden bg-accent shrink-0">
+        <img
+          src="/images/headshot.png"
+          alt="Dr. John P. Krasting"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-medium tracking-tighter mb-4">
+          Dr. John P. Krasting
+        </h1>
+        <p class="text-lg text-muted-foreground">
+          Climate Scientist | Sea Level Rise Expert
+        </p>
+      </div>
+    </div>
+
+    <!-- Bio -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-medium mb-4">About</h2>
+      <div class="space-y-4 text-muted-foreground">
+        <p>
+          I'm a climate scientist at NOAA's Geophysical Fluid Dynamics Laboratory (GFDL)
+          specializing in sea level rise, ocean dynamics, and Earth system modeling.
+        </p>
+        <p>
+          My research focuses on understanding how the ocean responds to climate change
+          and its implications for sea level rise and coastal communities worldwide.
+          I'm a core developer of the GFDL CM4, ESM4, and OM5 climate models used in
+          IPCC assessments.
+        </p>
+        <p>
+          With 44 peer-reviewed publications in journals including Nature Climate Change,
+          Nature Geoscience, and PNAS, my work has contributed to our understanding of
+          global sea level projections and ocean carbon uptake.
+        </p>
+      </div>
+    </section>
+
+    <!-- Research Focus -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-medium mb-4">Research Focus</h2>
+      <ul class="space-y-3 text-muted-foreground">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+          <span>Sea level rise projections and coastal impacts</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+          <span>Ocean dynamics and circulation patterns</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+          <span>Carbon cycle and ocean biogeochemistry</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+          <span>Earth system model development</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+          <span>Model diagnostics and evaluation</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-2xl font-medium mb-4">Contact</h2>
+      <div class="space-y-2 text-muted-foreground">
+        <p>
+          <span class="font-medium text-foreground">Email:</span>{" "}
+          <a href="mailto:John.Krasting@noaa.gov" class="hover:text-primary transition-colors">
+            John.Krasting@noaa.gov
+          </a>
+        </p>
+        <p>
+          <span class="font-medium text-foreground">ORCID:</span>{" "}
+          <a href="https://orcid.org/0000-0002-5218-2856" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+            0000-0002-5218-2856
+          </a>
+        </p>
+        <p>
+          <span class="font-medium text-foreground">GitHub:</span>{" "}
+          <a href="https://github.com/jkrasting" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+            @jkrasting
+          </a>
+        </p>
+      </div>
+    </section>
+  </div>
+</PageLayout>

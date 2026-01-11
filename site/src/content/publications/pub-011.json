@@ -1,0 +1,29 @@
+{
+  "id": "pub-011",
+  "title": "Impact of mountains on tropical circulation in two Earth System Models",
+  "authors": [
+    "Naiman, Z.",
+    "Goodman, P. J.",
+    "Krasting, J. P.",
+    "Malyshev, S. L.",
+    "Russell, J. L.",
+    "Stouffer, R. J.",
+    "Wittenberg, A. T."
+  ],
+  "year": 2017,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-16-0512.1",
+  "status": "published",
+  "researchAreas": [
+    "esm-development"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 50,
+    "analysis": 10,
+    "interpretation": 10,
+    "writing": 5
+  }
+}

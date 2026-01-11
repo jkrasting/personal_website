@@ -1,0 +1,27 @@
+{
+  "id": "pub-005",
+  "title": "Future changes in Northern Hemisphere snowfall",
+  "authors": [
+    "Krasting, J. P.",
+    "Broccoli, A. J.",
+    "Dixon, K. W.",
+    "Lanzante, J. R."
+  ],
+  "year": 2013,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-12-00832.1",
+  "status": "published",
+  "researchAreas": [
+    "esm-development"
+  ],
+  "featured": false,
+  "firstAuthor": true,
+  "contributions": {
+    "conceptualization": 60,
+    "dataProduction": 100,
+    "analysis": 100,
+    "interpretation": 70,
+    "writing": 80
+  }
+}

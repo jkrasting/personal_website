@@ -1,0 +1,63 @@
+---
+import PublicationCard from './PublicationCard.astro'
+
+interface Props {
+  publications: any[]
+  class?: string
+}
+
+const { publications, class: className }: Props = Astro.props
+---
+
+{publications.length === 0 ? (
+  <div class="text-center py-12">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
+      <svg
+        class="w-8 h-8 text-muted-foreground"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </div>
+    <h3 class="text-lg font-semibold text-foreground mb-2">
+      No publications found
+    </h3>
+    <p class="text-sm text-muted-foreground">
+      Try adjusting your filters or search criteria
+    </p>
+  </div>
+) : (
+  <div class:list={['space-y-0 divide-y divide-border/60', className]}>
+    {publications.map((pub, index) => {
+      // Handle both collection entries (pub.data) and plain objects
+      const data = pub.data || pub;
+      // Reverse numbering: if we have 44 publications, first one is 44, last one is 1
+      const publicationNumber = publications.length - index;
+      return (
+        <PublicationCard
+          publication={{
+            id: data.id || pub.id,
+            title: data.title,
+            authors: typeof data.authors === 'string' ? data.authors.split(', ') : (data.authors || []),
+            year: data.year,
+            journal: data.journal,
+            doi: data.doi,
+            impactFactor: data.impactFactor,
+            researchAreas: data.researchAreas || [],
+            featured: data.featured || false,
+            firstAuthor: data.firstAuthor || false,
+            description: data.description,
+          }}
+          number={publicationNumber}
+        />
+      )
+    })}
+  </div>
+)}

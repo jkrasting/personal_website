@@ -1,0 +1,53 @@
+{
+  "id": "pub-016",
+  "title": "The GFDL global ocean and sea ice model OM4.0: model description and simulation features",
+  "authors": [
+    "Adcroft, A.",
+    "Anderson, W.",
+    "Balaji, V.",
+    "Blanton, C.",
+    "Bushuk, M.",
+    "Dufour, C. O.",
+    "Dunne, J. P.",
+    "Griffies, S. M.",
+    "Hallberg, R.",
+    "Harrison, M. J.",
+    "Held, I. M.",
+    "Jansen, M. F.",
+    "John, J. G.",
+    "Krasting, J. P.",
+    "Langenhorst, A. R.",
+    "Legg, S.",
+    "Liang, Z.",
+    "McHugh, C.",
+    "Radhakrishnan, A.",
+    "Reichl, B. G.",
+    "Rosati, T.",
+    "Samuels, B. L.",
+    "Shao, A.",
+    "Stouffer, R.",
+    "Winton, M.",
+    "Wittenberg, A. T.",
+    "Xiang, B.",
+    "Zadeh, N.",
+    "Zhang, R."
+  ],
+  "year": 2019,
+  "journal": "Journal of Advances in Modeling Earth Systems",
+  "impactFactor": 4.6,
+  "doi": "10.1029/2019MS001726",
+  "status": "published",
+  "researchAreas": [
+    "esm-development",
+    "ocean-dynamics"
+  ],
+  "featured": true,
+  "firstAuthor": false,
+  "contributions": {
+    "conceptualization": 5,
+    "dataProduction": 30,
+    "analysis": 15,
+    "interpretation": 15,
+    "writing": 5
+  }
+}

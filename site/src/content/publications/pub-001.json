@@ -1,0 +1,43 @@
+{
+  "id": "pub-001",
+  "title": "GFDL's ESM2 global coupled climate–carbon Earth System Models. Part I: physical formulation and baseline simulation characteristics",
+  "authors": [
+    "Dunne, J. P.",
+    "John, J. G.",
+    "Adcroft, A. J.",
+    "Griffies, S. M.",
+    "Hallberg, R. W.",
+    "Shevliakova, E.",
+    "Stouffer, R. J.",
+    "Cooke, W.",
+    "Dunne, K. A.",
+    "Harrison, M. J.",
+    "Krasting, J. P.",
+    "Malyshev, S. L.",
+    "Milly, P.",
+    "Phillipps, P. J.",
+    "Sentman, L. T.",
+    "Samuels, B. L.",
+    "Spelman, M. J.",
+    "Winton, M.",
+    "Wittenberg, A. T.",
+    "Zadeh, N."
+  ],
+  "year": 2012,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-11-00560.1",
+  "status": "published",
+  "researchAreas": [
+    "esm-development"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "conceptualization": 10,
+    "dataProduction": 50,
+    "analysis": 15,
+    "interpretation": 10,
+    "writing": 10
+  }
+}

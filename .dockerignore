@@ -1,0 +1,40 @@
+# Dependencies
+site/node_modules
+# Keep package-lock.json for npm ci
+
+# Build output
+site/dist
+site/.astro
+
+# IDE
+site/.vscode
+site/.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Documentation
+README.md
+site/README.md

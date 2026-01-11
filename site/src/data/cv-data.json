@@ -1,0 +1,272 @@
+{
+  "personal": {
+    "name": "John P. Krasting",
+    "title": "Ph.D.",
+    "tagline": "Climate Scientist, Lecturer, Modeler, and Data Analyst",
+    "email": "John.Krasting@noaa.gov",
+    "phone": "(609) 452-5359",
+    "github": "jkrasting",
+    "linkedin": "krasting",
+    "positions": [
+      {
+        "title": "Physical Scientist, ZP-IV",
+        "organization": "NOAA / Geophysical Fluid Dynamics Laboratory (GFDL)",
+        "location": "Princeton, NJ",
+        "startDate": "2015",
+        "endDate": "Present",
+        "current": true
+      },
+      {
+        "title": "Lecturer",
+        "organization": "Princeton University",
+        "department": "Atmospheric and Oceanic Sciences Program",
+        "location": "Princeton, NJ",
+        "startDate": "2025",
+        "endDate": "Present",
+        "current": true
+      },
+      {
+        "title": "Adjunct Lecturer",
+        "organization": "Rutgers University",
+        "department": "Department of Environmental Sciences",
+        "location": "New Brunswick, NJ",
+        "startDate": "2015",
+        "endDate": "Present",
+        "current": true
+      }
+    ],
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Atmospheric Science",
+        "institution": "Rutgers University",
+        "year": 2008
+      },
+      {
+        "degree": "B.S.",
+        "field": "Meteorology",
+        "institution": "Rutgers University",
+        "year": 2003
+      }
+    ]
+  },
+  "metrics": {
+    "hIndex": 31,
+    "hIndexSource": "Google Scholar",
+    "hIndexWebOfScience": 24,
+    "i10Index": 47,
+    "totalPublications": 44,
+    "totalFunding": 8750000,
+    "yearsTeaching": 14,
+    "yearsExperience": 17
+  },
+  "awards": [
+    {
+      "title": "US Department of Commerce Bronze Medal Award",
+      "organization": "US Department of Commerce",
+      "year": 2024,
+      "description": "Quantifying US Wildfire Trends and Impacts"
+    },
+    {
+      "title": "US Department of Commerce Bronze Medal Award",
+      "organization": "US Department of Commerce",
+      "year": 2023,
+      "description": "Earth System Model Development"
+    },
+    {
+      "title": "NOAA/OAR Employee of the Year",
+      "organization": "NOAA - Oceanic and Atmospheric Research",
+      "year": 2021,
+      "description": "Model Diagnostics and Fostering New Research Collaborations on Sea Level",
+      "tenureSignificance": "high"
+    },
+    {
+      "title": "US Department of Commerce Silver Medal Award",
+      "organization": "US Department of Commerce",
+      "year": 2014,
+      "description": "Earth System Model Development"
+    },
+    {
+      "title": "George H. Cook Scholar",
+      "organization": "Rutgers University",
+      "year": 2003,
+      "description": "Meteorological Conditions Favorable for Severe Thunderstorms"
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Climate Dynamics (AOS-562)",
+      "institution": "Princeton University",
+      "department": "Atmospheric and Oceanic Sciences Program",
+      "level": "graduate",
+      "yearsStart": 2025,
+      "current": true
+    },
+    {
+      "course": "Introduction to Meteorology (11:670:101)",
+      "institution": "Rutgers University",
+      "department": "Department of Environmental Sciences",
+      "level": "undergraduate",
+      "yearsStart": 2015,
+      "current": true
+    },
+    {
+      "course": "Climate Dynamics (16:107:545)",
+      "institution": "Rutgers University",
+      "department": "Department of Environmental Sciences",
+      "level": "graduate",
+      "year": 2011
+    }
+  ],
+  "mentoring": {
+    "postdocs": [
+      {
+        "name": "Dr. Katherine Turner",
+        "institution": "GFDL / University of Arizona",
+        "project": "Storm-Driven Contributions to Southern Ocean Heat and Carbon Fluxes",
+        "yearsStart": 2023,
+        "current": true,
+        "advisingEffort": "70% (co-advised with Dr. Joellen Russell)"
+      },
+      {
+        "name": "Dr. Jan-Erik Tesdal",
+        "institution": "Princeton University",
+        "project": "Water Mass Transformation, Antarctic Ice Sheet Melt Contributions to Ocean Circulation, and Sea Level Rise",
+        "yearsStart": 2020,
+        "yearsEnd": 2025,
+        "advisingEffort": "Co-advised (50%) 2020-2022; Primary advisor 2022-2025"
+      },
+      {
+        "name": "Dr. Xinru Li",
+        "institution": "Princeton University",
+        "project": "Mechanistic Drivers of Subsurface Marine Heatwave Events",
+        "yearsStart": 2023,
+        "yearsEnd": 2025,
+        "advisingEffort": "Primary advisor"
+      },
+      {
+        "name": "Dr. Rebecca Beadling",
+        "institution": "GFDL/UCAR",
+        "project": "Antarctic Ice Sheet Melt Effects on the Antarctic Slope Current",
+        "yearsStart": 2020,
+        "yearsEnd": 2022,
+        "advisingEffort": "Primary advisor",
+        "fellowship": "NOAA Climate and Global Change Fellowship"
+      }
+    ],
+    "undergrads": [
+      {
+        "name": "Theo Avila",
+        "institution": "University of Illinois",
+        "program": "NOAA Ernest F. Hollings Program",
+        "project": "North Atlantic Water Mass Transformation, Impacts on AMOC and Sea Level",
+        "year": "2024-2025"
+      },
+      {
+        "name": "Matthew Birtman",
+        "institution": "University of Miami",
+        "program": "NOAA Ernest F. Hollings Program",
+        "project": "Observing and Simulating the Amplitude and Phasing of the Annual Cycle of Sea Level",
+        "year": "2023"
+      },
+      {
+        "name": "Rucha Wani",
+        "institution": "University of Delaware",
+        "program": "NOAA Ernest F. Hollings Program",
+        "project": "Simulated Nutrient Distributions Throughout the North Atlantic",
+        "year": "2020",
+        "honorsThesisCommittee": true
+      },
+      {
+        "name": "Maurizia de Palma",
+        "institution": "Kean University",
+        "program": "Princeton University CIMES Summer Internship",
+        "project": "Regional Acidification Sensitivity Patterns of Arctic Ocean Acidification Revealed with Machine Learning",
+        "year": "2019"
+      },
+      {
+        "name": "Maria Pulido-Velosa",
+        "institution": "Florida International University",
+        "program": "Princeton University CIMES Summer Internship",
+        "project": "Diagnosing Nutrient-Based Controls on Ocean Biological Productivity",
+        "year": "2016"
+      }
+    ]
+  },
+  "funding": [
+    {
+      "id": "fund-001",
+      "title": "Assess and Improve Sea Level Prediction on Seasonal to Annual Timescales with Advanced Models",
+      "funder": "Congressional Appropriation (Bipartisan Infrastructure Law)",
+      "role": "Agency Project Lead at OAR/GFDL",
+      "amount": 5839000,
+      "startYear": 2022,
+      "endYear": 2027,
+      "researchAreas": ["sea-level-rise"]
+    },
+    {
+      "id": "fund-002",
+      "title": "A Community Framework for Process-Oriented Diagnostics of Earth System Models Across Scales",
+      "funder": "NOAA Climate Program Office (MAPP)",
+      "role": "Co-Principal Investigator",
+      "totalAmount": 2212018,
+      "institutionalAmount": 1016878,
+      "startYear": 2025,
+      "endYear": 2027,
+      "researchAreas": ["model-diagnostics"]
+    },
+    {
+      "id": "fund-003",
+      "title": "Improving Coastal Sea Level Predictions with Ocean Process Insight Guided by Machine Learning",
+      "funder": "NOAA Climate Program Office",
+      "role": "Co-Principal Investigator",
+      "totalAmount": 587187,
+      "institutionalAmount": 159000,
+      "startYear": 2024,
+      "endYear": 2026,
+      "researchAreas": ["sea-level-rise"]
+    },
+    {
+      "id": "fund-004",
+      "title": "An Open Framework for Process-Oriented Diagnostics of Earth System Models",
+      "funder": "NOAA Climate Program Office (MAPP)",
+      "role": "Co-Principal Investigator",
+      "totalAmount": 2237244,
+      "institutionalAmount": 1050000,
+      "startYear": 2021,
+      "endYear": 2024,
+      "researchAreas": ["model-diagnostics"]
+    },
+    {
+      "id": "fund-005",
+      "title": "An Open Framework for Process-Oriented Diagnostics of Global Models",
+      "funder": "NOAA Climate Program Office (MAPP)",
+      "role": "Funded Collaborator",
+      "totalAmount": 1488078,
+      "institutionalAmount": 633716,
+      "startYear": 2018,
+      "endYear": 2021,
+      "researchAreas": ["model-diagnostics"]
+    },
+    {
+      "id": "fund-006",
+      "title": "Contextualizing Existing Sea Level Rise Scenarios in Light of a New Generation of Climate Models",
+      "funder": "NOAA Climate Program Office",
+      "role": "Principal Investigator",
+      "totalAmount": 320000,
+      "startYear": 2022,
+      "endYear": 2025,
+      "researchAreas": ["sea-level-rise"]
+    },
+    {
+      "id": "fund-007",
+      "title": "Evaluating Ventilation Pathways and Interior Water Mass Properties",
+      "funder": "Department of Energy RGMA Subcontract Award",
+      "role": "Principal Investigator",
+      "institutionalAmount": 361600,
+      "startYear": 2020,
+      "endYear": 2022,
+      "researchAreas": ["ocean-dynamics"]
+    }
+  ]
+}

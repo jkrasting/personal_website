@@ -1,0 +1,69 @@
+# ===================================
+# johnkrasting-site Repository
+# Full Infrastructure (Site + Docker)
+# ===================================
+
+# ----- Node.js / Astro (site/) -----
+site/node_modules/
+site/dist/
+site/.astro/
+site/.vercel/
+site/.vscode/
+
+# ----- Build Artifacts -----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----- Environment & Secrets -----
+.env
+.env.local
+.env.production
+.env.*.local
+.htpasswd
+*.key
+*.pem
+
+# ----- Template Code (reference only) -----
+template-code/
+
+# ----- Backups & Working Files -----
+site-backup/
+*.backup
+*.bak
+*.swp
+*.swo
+*~
+# Note: .agents-output/ is INCLUDED (not ignored) - documents design process
+
+# ----- Reference/Duplicate Files -----
+photo.png
+issue-badge-color.png
+site/public/assets/preview.png
+site/public/assets/mockup*.png
+
+# ----- OS Files -----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ----- IDE / Editor -----
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ----- Docker (runtime only) -----
+# Keep: docker-compose.yml, Dockerfile, nginx.conf
+# Ignore: none (all Docker configs should be committed)
+
+# ----- Temporary Files -----
+*.tmp
+.cache/

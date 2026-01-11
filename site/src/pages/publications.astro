@@ -1,0 +1,92 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PublicationsPage from '../components/publications/PublicationsPage';
+import { getCollection } from 'astro:content';
+
+// Get all publications and sort by year (descending)
+const allPublications = await getCollection('publications');
+const sortedPublications = allPublications.sort((a, b) => b.data.year - a.data.year);
+
+// Metadata
+const pageTitle = "Publications | Dr. John P. Krasting";
+const pageDescription = "Peer-reviewed publications on sea level rise, ocean dynamics, and climate modeling.";
+
+// Transform publications for React component (plain objects)
+const publicationsData = sortedPublications.map(pub => ({
+  id: pub.data.id,
+  title: pub.data.title,
+  authors: pub.data.authors,
+  year: pub.data.year,
+  journal: pub.data.journal,
+  doi: pub.data.doi,
+  impactFactor: pub.data.impactFactor,
+  researchAreas: pub.data.researchAreas,
+  featured: pub.data.featured,
+  firstAuthor: pub.data.firstAuthor,
+  description: pub.data.description,
+}));
+
+// Research areas legend with colors
+const researchAreasLegend = [
+  { id: 'sea-level-rise', name: 'Sea Level Rise & Coastal Impacts', color: 'bg-blue-500' },
+  { id: 'ocean-dynamics', name: 'Ocean Dynamics & Circulation', color: 'bg-green-500' },
+  { id: 'carbon-cycle', name: 'Carbon Cycle & Biogeochemistry', color: 'bg-purple-500' },
+  { id: 'esm-development', name: 'Earth System Model Development', color: 'bg-orange-500' },
+  { id: 'model-diagnostics', name: 'Model Diagnostics & Evaluation', color: 'bg-red-500' },
+];
+---
+
+<PageLayout title={pageTitle} description={pageDescription}>
+  <div class="max-w-5xl mx-auto">
+    <!-- Page Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tighter mb-4">
+        Publications
+      </h1>
+      <p class="text-muted-foreground text-lg mb-6">
+        Peer-reviewed research in climate science
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
+        <div class="flex items-center gap-2">
+          <span class="font-medium">{sortedPublications.length}</span>
+          <span>Publications</span>
+        </div>
+        <span class="text-muted-foreground/50">|</span>
+        <div class="flex items-center gap-2">
+          <span class="font-medium">h-31</span>
+          <span>Index</span>
+        </div>
+        <span class="text-muted-foreground/50">|</span>
+        <div class="flex items-center gap-2">
+          <span class="font-medium">i10-47</span>
+          <span>Index</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Publications Component -->
+    <PublicationsPage
+      client:load
+      publications={publicationsData}
+      researchAreasLegend={researchAreasLegend}
+    />
+
+    <!-- Export Options -->
+    <div class="mt-12 p-6 bg-card rounded-lg border">
+      <h2 class="text-lg font-medium mb-4">Export Citations</h2>
+      <p class="text-sm text-muted-foreground mb-4">
+        Download citation information for reference management software.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="https://scholar.google.com/citations"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:bg-accent"
+        >
+          View on Google Scholar
+        </a>
+      </div>
+    </div>
+  </div>
+</PageLayout>

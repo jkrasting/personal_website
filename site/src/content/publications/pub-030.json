@@ -1,0 +1,32 @@
+{
+  "id": "pub-030",
+  "title": "Contrasting projection of the ENSO-driven CO2 flux variability in the equatorial Pacific under high warming scenario",
+  "authors": [
+    "Ayar, P. V.",
+    "Tjiputra, J.",
+    "Bopp, L.",
+    "Christian, J. R.",
+    "Ilyina, T.",
+    "Krasting, J. P.",
+    "Séférian, R.",
+    "Tsujino, H.",
+    "Watanabe, M.",
+    "Yool, A."
+  ],
+  "year": 2022,
+  "journal": "Earth System Dynamics",
+  "impactFactor": 7.3,
+  "doi": "10.5194/esd-13-1097-2022",
+  "status": "published",
+  "researchAreas": [
+    "carbon-cycle",
+    "ocean-dynamics"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 5,
+    "interpretation": 5,
+    "writing": 5
+  }
+}

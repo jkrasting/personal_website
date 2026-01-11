@@ -1,0 +1,47 @@
+{
+  "id": "pub-036",
+  "title": "Systematic and objective evaluation of Earth System Models: PCMDI Metrics Package (PMP) Version 3",
+  "authors": [
+    "Lee, J.",
+    "Gleckler, P. J.",
+    "Ahn, M.",
+    "Ordonez, A.",
+    "Ullrich, P. A.",
+    "Sperber, K. R.",
+    "Taylor, K. E.",
+    "Planton, Y. Y.",
+    "Guilyardi, E.",
+    "Durack, P.",
+    "Bonfils, C.",
+    "Zelinka, M. D.",
+    "Chao, L.",
+    "Dong, B.",
+    "Doutriaux, C.",
+    "Zhang, C.",
+    "Vo, T.",
+    "Boutte, J.",
+    "Wehner, M. F.",
+    "Pendergrass, A. G.",
+    "Kim, D.",
+    "Xue, Z.",
+    "Wittenberg, A. T.",
+    "Krasting, J."
+  ],
+  "year": 2024,
+  "journal": "Geoscientific Model Development",
+  "impactFactor": 5.0,
+  "doi": "10.5194/gmd-17-3919-2024",
+  "status": "published",
+  "researchAreas": [
+    "model-diagnostics",
+    "esm-development"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 15,
+    "analysis": 5,
+    "interpretation": 5,
+    "writing": 5
+  }
+}

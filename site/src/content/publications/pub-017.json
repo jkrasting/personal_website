@@ -1,0 +1,51 @@
+{
+  "id": "pub-017",
+  "title": "Taking climate model evaluation to the next level",
+  "authors": [
+    "Eyring, V.",
+    "Cox, P. M.",
+    "Flato, G. M.",
+    "Gleckler, P. J.",
+    "Abramowitz, G.",
+    "Caldwell, P.",
+    "Collins, W. D.",
+    "Gier, B. K.",
+    "Hall, A. D.",
+    "Hoffman, F. M.",
+    "Hurtt, G. C.",
+    "Jahn, A.",
+    "Jones, C. D.",
+    "Klein, S. A.",
+    "Krasting, J. P.",
+    "Kwiatkowski, L.",
+    "Lorenz, R.",
+    "Maloney, E.",
+    "Meehl, G. A.",
+    "Pendergrass, A. G.",
+    "Pincus, R.",
+    "Ruane, A. C.",
+    "Russell, J. L.",
+    "Sanderson, B. M.",
+    "Santer, B. D.",
+    "Sherwood, S. C.",
+    "Simpson, I. R.",
+    "Stouffer, R. J.",
+    "Williamson, M. S."
+  ],
+  "year": 2019,
+  "journal": "Nature Climate Change",
+  "impactFactor": 27.1,
+  "doi": "10.1038/s41558-018-0355-y",
+  "status": "published",
+  "researchAreas": [
+    "model-diagnostics",
+    "esm-development"
+  ],
+  "featured": true,
+  "firstAuthor": false,
+  "contributions": {
+    "conceptualization": 5,
+    "interpretation": 10,
+    "writing": 5
+  }
+}

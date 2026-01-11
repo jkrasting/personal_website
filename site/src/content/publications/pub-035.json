@@ -1,0 +1,43 @@
+{
+  "id": "pub-035",
+  "title": "The land component LM4.1 of the GFDL Earth System Model ESM4.1: Model description and characteristics of land surface climate and carbon cycling in the historical simulation",
+  "authors": [
+    "Shevliakova, E.",
+    "Malyshev, S.",
+    "Martinez-Cano, I.",
+    "Milly, P.",
+    "Pacala, S.",
+    "Ginoux, P.",
+    "Dunne, K.",
+    "Dunne, J.",
+    "Dupuis, C.",
+    "Findell, K.",
+    "Ghannam, K.",
+    "Horowitz, L.",
+    "Knutson, T.",
+    "Krasting, J.",
+    "Naik, V.",
+    "Phillipps, P.",
+    "Zadeh, N.",
+    "Yu, Y.",
+    "Zeng, F.",
+    "Zeng, Y."
+  ],
+  "year": 2024,
+  "journal": "Journal of Advances in Modeling Earth Systems",
+  "impactFactor": 4.6,
+  "doi": "10.1029/2023MS003922",
+  "status": "published",
+  "researchAreas": [
+    "esm-development",
+    "carbon-cycle"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "contributions": {
+    "dataProduction": 15,
+    "analysis": 10,
+    "interpretation": 5,
+    "writing": 5
+  }
+}

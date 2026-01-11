@@ -1,0 +1,56 @@
+{
+  "/": {
+    "title": "Dr. John P. Krasting - Climate Scientist | Sea Level Rise Expert",
+    "description": "Climate scientist at NOAA GFDL specializing in sea level rise and ocean dynamics. Published in Nature journals and PNAS."
+  },
+
+  "/about": {
+    "title": "About Dr. John P. Krasting - Climate Scientist at NOAA GFDL",
+    "description": "Climate scientist and ocean modeler at NOAA GFDL. Leading sea level rise research, Earth system model development, and process-oriented diagnostics."
+  },
+
+  "/research": {
+    "title": "Research - Sea Level Rise, Ocean Dynamics, Climate Modeling | Dr. John P. Krasting",
+    "description": "Research on sea level rise, ocean circulation, carbon cycle, Earth system models, and model diagnostics. Leading sea level prediction projects at NOAA GFDL."
+  },
+
+  "/research/sea-level-rise": {
+    "title": "Sea Level Rise & Coastal Impacts Research | Dr. John P. Krasting",
+    "description": "Leading research on regional sea level projections, steric sea level changes, and coastal inundation. Published in Nature Geoscience and Journal of Climate."
+  },
+
+  "/research/ocean-dynamics": {
+    "title": "Ocean Dynamics & Circulation Research | Dr. John P. Krasting",
+    "description": "Expert in ocean circulation, water mass transformation, Antarctic Slope Current, and AMOC dynamics. Advancing understanding of ocean's role in climate change."
+  },
+
+  "/research/carbon-cycle": {
+    "title": "Carbon Cycle & Biogeochemistry Research | Dr. John P. Krasting",
+    "description": "Research on ocean carbon uptake, acidification, and transient climate response to emissions. Published in PNAS and Annual Review of Earth and Planetary Sciences."
+  },
+
+  "/research/esm-development": {
+    "title": "Earth System Model Development | Dr. John P. Krasting",
+    "description": "Core developer of GFDL CM4, ESM4, CM5, and OM5 climate models used in IPCC assessments. Leading climate model diagnostics and evaluation efforts."
+  },
+
+  "/research/model-diagnostics": {
+    "title": "Model Diagnostics & Evaluation Research | Dr. John P. Krasting",
+    "description": "Co-lead of NOAA Model Diagnostics Task Force developing process-oriented diagnostics for climate models. Securing competitive funding for diagnostic framework development."
+  },
+
+  "/publications": {
+    "title": "Publications - Peer-Reviewed Research | Dr. John P. Krasting",
+    "description": "Peer-reviewed publications on sea level rise, ocean dynamics, and climate modeling in Nature Geoscience, Nature Climate Change, PNAS, and other leading journals."
+  },
+
+  "/teaching": {
+    "title": "Teaching & Mentoring | Dr. John P. Krasting",
+    "description": "Teaching climate science at Princeton and Rutgers. Mentoring postdocs and undergraduates through competitive research programs. Hands-on climate modeling approach."
+  },
+
+  "/cv": {
+    "title": "Curriculum Vitae | Dr. John P. Krasting",
+    "description": "Complete CV for Dr. John P. Krasting: publications, funding, awards, teaching, mentoring, and service. Download PDF for tenure review and collaboration inquiries."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "pub-015",
+  "title": "Role of ocean model formulation in climate response uncertainty",
+  "authors": [
+    "Krasting, J. P.",
+    "Stouffer, R. J.",
+    "Griffies, S. M.",
+    "Hallberg, R. W.",
+    "Malyshev, S. L.",
+    "Samuels, B. L.",
+    "Sentman, L. T."
+  ],
+  "year": 2018,
+  "journal": "Journal of Climate",
+  "impactFactor": 3.9,
+  "doi": "10.1175/JCLI-D-18-0035.1",
+  "status": "published",
+  "researchAreas": [
+    "ocean-dynamics",
+    "esm-development"
+  ],
+  "featured": true,
+  "firstAuthor": true,
+  "contributions": {
+    "conceptualization": 80,
+    "dataProduction": 50,
+    "analysis": 90,
+    "interpretation": 80,
+    "writing": 90
+  }
+}

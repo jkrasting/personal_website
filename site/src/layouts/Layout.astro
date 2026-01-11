@@ -1,0 +1,96 @@
+---
+import { SEO } from "astro-seo";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Dr. John P. Krasting | Climate Scientist",
+  description = "Climate scientist at NOAA GFDL specializing in sea level rise, ocean dynamics, and Earth system modeling."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: "https://johnkrasting.com/images/headshot.png",
+        },
+        optional: {
+          description: description,
+          siteName: "Dr. John P. Krasting",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: title,
+        description: description,
+        image: "https://johnkrasting.com/images/headshot.png",
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="relative flex flex-col w-full min-h-dvh justify-center items-center bg-background"
+  >
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      /* Bright red accent theme */
+      --primary: 0, 80%, 50%;
+      --secondary: 5, 75%, 55%;
+      --background: 0, 0%, 100%;
+      --foreground: 0, 0%, 9%;
+      --card: 0, 0%, 98%;
+      --dark-card: 0, 0%, 7%;
+      --muted: 0, 0%, 92%;
+      --muted-foreground: 0, 0%, 40%;
+      --accent: 0, 0%, 92%;
+      --border: 220 13% 91%;
+      --dark-border: 0, 0%, 11%;
+    }
+  }
+
+  @layer base {
+    @font-face {
+      font-family: "Geist";
+      src: url("/fonts/GeistVF.woff") format("woff");
+    }
+    * {
+      @apply border-border;
+    }
+    body {
+      font-family: "Geist", system-ui, sans-serif;
+      @apply bg-background text-foreground;
+    }
+  }
+  .perfect-shadow {
+    box-shadow: var(--perfect-shadow);
+    --base: hsl(214 80% 27% / 4%);
+    --shade: hsl(from var(--base) calc(h + 8) 25 calc(l - 5));
+    --perfect-shadow: 0 0 0 1px var(--base), 0 1px 1px -0.5px var(--shade),
+      0 3px 3px -1.5px var(--shade), 0 6px 6px -3px var(--shade),
+      0 12px 12px -6px var(--base), 0 24px 24px -12px var(--base);
+  }
+</style>

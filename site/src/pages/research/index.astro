@@ -1,0 +1,40 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allResearch = await getCollection('research');
+
+const pageTitle = "Research Areas | Dr. John P. Krasting";
+const pageDescription = "Climate research focusing on sea level rise, ocean dynamics, carbon cycle, and Earth system modeling.";
+---
+
+<PageLayout title={pageTitle} description={pageDescription}>
+  <div class="max-w-4xl mx-auto">
+    <!-- Page Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tighter mb-4">
+        Research Areas
+      </h1>
+      <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+        Understanding climate change through ocean dynamics, sea level projections, and Earth system modeling.
+      </p>
+    </div>
+
+    <!-- Research Areas Grid -->
+    <div class="grid gap-6 md:grid-cols-2">
+      {allResearch.map((area) => (
+        <a
+          href={`/research/${area.slug}`}
+          class="group block p-6 border rounded-lg hover:border-primary transition-colors"
+        >
+          <h2 class="text-xl font-medium mb-2 group-hover:text-primary transition-colors">
+            {area.data.title}
+          </h2>
+          <p class="text-muted-foreground text-sm">
+            {area.data.description}
+          </p>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,33 @@
+{
+  "id": "pub-029",
+  "title": "Importance of the Antarctic Slope Current in the Southern Ocean response to ice sheet melt and wind stress change",
+  "authors": [
+    "Beadling, R.",
+    "Krasting, J.",
+    "Griffies, S.",
+    "Hurlin, W.",
+    "Bronselaer, B.",
+    "Russell, J.",
+    "MacGilchrist, G.",
+    "Tesdal, J.",
+    "Winton, M."
+  ],
+  "year": 2022,
+  "journal": "Journal of Geophysical Research: Oceans",
+  "impactFactor": 3.4,
+  "doi": "10.1029/2021JC017608",
+  "status": "published",
+  "researchAreas": [
+    "ocean-dynamics",
+    "sea-level-rise"
+  ],
+  "featured": false,
+  "firstAuthor": false,
+  "mentoredPostdoc": true,
+  "contributions": {
+    "conceptualization": 30,
+    "dataProduction": 10,
+    "interpretation": 30,
+    "writing": 25
+  }
+}

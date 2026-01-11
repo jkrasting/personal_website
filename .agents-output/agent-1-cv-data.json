@@ -1,0 +1,1171 @@
+{
+  "personal": {
+    "name": "John P. Krasting",
+    "title": "Ph.D.",
+    "tagline": "Climate Scientist, Lecturer, Modeler, and Data Analyst",
+    "email": "John.Krasting@noaa.gov",
+    "phone": "(609) 452-5359",
+    "github": "jkrasting",
+    "linkedin": "krasting",
+    "positions": [
+      {
+        "title": "Physical Scientist, ZP-IV",
+        "organization": "NOAA / Geophysical Fluid Dynamics Laboratory (GFDL)",
+        "location": "Princeton, NJ",
+        "startDate": "2015",
+        "endDate": "Present",
+        "current": true
+      },
+      {
+        "title": "Lecturer",
+        "organization": "Princeton University",
+        "department": "Atmospheric and Oceanic Sciences Program",
+        "location": "Princeton, NJ",
+        "startDate": "2025",
+        "endDate": "Present",
+        "current": true
+      },
+      {
+        "title": "Adjunct Lecturer",
+        "organization": "Rutgers University",
+        "department": "Department of Environmental Sciences",
+        "location": "New Brunswick, NJ",
+        "startDate": "2015",
+        "endDate": "Present",
+        "current": true
+      }
+    ],
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Atmospheric Science",
+        "institution": "Rutgers University",
+        "year": 2008
+      },
+      {
+        "degree": "B.S.",
+        "field": "Meteorology",
+        "institution": "Rutgers University",
+        "year": 2003
+      }
+    ]
+  },
+  "metrics": {
+    "hIndex": 31,
+    "hIndexSource": "Google Scholar",
+    "hIndexWebOfScience": 24,
+    "i10Index": 47,
+    "totalPublications": 44,
+    "totalFunding": 8750000,
+    "yearsTeaching": 14,
+    "yearsExperience": 17
+  },
+  "researchAreas": [
+    {
+      "id": "sea-level-rise",
+      "name": "Sea Level Rise & Coastal Impacts",
+      "description": "Leading research on global and regional sea level projections, steric sea level changes, and coastal inundation"
+    },
+    {
+      "id": "ocean-dynamics",
+      "name": "Ocean Dynamics & Circulation",
+      "description": "Expert in ocean circulation, water mass transformation, Antarctic Slope Current, and AMOC dynamics"
+    },
+    {
+      "id": "carbon-cycle",
+      "name": "Carbon Cycle & Biogeochemistry",
+      "description": "Research on ocean carbon uptake, acidification, transient climate response to cumulative emissions (TCRE)"
+    },
+    {
+      "id": "esm-development",
+      "name": "Earth System Model Development",
+      "description": "Core developer of GFDL CM4, ESM4, CM5, and OM5 climate models used in IPCC assessments"
+    },
+    {
+      "id": "model-diagnostics",
+      "name": "Model Diagnostics & Evaluation",
+      "description": "Co-lead of NOAA Model Diagnostics Task Force, developing process-oriented diagnostics frameworks"
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-044",
+      "title": "The GFDL-CM4X climate model hierarchy, Part I: Model description and thermal properties",
+      "authors": "Griffies, S. M., Adcroft, A. J., Beadling, R. L., Bushuk, M., Chang, C., Drake, H. F., Dussin, R., Hallberg, R. W., Hurlin, W. J., Khatri, H., Krasting, J. P., Lobo, M., MacGilchrist, G. A., Reichl, B. G., Sane, A., Sergienko, O., Sonnewald, M., Steinberg, J. M., Tesdal, J. E., Thomas, M., Turner, K. E., Ward, M. L., Winton, M., Zadeh, N., Zanna, L., Zhang, R., Zhang, W., & Zhao M.",
+      "year": 2025,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2024MS004861",
+      "status": "published",
+      "researchAreas": ["esm-development", "ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 5,
+        "dataProduction": 10,
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-043",
+      "title": "Uncovering the seasonality of storm-driven Southern Ocean heat and carbon uptake",
+      "authors": "Turner, K. E., Krasting, J. P., J. Russell, & Stouffer, R. J.",
+      "year": 2025,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-24-0642.1",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics", "carbon-cycle"],
+      "featured": true,
+      "mentoredPostdoc": true,
+      "contributions": {
+        "conceptualization": 80,
+        "interpretation": 30,
+        "writing": 35
+      }
+    },
+    {
+      "id": "pub-042",
+      "title": "A holistic view of climate sensitivity",
+      "authors": "Jeevanjee, N., Paynter, D. J., Dunne, J. P., Sentman, L. T. & Krasting, J. P.",
+      "year": 2025,
+      "journal": "Annual Review of Earth and Planetary Sciences",
+      "impactFactor": 13.0,
+      "doi": "10.1146/annurev-earth-040523-014302",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "ocean-dynamics"],
+      "featured": true,
+      "contributions": {
+        "conceptualization": 10,
+        "dataProduction": 25,
+        "interpretation": 25,
+        "writing": 25
+      }
+    },
+    {
+      "id": "pub-041",
+      "title": "Evaluating current statistical and dynamical forecasting techniques for seasonal coastal sea level prediction",
+      "authors": "Long, X., Newman, M., Shin, S., Balmeseda, M., Callahan, J., Dusek, G., Jia, L., Kirtman, B., Krasting, J., Lee, C. C., Lee, T., Sweet, W., Wang, O., Wang, Y. & Widlansky, M. J.",
+      "year": 2025,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-24-0214.1",
+      "status": "published",
+      "researchAreas": ["sea-level-rise"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 5,
+        "dataProduction": 10,
+        "analysis": 10,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-040",
+      "title": "Water mass transformation budgets in finite-volume generalized vertical coordinate ocean models",
+      "authors": "Drake, H. F., Bailey, S., Dussin, R., Griffies, S. M., Krasting, J., MacGilchrist, G., Stanley, G., Tesdal, J. & Zika, J. D.",
+      "year": 2025,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2024MS004383",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 10
+      }
+    },
+    {
+      "id": "pub-039",
+      "title": "A link between US East Coast sea Level and North Atlantic subtropical ocean heat content",
+      "authors": "Steinberg, J. M., Griffies, S. M., Krasting, J. P., Piecuch, C. G. & Ross, A. C.",
+      "year": 2024,
+      "journal": "Journal of Geophysical Research: Oceans",
+      "impactFactor": 3.4,
+      "doi": "10.1029/2024JC021425",
+      "status": "published",
+      "researchAreas": ["sea-level-rise", "ocean-dynamics"],
+      "featured": true,
+      "supervisedStaff": true,
+      "contributions": {
+        "conceptualization": 50,
+        "interpretation": 20,
+        "writing": 10
+      }
+    },
+    {
+      "id": "pub-038",
+      "title": "From the surface to the stratosphere: Large-scale atmospheric response to Antarctic meltwater",
+      "authors": "Beadling, R. L., Lin, P., Krasting, J., Ellinger, W., Coomans, A., Milward, J., Turner, K., Xu, X., Martin, T. & Molina, M. J.",
+      "year": 2024,
+      "journal": "Geophysical Research Letters",
+      "impactFactor": 4.7,
+      "doi": "10.1029/2024GL110157",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics", "sea-level-rise"],
+      "featured": true,
+      "mentoredPostdoc": true,
+      "contributions": {
+        "conceptualization": 45,
+        "interpretation": 25,
+        "writing": 15
+      }
+    },
+    {
+      "id": "pub-037",
+      "title": "Steric sea level rise and relationships with model drift and water mass representation in GFDL CM4 and ESM4",
+      "authors": "Krasting, J. P., Griffies, S. M., Tesdal, J., MacGilchrist, G., Beadling, R. L. & Little, C. M.",
+      "year": 2024,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-23-0591.1",
+      "status": "published",
+      "researchAreas": ["sea-level-rise", "ocean-dynamics", "esm-development"],
+      "featured": true,
+      "firstAuthor": true,
+      "contributions": {
+        "conceptualization": 90,
+        "dataProduction": 70,
+        "analysis": 90,
+        "interpretation": 85,
+        "writing": 85
+      }
+    },
+    {
+      "id": "pub-036",
+      "title": "Systematic and objective evaluation of Earth System Models: PCMDI Metrics Package (PMP) Version 3",
+      "authors": "Lee, J., Gleckler, P. J., Ahn, M., Ordonez, A., Ullrich, P. A., Sperber, K. R., Taylor, K. E., Planton, Y. Y., Guilyardi, E., Durack, P., Bonfils, C., Zelinka, M. D., Chao, L., Dong, B., Doutriaux, C., Zhang, C., Vo, T., Boutte, J., Wehner, M. F., Pendergrass, A. G., Kim, D., Xue, Z., Wittenberg, A. T. & Krasting, J.",
+      "year": 2024,
+      "journal": "Geoscientific Model Development",
+      "impactFactor": 5.0,
+      "doi": "10.5194/gmd-17-3919-2024",
+      "status": "published",
+      "researchAreas": ["model-diagnostics", "esm-development"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 15,
+        "analysis": 5,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-035",
+      "title": "The land component LM4.1 of the GFDL Earth System Model ESM4.1: Model description and characteristics of land surface climate and carbon cycling in the historical simulation",
+      "authors": "Shevliakova, E., Malyshev, S., Martinez-Cano, I., Milly, P., Pacala, S., Ginoux, P., Dunne, K., Dunne, J., Dupuis, C., Findell, K., Ghannam, K., Horowitz, L., Knutson, T., Krasting, J., Naik, V., Phillipps, P., Zadeh, N., Yu, Y., Zeng, F. & Zeng, Y.",
+      "year": 2024,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2023MS003922",
+      "status": "published",
+      "researchAreas": ["esm-development", "carbon-cycle"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 15,
+        "analysis": 10,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-034",
+      "title": "Process-oriented diagnostics: principles, practice, community development, and common standards",
+      "authors": "Neelin, J. D., Krasting, J. P., Radhakrishnan, A., Liptak, J., Jackson, T., Ming, Y., Dong, W., Gettelman, A., Coleman, D. R., Maloney, E. D., Wing, A. A., Kuo, Y., Ahmed, F., Ullrich, P., Bitz, C. M., Neale, R. B., Ordonez, A. & Maroon, E. A.",
+      "year": 2023,
+      "journal": "Bulletin of the American Meteorological Society",
+      "impactFactor": 4.5,
+      "doi": "10.1175/BAMS-D-21-0268.1",
+      "status": "published",
+      "researchAreas": ["model-diagnostics"],
+      "featured": true,
+      "coPI": true,
+      "contributions": {
+        "conceptualization": 35,
+        "interpretation": 30,
+        "writing": 30
+      }
+    },
+    {
+      "id": "pub-033",
+      "title": "Revisiting interior water mass responses to surface forcing changes and the subsequent effects on overturning in the Southern Ocean",
+      "authors": "Tesdal, J., MacGilchrist, G. A., Beadling, R. L., Griffies, S. M., Krasting, J. P. & Durack, P. J.",
+      "year": 2023,
+      "journal": "Journal of Geophysical Research: Oceans",
+      "impactFactor": 3.4,
+      "doi": "10.1029/2022JC019105",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics"],
+      "featured": false,
+      "mentoredPostdoc": true,
+      "contributions": {
+        "conceptualization": 25,
+        "interpretation": 20,
+        "writing": 15
+      }
+    },
+    {
+      "id": "pub-032",
+      "title": "Simulation of United States mesoscale convective systems using GFDL's new high-resolution general circulation model",
+      "authors": "Dong, W., Zhao, M., Ming, Y., Krasting, J. P. & Ramaswamy, V.",
+      "year": 2023,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-22-0529.1",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "coPI": true,
+      "contributions": {
+        "conceptualization": 10,
+        "interpretation": 15,
+        "writing": 15
+      }
+    },
+    {
+      "id": "pub-031",
+      "title": "Simulations of ocean deoxygenation in the historical era: insights from forced and coupled models",
+      "authors": "Takano, Y., Ilyina, T., Tjiputra, J., Eddebbar, Y. A., Berthet, S., Bopp, L., Buitenhuis, E., Butenschön, M., Christian, J. R., Dunne, J. P., Gröger, M., Hayashida, H., Hieronymus, J., Koenigk, T., Krasting, J. P., Long, M. C., Lovato, T., Nakano, H., Palmieri, J., Schwinger, J., Séférian, R., Suntharalingam, P., Tatebe, H., Tsujino, H., Urakawa, S., Watanabe, M. & Yool, A.",
+      "year": 2023,
+      "journal": "Frontiers in Marine Science",
+      "impactFactor": 3.7,
+      "doi": "10.3389/fmars.2023.1139917",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics", "carbon-cycle"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 5,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-030",
+      "title": "Contrasting projection of the ENSO-driven CO2 flux variability in the equatorial Pacific under high warming scenario",
+      "authors": "Ayar, P. V., Tjiputra, J., Bopp, L., Christian, J. R., Ilyina, T., Krasting, J. P., Séférian, R., Tsujino, H., Watanabe, M. & Yool, A.",
+      "year": 2022,
+      "journal": "Earth System Dynamics",
+      "impactFactor": 7.3,
+      "doi": "10.5194/esd-13-1097-2022",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 5,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-029",
+      "title": "Importance of the Antarctic Slope Current in the Southern Ocean response to ice sheet melt and wind stress change",
+      "authors": "Beadling, R., Krasting, J., Griffies, S., Hurlin, W., Bronselaer, B., Russell, J., MacGilchrist, G., Tesdal, J. & Winton, M.",
+      "year": 2022,
+      "journal": "Journal of Geophysical Research: Oceans",
+      "impactFactor": 3.4,
+      "doi": "10.1029/2021JC017608",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics", "sea-level-rise"],
+      "featured": false,
+      "mentoredPostdoc": true,
+      "contributions": {
+        "conceptualization": 30,
+        "dataProduction": 10,
+        "interpretation": 30,
+        "writing": 25
+      }
+    },
+    {
+      "id": "pub-028",
+      "title": "Oceanic and atmospheric drivers of post-El-Niño chlorophyll rebound in the equatorial Pacific",
+      "authors": "Lim, H., Dunne, J. P., Stock, C. A., Ginoux, P., John, J. G. & Krasting, J.",
+      "year": 2022,
+      "journal": "Geophysical Research Letters",
+      "impactFactor": 4.7,
+      "doi": "10.1029/2021GL096113",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 30,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-027",
+      "title": "Regional sensitivity patterns of Arctic Ocean acidification revealed with machine learning",
+      "authors": "Krasting, J. P., Palma, M. D., Sonnewald, M., Dunne, J. P. & John, J. G.",
+      "year": 2022,
+      "journal": "Communications Earth & Environment",
+      "impactFactor": 8.9,
+      "doi": "10.1038/s43247-022-00419-4",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "ocean-dynamics"],
+      "featured": true,
+      "firstAuthor": true,
+      "mentoredUndergrad": true,
+      "contributions": {
+        "conceptualization": 70,
+        "dataProduction": 50,
+        "analysis": 90,
+        "interpretation": 80,
+        "writing": 90
+      }
+    },
+    {
+      "id": "pub-026",
+      "title": "The role of continental topography in the present-day ocean's mean climate",
+      "authors": "Stouffer, R., Russell, J., Beadling, R., Broccoli, A., Krasting, J., Malyshev, S. & Naiman, Z.",
+      "year": 2022,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-20-0690.1",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 50,
+        "analysis": 10,
+        "interpretation": 20,
+        "writing": 15
+      }
+    },
+    {
+      "id": "pub-025",
+      "title": "Increased risk of the 2019 Alaskan July fires due to anthropogenic activity",
+      "authors": "Yu, Y., Dunne, J. P., Shevliakova, E., Ginoux, P., Malyshev, S., John, J. G. & Krasting, J. P.",
+      "year": 2021,
+      "journal": "Bulletin of the American Meteorological Society",
+      "impactFactor": 4.5,
+      "doi": "10.1175/BAMS-D-20-0154.1",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 50,
+        "writing": 10
+      }
+    },
+    {
+      "id": "pub-024",
+      "title": "Climate sensitivity of GFDL's CM4.0",
+      "authors": "Winton, M., Adcroft, A., Dunne, J., Held, I. M., Shevliakova, E., Zhao, M., Guo, H., Hurlin, W., Krasting, J., Knutson, T., Paynter, D., Silvers, L. G. & Zhang, R.",
+      "year": 2020,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2019MS001838",
+      "status": "published",
+      "researchAreas": ["esm-development", "carbon-cycle"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 5,
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-023",
+      "title": "Comparison of equilibrium climate sensitivity estimates from slab ocean, 150-year, and longer simulations",
+      "authors": "Dunne, J. P., Winton, M., Bacmeister, J., Danabasoglu, G., Gettelman, A., Golaz, J., Hannay, C., Schmidt, G. A., Krasting, J. P., Leung, L. R., Nazarenko, L., Sentman, L. T., Stouffer, R. J. & Wolfe, J. D.",
+      "year": 2020,
+      "journal": "Geophysical Research Letters",
+      "impactFactor": 4.7,
+      "doi": "10.1029/2020GL088852",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "esm-development"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 15,
+        "dataProduction": 20,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-022",
+      "title": "Ocean biogeochemistry in GFDL's Earth System Model 4.1 and its response to increasing atmospheric CO2",
+      "authors": "Stock, C. A., Dunne, J. P., Fan, S., Ginoux, P., John, J., Krasting, J. P., Laufkötter, C., Paulot, F. & Zadeh, N.",
+      "year": 2020,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2019MS002043",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "esm-development"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 80,
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-021",
+      "title": "Simple global ocean biogeochemistry with light, iron, nutrients and gas version 2 (BLINGv2): model description and simulation characteristics in GFDL's CM4.0",
+      "authors": "Dunne, J. P., Bociu, I., Bronselaer, B., Guo, H., John, J., Krasting, J., Stock, C., Winton, M. & Zadeh, N.",
+      "year": 2020,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2019MS002008",
+      "status": "published",
+      "researchAreas": ["carbon-cycle", "esm-development"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 10,
+        "analysis": 5,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-020",
+      "title": "The GFDL Earth System Model version 4.1 (GFDL-ESM 4.1): overall coupled model description and simulation characteristics",
+      "authors": "Dunne, J. P., Horowitz, L., Adcroft, A., Ginoux, P., Held, I., John, J., Krasting, J. P., Malyshev, S., Naik, V., Paulot, F., Shevliakova, E., Stock, C., Zadeh, N., Balaji, V., Blanton, C., Dunne, K., Dupuis, C., Durachta, J., Dussin, R., Gauthier, P., Griffies, S., Guo, H., Hallberg, R., Harrison, M., He, J., Hurlin, W., McHugh, C., Menzel, R., Milly, P., Nikonov, S., Paynter, D., Ploshay, J., Radhakrishnan, A., Rand, K., Reichl, B., Robinson, T., Schwarzkopf, D., Sentman, L., Underwood, S., Vahlenkamp, H., Winton, M., Wittenberg, A., Wyman, B., Zeng, Y. & Zhao, M.",
+      "year": 2020,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2019MS002015",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": true,
+      "contributions": {
+        "conceptualization": 15,
+        "dataProduction": 50,
+        "analysis": 15,
+        "interpretation": 15,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-019",
+      "title": "Rising temperatures increase importance of oceanic evaporation as a source for continental precipitation",
+      "authors": "Findell, K. L., Keys, P. W., Ent, R. J. V. D., Lintner, B. R., Berg, A. & Krasting, J. P.",
+      "year": 2019,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-19-0145.1",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 30,
+        "interpretation": 15,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-018",
+      "title": "Structure and performance of GFDL's CM4.0 climate model",
+      "authors": "Held, I., Guo, H., Adcroft, A., Dunne, J., Horowitz, L., Krasting, J., Shevliakova, E., Winton, M., Zhao, M., Bushuk, M., Wittenberg, A., Wyman, B., Xiang, B., Zhang, R., Anderson, W., Balaji, V., Donner, L., Dunne, K., Durachta, J., Gauthier, P., Ginoux, P., Golaz, J., Griffies, S., Hallberg, R., Harris, L., Harrison, M., Hurlin, W., John, J., Lin, P., Lin, S., Malyshev, S., Menzel, R., Milly, P., Ming, Y., Naik, V., Paynter, D., Paulot, F., Ramaswamy, V., Reichl, B., Robinson, T., Rosati, A., Seman, C., Silvers, L., Underwood, S. & Zadeh, N.",
+      "year": 2019,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2019MS001829",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": true,
+      "contributions": {
+        "conceptualization": 5,
+        "dataProduction": 30,
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-017",
+      "title": "Taking climate model evaluation to the next level",
+      "authors": "Eyring, V., Cox, P. M., Flato, G. M., Gleckler, P. J., Abramowitz, G., Caldwell, P., Collins, W. D., Gier, B. K., Hall, A. D., Hoffman, F. M., Hurtt, G. C., Jahn, A., Jones, C. D., Klein, S. A., Krasting, J. P., Kwiatkowski, L., Lorenz, R., Maloney, E., Meehl, G. A., Pendergrass, A. G., Pincus, R., Ruane, A. C., Russell, J. L., Sanderson, B. M., Santer, B. D., Sherwood, S. C., Simpson, I. R., Stouffer, R. J. & Williamson, M. S.",
+      "year": 2019,
+      "journal": "Nature Climate Change",
+      "impactFactor": 27.1,
+      "doi": "10.1038/s41558-018-0355-y",
+      "status": "published",
+      "researchAreas": ["model-diagnostics", "esm-development"],
+      "featured": true,
+      "contributions": {
+        "conceptualization": 5,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-016",
+      "title": "The GFDL global ocean and sea ice model OM4.0: model description and simulation features",
+      "authors": "Adcroft, A., Anderson, W., Balaji, V., Blanton, C., Bushuk, M., Dufour, C. O., Dunne, J. P., Griffies, S. M., Hallberg, R., Harrison, M. J., Held, I. M., Jansen, M. F., John, J. G., Krasting, J. P., Langenhorst, A. R., Legg, S., Liang, Z., McHugh, C., Radhakrishnan, A., Reichl, B. G., Rosati, T., Samuels, B. L., Shao, A., Stouffer, R., Winton, M., Wittenberg, A. T., Xiang, B., Zadeh, N. & Zhang, R.",
+      "year": 2019,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1029/2019MS001726",
+      "status": "published",
+      "researchAreas": ["esm-development", "ocean-dynamics"],
+      "featured": true,
+      "contributions": {
+        "conceptualization": 5,
+        "dataProduction": 30,
+        "analysis": 15,
+        "interpretation": 15,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-015",
+      "title": "Role of ocean model formulation in climate response uncertainty",
+      "authors": "Krasting, J. P., Stouffer, R. J., Griffies, S. M., Hallberg, R. W., Malyshev, S. L., Samuels, B. L. & Sentman, L. T.",
+      "year": 2018,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-18-0035.1",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics", "esm-development"],
+      "featured": true,
+      "firstAuthor": true,
+      "contributions": {
+        "conceptualization": 80,
+        "dataProduction": 50,
+        "analysis": 90,
+        "interpretation": 80,
+        "writing": 90
+      }
+    },
+    {
+      "id": "pub-014",
+      "title": "The GFDL global atmosphere and land model AM4.0/LM4.0: 1. Simulation characteristics with prescribed SSTs",
+      "authors": "Zhao, M., Golaz, J., Held, I., Guo, H., Balaji, V., Benson, R., Chen, J., Chen, X., Donner, L., Dunne, J., Dunne, K., Durachta, J., Fan, S., Freidenreich, S., Garner, S., Ginoux, P., Harris, L., Horowitz, L., Krasting, J., Langenhorst, A., Liang, Z., Lin, P., Lin, S., Malyshev, S., Mason, E., Milly, P. C., Ming, Y., Naik, V., Paulot, F., Paynter, D., Phillipps, P., Radhakrishnan, A., Ramaswamy, V., Robinson, T., Schwarzkopf, D., Seman, C., Shevliakova, E., Shen, Z., Shin, H., Silvers, L., Wilson, J., Winton, M., Wittenberg, A., Wyman, B. & Xiang, B.",
+      "year": 2018,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1002/2017MS001208",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "contributions": {
+        "analysis": 15,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-013",
+      "title": "The GFDL global atmosphere and land model AM4.0/LM4.0: 2. Model description, sensitivity studies, and tuning strategies",
+      "authors": "Zhao, M., Golaz, J., Held, I., Guo, H., Balaji, V., Benson, R., Chen, J., Chen, X., Donner, L., Dunne, J., Dunne, K., Durachta, J., Fan, S., Freidenreich, S., Garner, S., Ginoux, P., Harris, L., Horowitz, L., Krasting, J., Langenhorst, A., Liang, Z., Lin, P., Lin, S., Malyshev, S., Mason, E., Milly, P. C., Ming, Y., Naik, V., Paulot, F., Paynter, D., Phillipps, P., Radhakrishnan, A., Ramaswamy, V., Robinson, T., Schwarzkopf, D., Seman, C., Shevliakova, E., Shen, Z., Shin, H., Silvers, L., Wilson, J., Winton, M., Wittenberg, A., Wyman, B. & Xiang, B.",
+      "year": 2018,
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "impactFactor": 4.6,
+      "doi": "10.1002/2017MS001209",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "contributions": {
+        "analysis": 15,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-012",
+      "title": "The mechanistic role of the Central American seaway in a GFDL Earth System Model. Part 1: impacts on global ocean mean state and circulation",
+      "authors": "Sentman, L. T., Dunne, J. P., Stouffer, R. J., Krasting, J. P., Toggweiler, J. & Broccoli, A. J.",
+      "year": 2018,
+      "journal": "Paleoceanography and Paleoclimatology",
+      "impactFactor": 3.5,
+      "doi": "10.1029/2018PA003364",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 20,
+        "interpretation": 20,
+        "writing": 10
+      }
+    },
+    {
+      "id": "pub-011",
+      "title": "Impact of mountains on tropical circulation in two Earth System Models",
+      "authors": "Naiman, Z., Goodman, P. J., Krasting, J. P., Malyshev, S. L., Russell, J. L., Stouffer, R. J. & Wittenberg, A. T.",
+      "year": 2017,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-16-0512.1",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 50,
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-010",
+      "title": "The impact of anthropogenic land use and land cover change on regional climate extremes",
+      "authors": "Findell, K. L., Berg, A., Gentine, P., Krasting, J. P., Lintner, B. R., Malyshev, S., Jr, J. A. S. & Shevliakova, E.",
+      "year": 2017,
+      "journal": "Nature Communications",
+      "impactFactor": 14.2,
+      "doi": "10.1038/s41467-017-01038-w",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": true,
+      "contributions": {
+        "dataProduction": 30,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-009",
+      "title": "Enhanced Atlantic sea-level rise relative to the Pacific under high carbon emission rates",
+      "authors": "Krasting, J. P., Dunne, J. P., Stouffer, R. J. & Hallberg, R. W.",
+      "year": 2016,
+      "journal": "Nature Geoscience",
+      "impactFactor": 16.1,
+      "doi": "10.1038/ngeo2641",
+      "status": "published",
+      "researchAreas": ["sea-level-rise", "ocean-dynamics", "carbon-cycle"],
+      "featured": true,
+      "firstAuthor": true,
+      "contributions": {
+        "conceptualization": 100,
+        "dataProduction": 100,
+        "analysis": 100,
+        "interpretation": 80,
+        "writing": 95
+      }
+    },
+    {
+      "id": "pub-008",
+      "title": "ESMValTool (v1.0) – a community diagnostic and performance metrics tool for routine evaluation of Earth System Models in CMIP",
+      "authors": "Eyring, V., Righi, M., Lauer, A., Evaldsson, M., Wenzel, S., Jones, C., Anav, A., Andrews, O., Cionni, I., Davin, E. L., Deser, C., Ehbrecht, C., Friedlingstein, P., Gleckler, P., Gottschaldt, K., Hagemann, S., Juckes, M., Kindermann, S., Krasting, J., Kunert, D., Levine, R., Loew, A., Mäkelä, J., Martin, G., Mason, E., Phillips, A. S., Read, S., Rio, C., Roehrig, R., Senftleben, D., Sterl, A., Ulft, L. H. V., Walton, J., Wang, S. & Williams, K. D.",
+      "year": 2016,
+      "journal": "Geoscientific Model Development",
+      "impactFactor": 5.0,
+      "doi": "10.5194/gmd-9-1747-2016",
+      "status": "published",
+      "researchAreas": ["model-diagnostics"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 5,
+        "dataProduction": 5,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-007",
+      "title": "Ocean response to volcanic eruptions in Coupled Model Intercomparison Project 5 simulations",
+      "authors": "Ding, Y., Carton, J. A., Chepurin, G. A., Stenchikov, G., Robock, A., Sentman, L. T. & Krasting, J. P.",
+      "year": 2014,
+      "journal": "Journal of Geophysical Research: Oceans",
+      "impactFactor": 3.4,
+      "doi": "10.1002/2013JC009780",
+      "status": "published",
+      "researchAreas": ["ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 40,
+        "interpretation": 5,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-006",
+      "title": "Trajectory sensitivity of the transient climate response to cumulative carbon emissions",
+      "authors": "Krasting, J., Dunne, J., Shevliakova, E. & Stouffer, R.",
+      "year": 2014,
+      "journal": "Geophysical Research Letters",
+      "impactFactor": 4.7,
+      "doi": "10.1002/2013GL059141",
+      "status": "published",
+      "researchAreas": ["carbon-cycle"],
+      "featured": true,
+      "firstAuthor": true,
+      "contributions": {
+        "conceptualization": 100,
+        "dataProduction": 100,
+        "analysis": 100,
+        "interpretation": 90,
+        "writing": 95
+      }
+    },
+    {
+      "id": "pub-005",
+      "title": "Future changes in Northern Hemisphere snowfall",
+      "authors": "Krasting, J. P., Broccoli, A. J., Dixon, K. W. & Lanzante, J. R.",
+      "year": 2013,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-12-00832.1",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "firstAuthor": true,
+      "contributions": {
+        "conceptualization": 60,
+        "dataProduction": 100,
+        "analysis": 100,
+        "interpretation": 70,
+        "writing": 80
+      }
+    },
+    {
+      "id": "pub-004",
+      "title": "GFDL's ESM2 global coupled climate–carbon Earth System Models. Part II: carbon system formulation and baseline simulation characteristics",
+      "authors": "Dunne, J. P., John, J. G., Shevliakova, E., Stouffer, R. J., Krasting, J. P., Malyshev, S. L., Milly, P., Sentman, L. T., Adcroft, A. J., Cooke, W., Dunne, K. A., Griffies, S. M., Hallberg, R. W., Harrison, M. J., Levy, H., Wittenberg, A. T., Phillips, P. J. & Zadeh, N.",
+      "year": 2013,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-12-00150.1",
+      "status": "published",
+      "researchAreas": ["esm-development", "carbon-cycle"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 10,
+        "dataProduction": 50,
+        "analysis": 15,
+        "interpretation": 10,
+        "writing": 10
+      }
+    },
+    {
+      "id": "pub-003",
+      "title": "Historical warming reduced due to enhanced land carbon uptake",
+      "authors": "Shevliakova, E., Stouffer, R. J., Malyshev, S., Krasting, J. P., Hurtt, G. C. & Pacala, S. W.",
+      "year": 2013,
+      "journal": "Proceedings of the National Academy of Sciences",
+      "impactFactor": 8.9,
+      "doi": "10.1073/pnas.1314047110",
+      "status": "published",
+      "researchAreas": ["carbon-cycle"],
+      "featured": true,
+      "contributions": {
+        "dataProduction": 80,
+        "interpretation": 20,
+        "writing": 15
+      }
+    },
+    {
+      "id": "pub-002",
+      "title": "Sensitivity of twenty-first-century global-mean steric sea level rise to ocean model formulation",
+      "authors": "Hallberg, R., Adcroft, A., Dunne, J. P., Krasting, J. P. & Stouffer, R. J.",
+      "year": 2013,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-12-00506.1",
+      "status": "published",
+      "researchAreas": ["sea-level-rise", "ocean-dynamics"],
+      "featured": false,
+      "contributions": {
+        "dataProduction": 50,
+        "analysis": 10,
+        "interpretation": 10,
+        "writing": 5
+      }
+    },
+    {
+      "id": "pub-001",
+      "title": "GFDL's ESM2 global coupled climate–carbon Earth System Models. Part I: physical formulation and baseline simulation characteristics",
+      "authors": "Dunne, J. P., John, J. G., Adcroft, A. J., Griffies, S. M., Hallberg, R. W., Shevliakova, E., Stouffer, R. J., Cooke, W., Dunne, K. A., Harrison, M. J., Krasting, J. P., Malyshev, S. L., Milly, P., Phillipps, P. J., Sentman, L. T., Samuels, B. L., Spelman, M. J., Winton, M., Wittenberg, A. T. & Zadeh, N.",
+      "year": 2012,
+      "journal": "Journal of Climate",
+      "impactFactor": 3.9,
+      "doi": "10.1175/JCLI-D-11-00560.1",
+      "status": "published",
+      "researchAreas": ["esm-development"],
+      "featured": false,
+      "contributions": {
+        "conceptualization": 10,
+        "dataProduction": 50,
+        "analysis": 15,
+        "interpretation": 10,
+        "writing": 10
+      }
+    }
+  ],
+  "worksInProgress": [
+    {
+      "id": "wip-005",
+      "title": "The contribution of sterodynamic changes to the uncertainty of regional sea-level projections over the 21st Century",
+      "authors": "Tesdal, J. E., Krasting, J. P., Kopp, R. E., Hermans, T. H. J., Kumar, P., Sweet, W. V., & Griffies, S. M.",
+      "status": "in-review",
+      "journal": "AGU Advances",
+      "submittedDate": "First round of revision",
+      "researchAreas": ["sea-level-rise"],
+      "contributions": {
+        "conceptualization": 80,
+        "interpretation": 25,
+        "writing": 25
+      },
+      "preprint": "https://essopenarchive.org/doi/full/10.22541/essoar.174729528.84639181/v1"
+    },
+    {
+      "id": "wip-004",
+      "title": "On the utility of the transient climate response",
+      "authors": "Nadir, J., Paynter, D., Dunne, J. P., Sentman, L. T., & Krasting, J. P.",
+      "status": "submitted",
+      "journal": "Geophysical Research Letters",
+      "researchAreas": ["carbon-cycle", "ocean-dynamics"],
+      "contributions": {
+        "conceptualization": 10,
+        "interpretation": 20,
+        "writing": 10
+      }
+    },
+    {
+      "id": "wip-003",
+      "title": "Assessing Earth's energy imbalance trend in the early 21st century in two high-resolution coupled models",
+      "authors": "Chen, Y. T., Merlis, T. M., Dinh, T., Griffies, S. M., Krasting, J. P., Dussin, R., Zadeh, N., & Fueglistaler, S. A.",
+      "status": "submitted",
+      "journal": "Geophysical Research Letters",
+      "researchAreas": ["ocean-dynamics", "esm-development"],
+      "contributions": {
+        "conceptualization": 20,
+        "interpretation": 20,
+        "writing": 10
+      }
+    },
+    {
+      "id": "wip-002",
+      "title": "Impacts of interannual storm activity on the Southern Ocean",
+      "authors": "Turner, K. E., Krasting, J. P., Stouffer, R. J., & Russell, J. L.",
+      "status": "in-review",
+      "journal": "Journal of Geophysical Research: Oceans",
+      "submittedDate": "In NOAA agency internal review",
+      "researchAreas": ["ocean-dynamics"],
+      "mentoredPostdoc": true,
+      "contributions": {
+        "conceptualization": 30,
+        "interpretation": 20,
+        "writing": 20
+      }
+    },
+    {
+      "id": "wip-001",
+      "title": "Steric sea level response to Antarctic freshwater forcing",
+      "authors": "Milward, J., Beadling, R. L., Krasting, J. P., Steinberg, J. M., Griffies, S. M., Tesdal, J. E., MacGilchrist, G. M., Martin, T., & MacIsaac, J.",
+      "status": "in-review",
+      "journal": "Journal of Geophysical Research: Oceans",
+      "submittedDate": "In NOAA agency internal review",
+      "researchAreas": ["sea-level-rise", "ocean-dynamics"],
+      "contributions": {
+        "analysis": 20,
+        "interpretation": 10,
+        "writing": 10
+      }
+    }
+  ],
+  "funding": [
+    {
+      "id": "fund-001",
+      "title": "Assess and Improve Sea Level Prediction on Seasonal to Annual Timescales with Advanced Models",
+      "funder": "Congressional Appropriation (Bipartisan Infrastructure Law)",
+      "role": "Agency Project Lead at OAR/GFDL",
+      "amount": 5839000,
+      "startYear": 2022,
+      "endYear": 2027,
+      "researchAreas": ["sea-level-rise"]
+    },
+    {
+      "id": "fund-002",
+      "title": "A Community Framework for Process-Oriented Diagnostics of Earth System Models Across Scales",
+      "funder": "NOAA Climate Program Office (MAPP)",
+      "role": "Co-Principal Investigator",
+      "totalAmount": 2212018,
+      "institutionalAmount": 1016878,
+      "startYear": 2025,
+      "endYear": 2027,
+      "researchAreas": ["model-diagnostics"]
+    },
+    {
+      "id": "fund-003",
+      "title": "Improving Coastal Sea Level Predictions with Ocean Process Insight Guided by Machine Learning",
+      "funder": "NOAA Climate Program Office",
+      "role": "Co-Principal Investigator",
+      "totalAmount": 587187,
+      "institutionalAmount": 159000,
+      "startYear": 2024,
+      "endYear": 2026,
+      "researchAreas": ["sea-level-rise"]
+    },
+    {
+      "id": "fund-004",
+      "title": "An Open Framework for Process-Oriented Diagnostics of Earth System Models",
+      "funder": "NOAA Climate Program Office (MAPP)",
+      "role": "Co-Principal Investigator",
+      "totalAmount": 2237244,
+      "institutionalAmount": 1050000,
+      "startYear": 2021,
+      "endYear": 2024,
+      "researchAreas": ["model-diagnostics"]
+    },
+    {
+      "id": "fund-005",
+      "title": "An Open Framework for Process-Oriented Diagnostics of Global Models",
+      "funder": "NOAA Climate Program Office (MAPP)",
+      "role": "Funded Collaborator",
+      "totalAmount": 1488078,
+      "institutionalAmount": 633716,
+      "startYear": 2018,
+      "endYear": 2021,
+      "researchAreas": ["model-diagnostics"]
+    },
+    {
+      "id": "fund-006",
+      "title": "Contextualizing Existing Sea Level Rise Scenarios in Light of a New Generation of Climate Models",
+      "funder": "NOAA Climate Program Office",
+      "role": "Principal Investigator",
+      "totalAmount": 320000,
+      "startYear": 2022,
+      "endYear": 2025,
+      "researchAreas": ["sea-level-rise"]
+    },
+    {
+      "id": "fund-007",
+      "title": "Evaluating Ventilation Pathways and Interior Water Mass Properties",
+      "funder": "Department of Energy RGMA Subcontract Award",
+      "role": "Principal Investigator",
+      "institutionalAmount": 361600,
+      "startYear": 2020,
+      "endYear": 2022,
+      "researchAreas": ["ocean-dynamics"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "US Department of Commerce Bronze Medal Award",
+      "organization": "US Department of Commerce",
+      "year": 2024,
+      "description": "Quantifying US Wildfire Trends and Impacts"
+    },
+    {
+      "title": "US Department of Commerce Bronze Medal Award",
+      "organization": "US Department of Commerce",
+      "year": 2023,
+      "description": "Earth System Model Development"
+    },
+    {
+      "title": "NOAA/OAR Employee of the Year",
+      "organization": "NOAA - Oceanic and Atmospheric Research",
+      "year": 2021,
+      "description": "Model Diagnostics and Fostering New Research Collaborations on Sea Level",
+      "tenureSignificance": "high"
+    },
+    {
+      "title": "US Department of Commerce Silver Medal Award",
+      "organization": "US Department of Commerce",
+      "year": 2014,
+      "description": "Earth System Model Development"
+    },
+    {
+      "title": "George H. Cook Scholar",
+      "organization": "Rutgers University",
+      "year": 2003,
+      "description": "Meteorological Conditions Favorable for Severe Thunderstorms"
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Climate Dynamics (AOS-562)",
+      "institution": "Princeton University",
+      "department": "Atmospheric and Oceanic Sciences Program",
+      "level": "graduate",
+      "yearsStart": 2025,
+      "current": true
+    },
+    {
+      "course": "Introduction to Meteorology (11:670:101)",
+      "institution": "Rutgers University",
+      "department": "Department of Environmental Sciences",
+      "level": "undergraduate",
+      "yearsStart": 2015,
+      "current": true
+    },
+    {
+      "course": "Climate Dynamics (16:107:545)",
+      "institution": "Rutgers University",
+      "department": "Department of Environmental Sciences",
+      "level": "graduate",
+      "year": 2011
+    }
+  ],
+  "mentoring": {
+    "postdocs": [
+      {
+        "name": "Dr. Katherine Turner",
+        "institution": "GFDL / University of Arizona",
+        "project": "Storm-Driven Contributions to Southern Ocean Heat and Carbon Fluxes",
+        "yearsStart": 2023,
+        "current": true,
+        "advisingEffort": "70% (co-advised with Dr. Joellen Russell)"
+      },
+      {
+        "name": "Dr. Jan-Erik Tesdal",
+        "institution": "Princeton University",
+        "project": "Water Mass Transformation, Antarctic Ice Sheet Melt Contributions to Ocean Circulation, and Sea Level Rise",
+        "yearsStart": 2020,
+        "yearsEnd": 2025,
+        "advisingEffort": "Co-advised (50%) 2020-2022; Primary advisor 2022-2025"
+      },
+      {
+        "name": "Dr. Xinru Li",
+        "institution": "Princeton University",
+        "project": "Mechanistic Drivers of Subsurface Marine Heatwave Events",
+        "yearsStart": 2023,
+        "yearsEnd": 2025,
+        "advisingEffort": "Primary advisor"
+      },
+      {
+        "name": "Dr. Rebecca Beadling",
+        "institution": "GFDL/UCAR",
+        "project": "Antarctic Ice Sheet Melt Effects on the Antarctic Slope Current",
+        "yearsStart": 2020,
+        "yearsEnd": 2022,
+        "advisingEffort": "Primary advisor",
+        "fellowship": "NOAA Climate and Global Change Fellowship"
+      }
+    ],
+    "undergrads": [
+      {
+        "name": "Theo Avila",
+        "institution": "University of Illinois",
+        "program": "NOAA Ernest F. Hollings Program",
+        "project": "North Atlantic Water Mass Transformation, Impacts on AMOC and Sea Level",
+        "year": "2024-2025"
+      },
+      {
+        "name": "Matthew Birtman",
+        "institution": "University of Miami",
+        "program": "NOAA Ernest F. Hollings Program",
+        "project": "Observing and Simulating the Amplitude and Phasing of the Annual Cycle of Sea Level",
+        "year": "2023"
+      },
+      {
+        "name": "Rucha Wani",
+        "institution": "University of Delaware",
+        "program": "NOAA Ernest F. Hollings Program",
+        "project": "Simulated Nutrient Distributions Throughout the North Atlantic",
+        "year": "2020",
+        "honorsThesisCommittee": true
+      },
+      {
+        "name": "Maurizia de Palma",
+        "institution": "Kean University",
+        "program": "Princeton University CIMES Summer Internship",
+        "project": "Regional Acidification Sensitivity Patterns of Arctic Ocean Acidification Revealed with Machine Learning",
+        "year": "2019"
+      },
+      {
+        "name": "Maria Pulido-Velosa",
+        "institution": "Florida International University",
+        "program": "Princeton University CIMES Summer Internship",
+        "project": "Diagnosing Nutrient-Based Controls on Ocean Biological Productivity",
+        "year": "2016"
+      }
+    ]
+  }
+}

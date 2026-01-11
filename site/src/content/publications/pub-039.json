@@ -1,0 +1,28 @@
+{
+  "id": "pub-039",
+  "title": "A link between US East Coast sea Level and North Atlantic subtropical ocean heat content",
+  "authors": [
+    "Steinberg, J. M.",
+    "Griffies, S. M.",
+    "Krasting, J. P.",
+    "Piecuch, C. G.",
+    "Ross, A. C."
+  ],
+  "year": 2024,
+  "journal": "Journal of Geophysical Research: Oceans",
+  "impactFactor": 3.4,
+  "doi": "10.1029/2024JC021425",
+  "status": "published",
+  "researchAreas": [
+    "sea-level-rise",
+    "ocean-dynamics"
+  ],
+  "featured": true,
+  "firstAuthor": false,
+  "supervisedStaff": true,
+  "contributions": {
+    "conceptualization": 50,
+    "interpretation": 20,
+    "writing": 10
+  }
+}

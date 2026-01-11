@@ -1,0 +1,89 @@
+{
+  "pub-044": "Comprehensive documentation of the GFDL-CM4X climate model hierarchy, detailing thermal properties and model formulation for next-generation climate projections.",
+
+  "pub-043": "Revealed the seasonal patterns of storm-driven heat and carbon uptake in the Southern Ocean using GFDL climate models. Co-advised postdoc Dr. Katherine Turner as primary author (80% conceptualization by Krasting).",
+
+  "pub-042": "Synthesized current understanding of climate sensitivity across multiple perspectives—radiative forcing, feedbacks, ocean heat uptake, and carbon cycle responses—providing a holistic framework for interpreting model projections. Published in *Annual Review of Earth and Planetary Sciences* (IF 13.0), this review establishes climate sensitivity as an emergent property of coupled Earth system dynamics.",
+
+  "pub-041": "Evaluated statistical and dynamical forecasting techniques for seasonal coastal sea level prediction, comparing multiple modeling systems to identify sources of forecast skill and uncertainty.",
+
+  "pub-040": "Developed mathematical framework for diagnosing water mass transformation budgets in finite-volume ocean models with generalized vertical coordinates, enabling process-based evaluation of ocean circulation changes.",
+
+  "pub-039": "Identified a robust link between North Atlantic subtropical ocean heat content and U.S. East Coast sea level on interannual to decadal timescales. This collaborative work with supervised staff member Dr. Joshua Steinberg demonstrates predictability pathways for coastal sea level that could improve seasonal-to-decadal forecasts.",
+
+  "pub-038": "Discovered large-scale atmospheric teleconnections extending from Antarctic meltwater forcing at the surface to the stratosphere, revealing previously unknown pathways by which ice sheet changes affect global climate. Co-advised postdoc Dr. Rebecca Beadling as primary author (45% conceptualization by Krasting).",
+
+  "pub-037": "Investigated the relationship between steric sea level rise, model drift, and water mass representation in GFDL's latest climate models (CM4 and ESM4). This first-author study in *Journal of Climate* (90% conceptualization, 85% writing by Krasting) provides critical insights for improving sea level projections in next-generation models by connecting biases in water mass properties to systematic errors in sea level trends.",
+
+  "pub-036": "Documented version 3 of the PCMDI Metrics Package (PMP), a community tool for systematic and objective evaluation of Earth System Models used across international climate modeling centers.",
+
+  "pub-035": "Comprehensive description of the LM4.1 land component of GFDL's ESM4.1, detailing land surface climate and carbon cycling characteristics in historical simulations.",
+
+  "pub-034": "Established principles and common standards for process-oriented diagnostics of Earth System Models, providing a framework for community development of targeted model evaluation tools. As Co-PI of the NOAA Model Diagnostics Task Force (35% conceptualization by Krasting), this work in *Bulletin of the American Meteorological Society* (IF 4.5) defines best practices now adopted across climate modeling centers.",
+
+  "pub-033": "Revisited Southern Ocean water mass responses to surface forcing changes and their effects on overturning circulation, revealing complex interactions between wind stress, buoyancy forcing, and interior ocean structure. Co-advised postdoc Dr. Jan-Erik Tesdal as primary author.",
+
+  "pub-032": "Demonstrated improved simulation of United States mesoscale convective systems using GFDL's new high-resolution general circulation model, validating the model's ability to represent organized thunderstorm complexes.",
+
+  "pub-031": "Multi-model assessment of ocean deoxygenation in the historical era, comparing forced and coupled model simulations to identify mechanisms driving oxygen decline in the global ocean.",
+
+  "pub-030": "Revealed contrasting projections of ENSO-driven CO2 flux variability in the equatorial Pacific under high warming scenarios, with implications for carbon cycle feedbacks in future climate.",
+
+  "pub-029": "Demonstrated the critical importance of the Antarctic Slope Current in mediating the Southern Ocean's response to ice sheet melt and wind stress changes, with implications for bottom water formation and global overturning circulation. Co-advised postdoc Dr. Rebecca Beadling as primary author.",
+
+  "pub-028": "Identified oceanic and atmospheric drivers of post-El-Niño chlorophyll rebound in the equatorial Pacific, revealing mechanisms of biological productivity recovery following major climate events.",
+
+  "pub-027": "Applied machine learning techniques to identify regional sensitivity patterns in Arctic Ocean acidification, revealing that physical circulation changes—not just atmospheric CO2 increases—drive spatial heterogeneity in pH changes. This first-author study in *Communications Earth & Environment* (IF 8.9) demonstrates the power of interpretable machine learning for climate model analysis and resulted from mentoring undergraduate intern Maurizia de Palma (70% conceptualization, 90% writing by Krasting).",
+
+  "pub-026": "Investigated the role of continental topography in shaping the present-day ocean's mean climate through idealized modeling experiments removing major mountain ranges.",
+
+  "pub-025": "Attributed increased risk of the severe 2019 Alaskan July fires to anthropogenic climate change using GFDL's Earth System Model, demonstrating human influence on extreme wildfire events.",
+
+  "pub-024": "Quantified climate sensitivity of GFDL's CM4.0 climate model through systematic analysis of equilibrium and transient climate response to CO2 forcing.",
+
+  "pub-023": "Compared equilibrium climate sensitivity estimates from slab ocean, 150-year, and longer simulations across multiple models, revealing systematic differences in sensitivity estimates depending on experimental design and timescale.",
+
+  "pub-022": "Documented ocean biogeochemistry in GFDL's Earth System Model 4.1 and its response to increasing atmospheric CO2, detailing nutrient cycling, biological productivity, and carbon uptake processes.",
+
+  "pub-021": "Described the BLINGv2 ocean biogeochemistry model—a simplified but physically consistent representation of light, iron, nutrient, and gas cycling—and its implementation in GFDL's CM4.0 climate model.",
+
+  "pub-020": "Comprehensive documentation of GFDL Earth System Model 4.1 (ESM4.1), the coupled model used in IPCC AR6 assessments, detailing overall model structure and simulation characteristics. This flagship publication describes a model to which Krasting contributed extensively as a core developer (15% conceptualization, 50% data production).",
+
+  "pub-019": "Demonstrated that rising temperatures increase the importance of oceanic evaporation as a source for continental precipitation, with implications for water resource management under climate change.",
+
+  "pub-018": "Detailed the structure and performance of GFDL's CM4.0 climate model, the physical climate model component of ESM4.1 used in IPCC AR6. This comprehensive model description paper documents one of the world's leading climate models, to which Krasting contributed as a core developer and diagnostics specialist (30% data production, 10% analysis).",
+
+  "pub-017": "Advocated for taking climate model evaluation to the next level through process-oriented diagnostics, emergent constraints, and targeted observations. Published in *Nature Climate Change* (IF 27.1), this perspective article shaped the direction of climate model development internationally and established the rationale for the NOAA Model Diagnostics Task Force that Krasting co-leads.",
+
+  "pub-016": "Comprehensive description of GFDL's OM4.0 global ocean and sea ice model, detailing model formulation, numerical methods, and simulation characteristics. This ocean model underpins GFDL's climate projections and represents one of the most advanced ocean components in international climate modeling (Krasting contributed 30% of data production).",
+
+  "pub-015": "Investigated how ocean model formulation choices—including coordinate system, mixing schemes, and numerical methods—affect climate response to CO2 forcing, revealing substantial uncertainty in projected warming patterns. This first-author study in *Journal of Climate* (80% conceptualization, 90% analysis and writing by Krasting) demonstrated that seemingly technical modeling decisions have first-order impacts on climate projections, fundamentally changing how the community thinks about ocean model design.",
+
+  "pub-014": "Documented the atmospheric component (AM4.0) of GFDL's fourth-generation climate model, Part 1: simulation characteristics with prescribed sea surface temperatures, establishing baseline model performance.",
+
+  "pub-013": "Documented the atmospheric component (AM4.0) of GFDL's fourth-generation climate model, Part 2: detailed model description, sensitivity studies, and tuning strategies for achieving realistic climate simulations.",
+
+  "pub-012": "Examined the mechanistic role of the Central American seaway in a GFDL Earth System Model, revealing impacts on global ocean mean state and circulation in paleoclimate contexts.",
+
+  "pub-011": "Assessed the impact of mountains on tropical circulation in two Earth System Models through topography-removal experiments, isolating orographic effects on atmospheric dynamics.",
+
+  "pub-010": "Demonstrated that anthropogenic land use and land cover change significantly affects regional climate extremes, particularly temperature and precipitation variability. Published in *Nature Communications* (IF 14.2), this work quantified human impacts on climate beyond greenhouse gas emissions alone.",
+
+  "pub-009": "Discovered that the Atlantic Ocean will experience significantly higher sea level rise than the Pacific under high carbon emissions due to differential ocean heat uptake and circulation changes. This first-author study in *Nature Geoscience* (IF 16.1) established regional sea level rise as a critical factor in coastal planning and remains one of the most highly cited papers on basin-scale sea level patterns (100% conceptualization, analysis, and 95% writing by Krasting).",
+
+  "pub-008": "Documented version 1.0 of ESMValTool, a community diagnostic and performance metrics tool for routine evaluation of Earth System Models in the Coupled Model Intercomparison Project (CMIP).",
+
+  "pub-007": "Analyzed ocean response to volcanic eruptions in CMIP5 simulations, identifying characteristic patterns of ocean heat content and circulation changes following major volcanic events.",
+
+  "pub-006": "Demonstrated that the transient climate response to cumulative carbon emissions (TCRE) depends on the trajectory of emissions, not just the total amount emitted—challenging the assumption of a constant carbon budget. This first-author study in *Geophysical Research Letters* (100% conceptualization, analysis, and 95% writing by Krasting) revealed path dependence in the climate-carbon system with implications for emissions policy.",
+
+  "pub-005": "Projected future changes in Northern Hemisphere snowfall under climate change, revealing competing effects of warming temperatures (reducing snowfall) and increased precipitation (increasing snowfall). First-author work combining climate model analysis with observational validation.",
+
+  "pub-004": "Documented the carbon system formulation and baseline simulation characteristics of GFDL's ESM2 global coupled climate-carbon Earth System Models, establishing the foundation for subsequent ESM development.",
+
+  "pub-003": "Revealed that historical warming has been reduced due to enhanced land carbon uptake from CO2 fertilization and climate-driven productivity changes. Published in *Proceedings of the National Academy of Sciences* (IF 8.9), this work quantified a critical negative feedback in the Earth system that has partially offset warming from fossil fuel emissions.",
+
+  "pub-002": "Quantified the sensitivity of 21st-century global-mean steric sea level rise to ocean model formulation, revealing that numerical choices in ocean models introduce substantial uncertainty in sea level projections.",
+
+  "pub-001": "Comprehensive documentation of GFDL's ESM2 global coupled climate-carbon Earth System Models, Part 1: physical formulation and baseline simulation characteristics, establishing the second-generation ESM framework."
+}
