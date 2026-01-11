@@ -62,5 +62,6 @@
     "analysis": 15,
     "interpretation": 5,
     "writing": 5
-  }
+  },
+  "contributionStatement": "Member of the core model development team. Wrote the suite of monitoring diagnostics used during model development and evaluated the final simulation characteristics against other CMIP-class atmosphere models. (A=15\\% / I=5\\% / W=5\\%)"
 }

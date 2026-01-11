@@ -26,5 +26,6 @@
     "analysis": 10,
     "interpretation": 10,
     "writing": 10
-  }
+  },
+  "contributionStatement": "Co-authored the python package (\"xwmt\") used to analyze water mass transformation rates. (A=10\\% / I=10\\% / W=10\\%)"
 }

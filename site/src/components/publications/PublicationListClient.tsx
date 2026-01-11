@@ -13,6 +13,14 @@ interface Publication {
   featured?: boolean
   firstAuthor?: boolean
   description?: string
+  contributionStatement?: string
+  contributions?: {
+    conceptualization?: number
+    dataProduction?: number
+    analysis?: number
+    interpretation?: number
+    writing?: number
+  }
 }
 
 interface PublicationListClientProps {
@@ -20,13 +28,15 @@ interface PublicationListClientProps {
   selectedResearchArea: string | null
   searchQuery: string
   onBadgeClick: (area: string) => void
+  showContributions: boolean
 }
 
 export function PublicationListClient({
   publications,
   selectedResearchArea,
   searchQuery,
-  onBadgeClick
+  onBadgeClick,
+  showContributions
 }: PublicationListClientProps) {
   const [filteredPublications, setFilteredPublications] = useState<Publication[]>(publications)
 
@@ -87,6 +97,7 @@ export function PublicationListClient({
             number={publicationNumber}
             onBadgeClick={onBadgeClick}
             selectedResearchArea={selectedResearchArea}
+            showContributions={showContributions}
           />
         )
       })}

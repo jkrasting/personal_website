@@ -29,5 +29,6 @@
     "dataProduction": 10,
     "interpretation": 30,
     "writing": 25
-  }
+  },
+  "contributionStatement": "Mentored the lead author. Assisted with modifying the ocean model code to conduct the idealized meltwater simulations used in this study. (C=30\\% / D=10\\% / I=30\\% / W=25\\%)"
 }

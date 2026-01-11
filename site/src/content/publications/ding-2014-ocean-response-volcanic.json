@@ -24,5 +24,6 @@
     "dataProduction": 40,
     "interpretation": 5,
     "writing": 5
-  }
+  },
+  "contributionStatement": "Conducted the GFDL Earth System Model version \"2G\" (GFDL-ESM2G) simulations used in this study. (D=40\\% / I=5\\% / W=5\\%)"
 }

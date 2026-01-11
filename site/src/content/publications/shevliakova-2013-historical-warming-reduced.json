@@ -23,5 +23,6 @@
     "dataProduction": 80,
     "interpretation": 20,
     "writing": 15
-  }
+  },
+  "contributionStatement": "Conducted the GFDL Earth System Model version \"2G\" (GFDL-ESM2G) simulations used in this study and performed analysis of global mean surface air temperature response to different land use and CO2 fertilization conditions (D=80\\% / I=20\\% / W=15\\%)"
 }

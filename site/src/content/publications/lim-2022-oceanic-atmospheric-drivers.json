@@ -24,5 +24,6 @@
     "dataProduction": 30,
     "interpretation": 5,
     "writing": 5
-  }
+  },
+  "contributionStatement": "Conducted the GFDL Earth System Model version 4.1 (GFDL-ESM4.1) simulations analyzed in the study. (D=30\\% / I=5\\% / W=5\\%)"
 }

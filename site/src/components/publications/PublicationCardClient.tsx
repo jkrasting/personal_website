@@ -12,6 +12,14 @@ interface Publication {
   featured?: boolean
   firstAuthor?: boolean
   description?: string
+  contributionStatement?: string
+  contributions?: {
+    conceptualization?: number
+    dataProduction?: number
+    analysis?: number
+    interpretation?: number
+    writing?: number
+  }
 }
 
 interface PublicationCardClientProps {
@@ -19,6 +27,7 @@ interface PublicationCardClientProps {
   number?: number
   onBadgeClick: (area: string) => void
   selectedResearchArea: string | null
+  showContributions: boolean
 }
 
 const formatAuthors = (authors: string[]) => {
@@ -34,7 +43,8 @@ export function PublicationCardClient({
   publication,
   number,
   onBadgeClick,
-  selectedResearchArea
+  selectedResearchArea,
+  showContributions
 }: PublicationCardClientProps) {
   return (
     <div className="group relative block py-6 border-b border-border/60 last:border-none">
@@ -136,6 +146,105 @@ export function PublicationCardClient({
                 </svg>
                 DOI: {publication.doi}
               </a>
+            </div>
+          )}
+
+          {/* Author Contributions */}
+          {showContributions && (publication.contributionStatement || publication.contributions) && (
+            <div className="mt-4 p-4 bg-muted/30 rounded-md border border-border/50">
+              <div className="flex items-start gap-2 mb-2">
+                <svg className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <div className="flex-1">
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Author Contribution</h4>
+                  {publication.contributionStatement && (
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                      {publication.contributionStatement.replace(/\s*\([CDIAWcdiaw\s=/\d%\\]+\)\s*$/, '')}
+                    </p>
+                  )}
+                  {publication.contributions && Object.keys(publication.contributions).length > 0 && (
+                    <div className="space-y-2">
+                      <div className="text-xs font-medium text-foreground/80 mb-2">Contribution Percentages:</div>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+                        {publication.contributions.conceptualization !== undefined && (
+                          <div className="flex flex-col">
+                            <span className="text-xs text-muted-foreground mb-1">Conceptualization</span>
+                            <div className="flex items-center gap-1.5">
+                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-primary transition-all"
+                                  style={{ width: `${publication.contributions.conceptualization}%` }}
+                                />
+                              </div>
+                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.conceptualization}%</span>
+                            </div>
+                          </div>
+                        )}
+                        {publication.contributions.dataProduction !== undefined && (
+                          <div className="flex flex-col">
+                            <span className="text-xs text-muted-foreground mb-1">Data Production</span>
+                            <div className="flex items-center gap-1.5">
+                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-primary transition-all"
+                                  style={{ width: `${publication.contributions.dataProduction}%` }}
+                                />
+                              </div>
+                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.dataProduction}%</span>
+                            </div>
+                          </div>
+                        )}
+                        {publication.contributions.analysis !== undefined && (
+                          <div className="flex flex-col">
+                            <span className="text-xs text-muted-foreground mb-1">Analysis</span>
+                            <div className="flex items-center gap-1.5">
+                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-primary transition-all"
+                                  style={{ width: `${publication.contributions.analysis}%` }}
+                                />
+                              </div>
+                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.analysis}%</span>
+                            </div>
+                          </div>
+                        )}
+                        {publication.contributions.interpretation !== undefined && (
+                          <div className="flex flex-col">
+                            <span className="text-xs text-muted-foreground mb-1">Interpretation</span>
+                            <div className="flex items-center gap-1.5">
+                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-primary transition-all"
+                                  style={{ width: `${publication.contributions.interpretation}%` }}
+                                />
+                              </div>
+                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.interpretation}%</span>
+                            </div>
+                          </div>
+                        )}
+                        {publication.contributions.writing !== undefined && (
+                          <div className="flex flex-col">
+                            <span className="text-xs text-muted-foreground mb-1">Writing</span>
+                            <div className="flex items-center gap-1.5">
+                              <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-primary transition-all"
+                                  style={{ width: `${publication.contributions.writing}%` }}
+                                />
+                              </div>
+                              <span className="text-xs font-semibold text-foreground w-8 text-right">{publication.contributions.writing}%</span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           )}
         </div>

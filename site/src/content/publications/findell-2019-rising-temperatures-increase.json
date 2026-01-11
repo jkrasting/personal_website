@@ -23,5 +23,6 @@
     "dataProduction": 30,
     "interpretation": 15,
     "writing": 5
-  }
+  },
+  "contributionStatement": "Conducted the GFDL Earth System Model version \"2G\" (GFDL-ESM2G) simulations used in this study and interpreted the ocean's role in the analyzed freshwater budgets. (D=30\\% / I=15\\% / W=5\\%)"
 }

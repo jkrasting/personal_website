@@ -23,5 +23,6 @@
     "dataProduction": 20,
     "interpretation": 20,
     "writing": 10
-  }
+  },
+  "contributionStatement": "Provided access to the model used in this study. Guided the interpretation of the simulated AMOC response in this study and its interaction with deep watermasses formed in the Southern Ocean. Provided instruction to the lead author on how to run the GFDL Earth System Model version \"2G\" (GFDL-ESM2G). ( D=20\\% / I=20\\% / W=10\\%)"
 }

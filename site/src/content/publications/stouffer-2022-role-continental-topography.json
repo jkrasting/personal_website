@@ -25,5 +25,6 @@
     "analysis": 10,
     "interpretation": 20,
     "writing": 15
-  }
+  },
+  "contributionStatement": "Conducted the GFDL Earth System Model version \"2G\" (GFDL-ESM2G) simulations and developed the methodology from removing the topography from the model. (D=50\\% / A=10\\% / I=20\\% / W=15\\%)"
 }
