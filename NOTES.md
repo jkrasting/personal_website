@@ -22,15 +22,17 @@
   - Visual percentage bars for each category
   - Responsive grid layout (2-5 columns)
 
-### Known Issues
+### Known Issues & Resolutions
 1. **Memory Constraint**: Local `npm run build` killed during Astro type checking
    - Not an issue for Docker builds (completed successfully)
    - Docker build environment handles it fine
+   - **Resolution**: Always use Docker builds, avoid local npm builds
 
-2. **ACTIVE BUG**: Toggle button clicks but publications don't update
-   - Toggle state changes correctly
-   - Publication entries not showing/hiding contribution information
-   - Need to debug React state propagation
+2. **FIXED**: Toggle button was clicking but publications weren't updating
+   - **Root Cause**: Missing contribution fields in data transformation (publications.astro)
+   - **Fix 1 (Commit: 5c63719)**: Added contributionStatement and contributions to publicationsData mapping
+   - **Fix 2 (Commit: cc9d9c4)**: Added fields to Zod schema in config.ts to fix TypeScript errors
+   - **Status**: RESOLVED - Toggle now working correctly
 
 ### Files Modified
 - `site/src/components/publications/PublicationsPage.tsx` - Added toggle state and button
