@@ -33,6 +33,14 @@ const yearsLabel = current
   : yearsEnd
     ? `${yearsStart} - ${yearsEnd}`
     : `${yearsStart}`;
+
+// Logo mapping based on institution name
+const logoMap: Record<string, { src: string; alt: string }> = {
+  "Princeton University": { src: "/logos/princeton-logo.svg", alt: "Princeton University" },
+  "Rutgers University": { src: "/logos/rutgers-logo.svg", alt: "Rutgers University" },
+};
+
+const logo = logoMap[institution];
 ---
 
 <div class="p-6 border rounded-lg hover:border-primary/50 transition-colors">
@@ -67,7 +75,17 @@ const yearsLabel = current
     </ul>
   )}
 
-  <p class="text-xs text-muted-foreground">
-    Typical enrollment: {enrollment} students
-  </p>
+  <div class="flex items-end justify-between mt-4">
+    <p class="text-xs text-muted-foreground">
+      Typical enrollment: {enrollment} students
+    </p>
+    {logo && (
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        class="w-8 h-8 opacity-50 hover:opacity-80 transition-opacity"
+        loading="lazy"
+      />
+    )}
+  </div>
 </div>

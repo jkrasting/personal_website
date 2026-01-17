@@ -199,6 +199,20 @@
         "title": "Reaching Beyond the Classroom",
         "description": "Connecting concepts to real-world applications and careers through alumni panels and practical examples"
       }
+    ],
+    "studentTestimonials": [
+      { "quote": "John Krasting may be one of the best Professors I've come across in my entire experience of Rutgers. He enables learning through his engaging personality and informative lessons.", "semester": "Fall 2020", "theme": "Overall Impact" },
+      { "quote": "The only problem I have is that he doesn't teach more classes.", "semester": "Fall 2020", "theme": "Overall Impact" },
+      { "quote": "Dr. Krasting has opened my eyes to the world of meteorology. I greatly appreciated learning all about the weather in his class, and has inspired me to learn more about meteorology.", "semester": "Fall 2024", "theme": "Overall Impact" },
+      { "quote": "Professor Krasting is perhaps one of the most passionate professors I have ever had the pleasure of learning with during my time at Rutgers. It is clear he loves what he teaches.", "semester": "Fall 2024", "theme": "Passion" },
+      { "quote": "Professor K's enthusiasm for the weather is infectious. He gets full on class discussions with the topics and the ways he presents them.", "semester": "Fall 2019", "theme": "Passion" },
+      { "quote": "My favorite part of the course was the Jeopardy-style review sessions for exams. They were a way for me to assess my knowledge while having fun and working as a team with my classmates.", "semester": "Fall 2021", "theme": "Engagement" },
+      { "quote": "The course made meteorology accessible to learn even for a non-science major.", "semester": "Fall 2020", "theme": "Engagement" },
+      { "quote": "This was my favorite course that I took this semester. Interesting material taught in a relatable and understandable way.", "semester": "Fall 2019", "theme": "Engagement" },
+      { "quote": "Professor Krasting always encouraged questions in a positive manner so it did not make anyone nervous to learn.", "semester": "Fall 2021", "theme": "Support" },
+      { "quote": "Whenever I asked questions after class, Professor Krasting made sure to answer my questions thoroughly.", "semester": "Fall 2022", "theme": "Support" },
+      { "quote": "The professor always forecasts next week's weather conditions. And when I talk with my friends, I look like a prophet.", "semester": "Fall 2019", "theme": "Real-World" },
+      { "quote": "My day to day has been impacted and I will never look at the weather the same. It is amazing that I understand the weather and meteorology on a deeper level than most.", "semester": "Fall 2019", "theme": "Real-World" }
     ]
   },
   "mentoring": {
@@ -351,5 +365,20 @@
       "endYear": 2022,
       "researchAreas": ["ocean-dynamics"]
     }
-  ]
+  ],
+  "extensionOutreach": {
+    "title": "Science Communication & Public Outreach",
+    "overview": "Effective science communication requires translating complex concepts for diverse audiences. My experience as a broadcast meteorologist and research scientist at NOAA enables me to make climate science accessible and relevant. I believe in demonstrating how research impacts daily life, helping people understand the science behind weather and climate.",
+    "activities": [
+      "Speaking engagements at local schools and community organizations",
+      "Media interviews translating climate research for public understanding",
+      "Curriculum development connecting students with real-world climate data",
+      "Career guidance for students entering atmospheric sciences"
+    ],
+    "featuredImage": {
+      "src": "/images/pascack-event.png",
+      "alt": "Dr. John Krasting speaking to students at Pascack Valley Regional High School",
+      "caption": "Speaking to students at Pascack Valley Regional High School, Hillsdale, NJ — April 2019"
+    }
+  }
 }
