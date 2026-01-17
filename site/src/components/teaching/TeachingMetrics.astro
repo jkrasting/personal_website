@@ -1,0 +1,44 @@
+---
+interface Props {
+  teachingEffectiveness: number;
+  teachingEffectivenessDeptMean: number;
+  courseQuality: number;
+  courseQualityDeptMean: number;
+  totalStudents: number;
+  yearsTeaching: number;
+}
+
+const {
+  teachingEffectiveness,
+  teachingEffectivenessDeptMean,
+  courseQuality,
+  courseQualityDeptMean,
+  totalStudents,
+  yearsTeaching,
+} = Astro.props;
+---
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-card rounded-lg border mb-12">
+  <div class="text-center">
+    <div class="text-2xl sm:text-3xl font-medium text-primary">{teachingEffectiveness}</div>
+    <div class="text-xs text-muted-foreground">out of 5.0</div>
+    <div class="text-sm text-muted-foreground mt-1">Teaching Effectiveness</div>
+    <div class="text-xs text-muted-foreground">(Dept avg: {teachingEffectivenessDeptMean})</div>
+  </div>
+  <div class="text-center">
+    <div class="text-2xl sm:text-3xl font-medium text-primary">{courseQuality}</div>
+    <div class="text-xs text-muted-foreground">out of 5.0</div>
+    <div class="text-sm text-muted-foreground mt-1">Course Quality</div>
+    <div class="text-xs text-muted-foreground">(Dept avg: {courseQualityDeptMean})</div>
+  </div>
+  <div class="text-center">
+    <div class="text-2xl sm:text-3xl font-medium">{totalStudents}+</div>
+    <div class="text-sm text-muted-foreground mt-1">Students Taught</div>
+    <div class="text-xs text-muted-foreground">since 2016</div>
+  </div>
+  <div class="text-center">
+    <div class="text-2xl sm:text-3xl font-medium">{yearsTeaching}+</div>
+    <div class="text-sm text-muted-foreground mt-1">Years Teaching</div>
+    <div class="text-xs text-muted-foreground">university level</div>
+  </div>
+</div>
