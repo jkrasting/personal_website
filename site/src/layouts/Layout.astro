@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import SessionAuth from "../components/SessionAuth.astro";
 
 interface Props {
   title?: string;
@@ -46,6 +47,7 @@ const {
   <body
     class="relative flex flex-col w-full min-h-dvh justify-center items-center bg-background"
   >
+    <SessionAuth />
     <slot />
   </body>
 </html>
@@ -57,9 +59,9 @@ const {
 
   @layer base {
     :root {
-      /* Bright red accent theme */
-      --primary: 0, 80%, 50%;
-      --secondary: 5, 75%, 55%;
+      /* Rutgers-inspired accent theme */
+      --primary: 345, 100%, 40%;          /* Rutgers Scarlet #CC0033 */
+      --secondary: 355, 83%, 30%;         /* Rutgers Dark Red #8E0D18 */
       --background: 0, 0%, 100%;
       --foreground: 0, 0%, 9%;
       --card: 0, 0%, 98%;
@@ -69,6 +71,37 @@ const {
       --accent: 0, 0%, 92%;
       --border: 220 13% 91%;
       --dark-border: 0, 0%, 11%;
+
+      /* Rutgers Supporting Color Palette */
+      /* Gray */
+      --rutgers-gray-dark: #222222;
+      --rutgers-gray-mid: #666666;
+      --rutgers-gray-pale: #D8D8D8;
+      --rutgers-gray-light: #EFEFEF;
+
+      /* Teal */
+      --rutgers-teal-dark: #00626D;
+      --rutgers-teal-mid: #52A2A9;
+      --rutgers-teal-pale: #87C3BE;
+      --rutgers-teal-light: #E3F3EF;
+
+      /* Blue */
+      --rutgers-blue-dark: #007FAC;
+      --rutgers-blue-mid: #7DBFD6;
+      --rutgers-blue-pale: #92D6E3;
+      --rutgers-blue-light: #DEF0F9;
+
+      /* Yellow */
+      --rutgers-yellow-dark: #EBB600;
+      --rutgers-yellow-mid: #F5D36A;
+      --rutgers-yellow-pale: #FCE48B;
+      --rutgers-yellow-light: #FFF6D4;
+
+      /* Scarlet (derived from primary) */
+      --rutgers-scarlet-dark: #8E0D18;
+      --rutgers-scarlet-mid: #D94F5C;
+      --rutgers-scarlet-pale: #F2D4D9;
+      --rutgers-scarlet-light: #FDF0F2;
     }
   }
 
@@ -93,4 +126,39 @@ const {
       0 3px 3px -1.5px var(--shade), 0 6px 6px -3px var(--shade),
       0 12px 12px -6px var(--base), 0 24px 24px -12px var(--base);
   }
+
+  /* Rutgers Pale Badge Styles - for use with research area and course badges */
+  /* All pale colors use black text per Rutgers style guide */
+  .badge-pale-teal {
+    background-color: var(--rutgers-teal-pale);
+    color: #000000;
+    border-color: var(--rutgers-teal-mid);
+  }
+  .badge-pale-blue {
+    background-color: var(--rutgers-blue-pale);
+    color: #000000;
+    border-color: var(--rutgers-blue-mid);
+  }
+  .badge-pale-yellow {
+    background-color: var(--rutgers-yellow-pale);
+    color: #000000;
+    border-color: var(--rutgers-yellow-mid);
+  }
+  .badge-pale-gray {
+    background-color: var(--rutgers-gray-pale);
+    color: #000000;
+    border-color: var(--rutgers-gray-mid);
+  }
+  .badge-pale-scarlet {
+    background-color: var(--rutgers-scarlet-pale);
+    color: #000000;
+    border-color: var(--rutgers-scarlet-mid);
+  }
+
+  /* Dot colors for legend indicators */
+  .dot-teal { background-color: var(--rutgers-teal-mid); }
+  .dot-blue { background-color: var(--rutgers-blue-mid); }
+  .dot-yellow { background-color: var(--rutgers-yellow-mid); }
+  .dot-gray { background-color: var(--rutgers-gray-mid); }
+  .dot-scarlet { background-color: var(--rutgers-scarlet-mid); }
 </style>

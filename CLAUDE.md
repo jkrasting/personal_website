@@ -23,6 +23,18 @@ This project is a professional academic website for **Dr. John P. Krasting**, a 
 - **Display**: Single-line comma-separated format (e.g., "Conceptualization 80%, Writing 25%")
 - **Tool**: `extract_contributions.py` - Automated extraction script
 
+### Session-Based Authentication (January 17, 2026)
+- **Replaced**: HTTP Basic Authentication removed (was using nginx `.htpasswd`)
+- **New System**: JavaScript session-based authentication using `sessionStorage`
+- **Component**: `site/src/components/SessionAuth.astro`
+- **Password**: Currently set to "elmer" (configurable in component)
+- **Behavior**:
+  - Prompts once per browser session (styled modal overlay)
+  - Works on any page as entry point
+  - Clears when browser closes (security)
+  - Client-side only (suitable for preview/staging, not cryptographic security)
+- **Note**: Remove authentication component before production launch
+
 ### CRITICAL: Build and Development Constraints
 
 **⚠️ NEVER RUN LOCAL BUILDS** - The server has limited memory and `npm run build` will crash it during Astro's TypeScript checking phase. Always use Docker builds:
@@ -415,12 +427,13 @@ The final website must:
 - **Watchtower**: Excluded from auto-updates (no `com.centurylinklabs.watchtower.enable` label)
   - Reason: Custom-built site requiring manual testing before deployment
   - Updates require: content changes → rebuild → manual deployment
-- **Basic Authentication**: HTTP basic auth enabled for preview/staging access
-  - Configured in `nginx.conf` with `auth_basic "Preview Access"`
-  - Credentials stored in `.htpasswd` file (git-ignored)
-  - Protects entire site including PDFs
-  - Generate new credentials: `htpasswd -c .htpasswd username`
-  - Note: Remove for production launch
+- **Session Authentication**: JavaScript-based preview access protection
+  - Component: `site/src/components/SessionAuth.astro`
+  - Password: "elmer" (edit `CORRECT_PASSWORD` constant to change)
+  - Session-based: Prompts once per browser session, clears on browser close
+  - Client-side only: Not cryptographic security, suitable for preview/staging
+  - To change password: Edit component → `docker compose build && docker compose up -d`
+  - Note: Remove `<SessionAuth />` from Layout.astro before production launch
 - Comprehensive documentation in README-DEPLOYMENT.md
 
 ## Next Steps

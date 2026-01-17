@@ -118,7 +118,7 @@ export function PublicationCardClient({
                   <button
                     key={area}
                     onClick={() => onBadgeClick(area)}
-                    className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-all hover:shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer ${colors.bg} ${colors.text} ${colors.border} ${isSelected ? 'ring-2 ring-offset-2 shadow-lg scale-105' : ''}`}
+                    className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-all hover:shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer ${colors.badgeClass} ${isSelected ? 'ring-2 ring-offset-2 shadow-lg scale-105' : ''}`}
                     aria-label={`Filter by ${displayName}`}
                   >
                     {displayName}
