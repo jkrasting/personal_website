@@ -2,6 +2,37 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Rutgers Visual Identity Colors */
+  /* Gray */
+  --rutgers-gray-dark: #222222;
+  --rutgers-gray-mid: #666666;
+  --rutgers-gray-pale: #D8D8D8;
+  --rutgers-gray-light: #EFEFEF;
+
+  /* Teal */
+  --rutgers-teal-dark: #00626D;
+  --rutgers-teal-mid: #52A2A9;
+  --rutgers-teal-pale: #87C3BE;
+  --rutgers-teal-light: #E3F3EF;
+
+  /* Blue */
+  --rutgers-blue-dark: #007FAC;
+  --rutgers-blue-mid: #7DBFD6;
+  --rutgers-blue-pale: #92D6E3;
+  --rutgers-blue-light: #DEF0F9;
+
+  /* Yellow */
+  --rutgers-yellow-dark: #EBB600;
+  --rutgers-yellow-mid: #F5D36A;
+  --rutgers-yellow-pale: #FCE48B;
+  --rutgers-yellow-light: #FFF6D4;
+
+  /* Scarlet (derived from primary) */
+  --rutgers-scarlet-dark: #8E0D18;
+  --rutgers-scarlet-mid: #D94F5C;
+  --rutgers-scarlet-pale: #F2D4D9;
+  --rutgers-scarlet-light: #FDF0F2;
 }
 
 body {
@@ -33,3 +64,38 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   @apply bg-gray-200 rounded-full;
 }
+
+/* Rutgers Pale Badge Styles - for use with research area and course badges */
+/* All pale colors use black text per Rutgers style guide */
+.badge-pale-teal {
+  background-color: var(--rutgers-teal-pale);
+  color: #000000;
+  border-color: var(--rutgers-teal-mid);
+}
+.badge-pale-blue {
+  background-color: var(--rutgers-blue-pale);
+  color: #000000;
+  border-color: var(--rutgers-blue-mid);
+}
+.badge-pale-yellow {
+  background-color: var(--rutgers-yellow-pale);
+  color: #000000;
+  border-color: var(--rutgers-yellow-mid);
+}
+.badge-pale-gray {
+  background-color: var(--rutgers-gray-pale);
+  color: #000000;
+  border-color: var(--rutgers-gray-mid);
+}
+.badge-pale-scarlet {
+  background-color: var(--rutgers-scarlet-pale);
+  color: #000000;
+  border-color: var(--rutgers-scarlet-mid);
+}
+
+/* Dot colors for legend indicators */
+.dot-teal { background-color: var(--rutgers-teal-mid); }
+.dot-blue { background-color: var(--rutgers-blue-mid); }
+.dot-yellow { background-color: var(--rutgers-yellow-mid); }
+.dot-gray { background-color: var(--rutgers-gray-mid); }
+.dot-scarlet { background-color: var(--rutgers-scarlet-mid); }

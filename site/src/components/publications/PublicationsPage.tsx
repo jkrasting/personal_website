@@ -14,6 +14,14 @@ interface Publication {
   featured?: boolean
   firstAuthor?: boolean
   description?: string
+  contributionStatement?: string
+  contributions?: {
+    conceptualization?: number
+    dataProduction?: number
+    analysis?: number
+    interpretation?: number
+    writing?: number
+  }
 }
 
 interface ResearchAreaLegend {
@@ -30,6 +38,7 @@ interface PublicationsPageProps {
 export function PublicationsPage({ publications, researchAreasLegend }: PublicationsPageProps) {
   const [selectedResearchArea, setSelectedResearchArea] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState<string>('')
+  const [showContributions, setShowContributions] = useState<boolean>(false)
 
   const handleBadgeClick = (area: string) => {
     // Toggle: if clicking the same area, clear it; otherwise, set the new area
@@ -197,7 +206,29 @@ export function PublicationsPage({ publications, researchAreasLegend }: Publicat
         selectedResearchArea={selectedResearchArea}
         searchQuery={searchQuery}
         onBadgeClick={handleBadgeClick}
+        showContributions={showContributions}
       />
+
+      {/* Contribution Toggle */}
+      <div className="mt-6 flex justify-end">
+        <button
+          onClick={() => setShowContributions(!showContributions)}
+          className={`inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors border ${
+            showContributions
+              ? 'bg-primary text-primary-foreground border-primary'
+              : 'bg-background text-foreground border-border hover:bg-muted'
+          }`}
+          aria-pressed={showContributions}
+        >
+          <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          {showContributions ? 'Hide' : 'Show'} Author Contributions
+        </button>
+      </div>
     </div>
   )
 }

@@ -11,33 +11,39 @@ export const researchAreaNames: Record<string, string> = {
 
 /**
  * Research area color mapping
- * Maps research area slug identifiers to their corresponding color classes
+ * Maps research area slug identifiers to their corresponding Rutgers pale palette colors
+ * Using CSS custom classes defined in global.css for consistent Rutgers branding
  */
-export const researchAreaColors: Record<string, { bg: string; text: string; border: string }> = {
+export const researchAreaColors: Record<string, { bg: string; text: string; border: string; badgeClass: string }> = {
   'sea-level-rise': {
-    bg: 'bg-blue-500/15',
-    text: 'text-blue-700 dark:text-blue-300',
-    border: 'border-blue-500/30',
+    bg: 'bg-[var(--rutgers-blue-pale)]',
+    text: 'text-[var(--rutgers-blue-dark)]',
+    border: 'border-[var(--rutgers-blue-mid)]',
+    badgeClass: 'badge-pale-blue',
   },
   'ocean-dynamics': {
-    bg: 'bg-green-500/15',
-    text: 'text-green-700 dark:text-green-300',
-    border: 'border-green-500/30',
+    bg: 'bg-[var(--rutgers-teal-pale)]',
+    text: 'text-[var(--rutgers-teal-dark)]',
+    border: 'border-[var(--rutgers-teal-mid)]',
+    badgeClass: 'badge-pale-teal',
   },
   'carbon-cycle': {
-    bg: 'bg-purple-500/15',
-    text: 'text-purple-700 dark:text-purple-300',
-    border: 'border-purple-500/30',
+    bg: 'bg-[var(--rutgers-yellow-pale)]',
+    text: 'text-[var(--rutgers-yellow-dark)]',
+    border: 'border-[var(--rutgers-yellow-mid)]',
+    badgeClass: 'badge-pale-yellow',
   },
   'esm-development': {
-    bg: 'bg-orange-500/15',
-    text: 'text-orange-700 dark:text-orange-300',
-    border: 'border-orange-500/30',
+    bg: 'bg-[var(--rutgers-gray-pale)]',
+    text: 'text-[var(--rutgers-gray-dark)]',
+    border: 'border-[var(--rutgers-gray-mid)]',
+    badgeClass: 'badge-pale-gray',
   },
   'model-diagnostics': {
-    bg: 'bg-red-500/15',
-    text: 'text-red-700 dark:text-red-300',
-    border: 'border-red-500/30',
+    bg: 'bg-[var(--rutgers-scarlet-pale)]',
+    text: 'text-[var(--rutgers-scarlet-dark)]',
+    border: 'border-[var(--rutgers-scarlet-mid)]',
+    badgeClass: 'badge-pale-scarlet',
   },
 };
 
@@ -51,24 +57,25 @@ export function getResearchAreaName(areaSlug: string): string {
 /**
  * Get color classes for a research area slug
  */
-export function getResearchAreaColor(areaSlug: string): { bg: string; text: string; border: string } {
+export function getResearchAreaColor(areaSlug: string): { bg: string; text: string; border: string; badgeClass: string } {
   return researchAreaColors[areaSlug] || {
-    bg: 'bg-muted/30',
-    text: 'text-muted-foreground',
-    border: 'border-border',
+    bg: 'bg-[var(--rutgers-gray-pale)]',
+    text: 'text-[var(--rutgers-gray-dark)]',
+    border: 'border-[var(--rutgers-gray-mid)]',
+    badgeClass: 'badge-pale-gray',
   };
 }
 
 /**
- * Get the dot color for the legend
+ * Get the dot color for the legend (uses Rutgers mid colors)
  */
 export function getResearchAreaDotColor(areaSlug: string): string {
   const colorMap: Record<string, string> = {
-    'sea-level-rise': 'bg-blue-500',
-    'ocean-dynamics': 'bg-green-500',
-    'carbon-cycle': 'bg-purple-500',
-    'esm-development': 'bg-orange-500',
-    'model-diagnostics': 'bg-red-500',
+    'sea-level-rise': 'dot-blue',
+    'ocean-dynamics': 'dot-teal',
+    'carbon-cycle': 'dot-yellow',
+    'esm-development': 'dot-gray',
+    'model-diagnostics': 'dot-scarlet',
   };
-  return colorMap[areaSlug] || 'bg-gray-500';
+  return colorMap[areaSlug] || 'dot-gray';
 }

@@ -16,10 +16,12 @@ const publications = allPapers.map(paper => ({
   journal: paper.data.venue, // Map 'venue' to 'journal'
   doi: paper.data.doi,
   impactFactor: undefined, // Not available in current schema
-  researchAreas: [], // Not available in current schema
+  researchAreas: paper.data.researchAreas || [],
   featured: paper.data.featured,
-  firstAuthor: false, // Not available in current schema
+  firstAuthor: paper.data.firstAuthor || false,
   description: paper.body || undefined,
+  contributionStatement: paper.data.contributionStatement,
+  contributions: paper.data.contributions,
 }));
 
 // Build research areas legend from the color mapping

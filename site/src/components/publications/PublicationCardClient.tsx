@@ -12,6 +12,14 @@ interface Publication {
   featured?: boolean
   firstAuthor?: boolean
   description?: string
+  contributionStatement?: string
+  contributions?: {
+    conceptualization?: number
+    dataProduction?: number
+    analysis?: number
+    interpretation?: number
+    writing?: number
+  }
 }
 
 interface PublicationCardClientProps {
@@ -19,6 +27,7 @@ interface PublicationCardClientProps {
   number?: number
   onBadgeClick: (area: string) => void
   selectedResearchArea: string | null
+  showContributions: boolean
 }
 
 const formatAuthors = (authors: string[]) => {
@@ -34,7 +43,8 @@ export function PublicationCardClient({
   publication,
   number,
   onBadgeClick,
-  selectedResearchArea
+  selectedResearchArea,
+  showContributions
 }: PublicationCardClientProps) {
   return (
     <div className="group relative block py-6 border-b border-border/60 last:border-none">
@@ -90,13 +100,8 @@ export function PublicationCardClient({
 
           <div className="flex flex-wrap items-center gap-2">
             {publication.firstAuthor && (
-              <span className="inline-flex items-center rounded-full border border-transparent bg-secondary px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+              <span className="inline-flex items-center rounded-full border badge-pale-gray px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
                 First Author
-              </span>
-            )}
-            {publication.featured && (
-              <span className="inline-flex items-center rounded-full border border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
-                Featured
               </span>
             )}
             {publication.researchAreas && publication.researchAreas.length > 0 && (
@@ -136,6 +141,40 @@ export function PublicationCardClient({
                 </svg>
                 DOI: {publication.doi}
               </a>
+            </div>
+          )}
+
+          {/* Author Contributions */}
+          {showContributions && (publication.contributionStatement || publication.contributions) && (
+            <div className="mt-4 p-4 bg-muted/30 rounded-md border border-border/50">
+              <div className="flex items-start gap-2 mb-2">
+                <svg className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <div className="flex-1">
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Author Contribution</h4>
+                  {publication.contributionStatement && (
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-2">
+                      {publication.contributionStatement.replace(/\s*\([CDIAWcdiaw\s=/\d%\\]+\)\s*$/, '')}
+                    </p>
+                  )}
+                  {publication.contributions && Object.keys(publication.contributions).length > 0 && (
+                    <p className="text-xs text-muted-foreground">
+                      <span className="font-medium text-foreground/80">Contribution Percentages: </span>
+                      {[
+                        publication.contributions.conceptualization !== undefined && `Conceptualization ${publication.contributions.conceptualization}%`,
+                        publication.contributions.dataProduction !== undefined && `Data Production ${publication.contributions.dataProduction}%`,
+                        publication.contributions.analysis !== undefined && `Analysis ${publication.contributions.analysis}%`,
+                        publication.contributions.interpretation !== undefined && `Interpretation ${publication.contributions.interpretation}%`,
+                        publication.contributions.writing !== undefined && `Writing ${publication.contributions.writing}%`
+                      ].filter(Boolean).join(', ')}
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
           )}
         </div>
