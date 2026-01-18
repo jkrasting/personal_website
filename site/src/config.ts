@@ -13,14 +13,14 @@ export const SITE = {
   // Lab Info
   labName: 'Dr. John P. Krasting',
   university: 'NOAA GFDL | Princeton University | Rutgers University',
-  logo: '/assets/logo-real.svg', // Logo path
-  avatar: '/assets/logo-real.svg', // Avatar for SEO/Schema
+  logo: '/assets/Earth.png', // Logo path
+  avatar: '/assets/Earth.png', // Avatar for SEO/Schema
   email: 'John.Krasting@noaa.gov',
 
   // Hero Section (Home Page)
   hero: {
-    title: 'Climate Science Research & Education',
-    subtitle: 'Physical Scientist at NOAA GFDL | Lecturer at Princeton & Rutgers',
+    title: 'Connecting Global Changes to Local Impacts',
+    subtitle: 'Dr. John P. Krasting | Climate Scientist and Modeler',
     action: 'View Publications', // Optional call to action text
     image: heroImage, // Hero image path
   },
@@ -28,10 +28,10 @@ export const SITE = {
   // Navigation
   nav: [
     { text: 'Home', link: '/', key: 'home' },
-    { text: 'Research', link: '/research', key: 'research' },
     { text: 'Publications', link: '/publications', key: 'publications' },
-    { text: 'Achievements', link: '/achievements', key: 'achievements' },
+    { text: 'Research', link: '/research', key: 'research' },
     { text: 'Teaching', link: '/teaching', key: 'teaching' },
+    { text: 'Achievements', link: '/achievements', key: 'achievements' },
     { text: 'CV', link: '/cv', key: 'cv' },
     { text: 'Search', link: '/search', key: 'search' },
   ],
@@ -55,9 +55,9 @@ export const LOCALE = {
 
 export const LOGO_IMAGE = {
   enable: true,
-  svg: true,
-  width: 216,
-  height: 46,
+  svg: false,
+  width: 40,
+  height: 40,
 };
 
 export const SOCIALS = [
