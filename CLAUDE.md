@@ -13,7 +13,7 @@
 - Physical Scientist (ZP-IV) at NOAA GFDL (2009-present)
 - Lecturer at Princeton University; Adjunct Lecturer at Rutgers University
 - Research: Climate modeling, sea level rise, ocean dynamics, Earth system models
-- 44 peer-reviewed publications (h-index: 31)
+- 45 peer-reviewed publications (h-index: 31)
 - $8M+ research funding
 
 ## Directory Structure
@@ -21,7 +21,7 @@
 site/src/
 ├── pages/           # Astro pages (index, publications, research, teaching, cv, achievements)
 ├── content/         # Content collections
-│   ├── publications/  # 44 publication markdown files
+│   ├── publications/  # 45 publication markdown files (use DOI-based names for new pubs)
 │   ├── research/      # 5 research area pages
 │   ├── honors/        # Awards and distinctions
 │   └── softwares/     # Software and data products

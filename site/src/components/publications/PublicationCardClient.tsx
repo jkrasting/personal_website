@@ -1,4 +1,5 @@
 import { getResearchAreaColor, getResearchAreaName } from '../../lib/researchAreaColors'
+import { CitationPopover } from './CitationPopover'
 
 interface Publication {
   id: string
@@ -126,8 +127,8 @@ export function PublicationCardClient({
             )}
           </div>
 
-          {publication.doi && (
-            <div className="mt-1">
+          <div className="mt-1 flex items-center gap-3">
+            {publication.doi && (
               <a
                 href={`https://doi.org/${publication.doi}`}
                 target="_blank"
@@ -141,8 +142,17 @@ export function PublicationCardClient({
                 </svg>
                 DOI: {publication.doi}
               </a>
-            </div>
-          )}
+            )}
+            <CitationPopover
+              publication={{
+                authors: publication.authors,
+                year: publication.year,
+                title: publication.title,
+                journal: publication.journal,
+                doi: publication.doi,
+              }}
+            />
+          </div>
 
           {/* Author Contributions */}
           {showContributions && (publication.contributionStatement || publication.contributions) && (
