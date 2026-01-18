@@ -1,6 +1,7 @@
 ---
 title: "Ocean Dynamics & Circulation"
 description: "Understanding ocean circulation, water mass transformation, and heat transport in a changing climate"
+cover: ./ocean-card.jpg
 order: 2
 ---
 

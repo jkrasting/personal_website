@@ -1,6 +1,7 @@
 ---
 title: "Earth System Model Development"
 description: "Core developer of GFDL climate models used in IPCC assessments and global climate research"
+cover: ./modeling-card.jpg
 order: 4
 ---
 

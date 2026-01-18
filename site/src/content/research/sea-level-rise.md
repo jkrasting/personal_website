@@ -1,6 +1,7 @@
 ---
 title: "Sea Level Rise & Coastal Impacts"
 description: "Improving projections of global and regional sea level change to support coastal resilience planning"
+cover: ./coastal-card.jpg
 order: 1
 ---
 

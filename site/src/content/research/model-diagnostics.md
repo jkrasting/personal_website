@@ -1,6 +1,7 @@
 ---
 title: "Model Diagnostics & Evaluation"
 description: "Leading community frameworks for process-oriented climate model evaluation"
+cover: ./diagnostics-card.jpg
 order: 5
 ---
 

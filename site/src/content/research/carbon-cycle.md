@@ -1,6 +1,7 @@
 ---
 title: "Carbon Cycle & Biogeochemistry"
 description: "Understanding ocean and land carbon uptake, acidification, and climate sensitivity to emissions"
+cover: ./carbon-card.jpg
 order: 3
 ---
 
