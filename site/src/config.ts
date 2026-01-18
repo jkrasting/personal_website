@@ -1,4 +1,4 @@
-import heroImage from './assets/hero-real.jpg';
+import heroImage from './assets/shore.jpg';
 
 export const SITE = {
   website: 'https://johnkrasting.com/',
