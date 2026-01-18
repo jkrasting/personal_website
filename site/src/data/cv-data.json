@@ -95,126 +95,29 @@
   ],
   "teaching": [
     {
-      "course": "Climate II: Coupled Earth System Dynamics",
-      "courseNumber": "AOS-562",
+      "course": "Climate Dynamics (AOS-562)",
       "institution": "Princeton University",
       "department": "Atmospheric and Oceanic Sciences Program",
       "level": "graduate",
       "yearsStart": 2025,
-      "current": true,
-      "enrollment": "~15",
-      "description": "This course is a graduate-level synthesis of how individual components come together and interact to form the Earth's climate system. In 2025, my co-instructor and I were tasked with reimagining this course from the ground up, as it had not been taught at Princeton University for several years. The course is now centered on using a hierarchy of models, ranging from idealized, theoretical representations of the Earth system to fully coupled, comprehensive numerical climate models, to illustrate the core concepts in the course.",
-      "highlights": [
-        "Uses hierarchy of models from idealized to fully coupled comprehensive climate models",
-        "Spans atmospheric and ocean dynamics, cryospheric processes, and land surface interactions",
-        "Tailored to each student's research and career trajectory"
-      ]
+      "current": true
     },
     {
-      "course": "Introduction to Meteorology",
-      "courseNumber": "11:670:101",
+      "course": "Introduction to Meteorology (11:670:101)",
       "institution": "Rutgers University",
       "department": "Department of Environmental Sciences",
       "level": "undergraduate",
-      "yearsStart": 2016,
-      "current": true,
-      "enrollment": "60-120",
-      "description": "This is the introductory course in the meteorology program. It is a core requirement for students majoring in meteorology, but the course also fulfills the natural science requirement for most Rutgers students. It is a large lecture course that attracts between 60 and 120 students representing a diverse cross-section of majors. I incorporate a real-time weather discussion based on conditions around the state, the nation, and the world to help students relate the concepts learned in the classroom to current events.",
-      "highlights": [
-        "Real-time weather discussions connecting concepts to current events",
-        "Balances quantitative rigor for majors with conceptual learning for non-majors",
-        "Cultivates curiosity for atmosphere, weather, and the world"
-      ]
+      "yearsStart": 2015,
+      "current": true
     },
     {
-      "course": "Climate Dynamics",
-      "courseNumber": "11:670:461 / 16:107:545",
+      "course": "Climate Dynamics (16:107:545)",
       "institution": "Rutgers University",
       "department": "Department of Environmental Sciences",
       "level": "graduate",
-      "yearsStart": 2011,
-      "yearsEnd": 2011,
-      "current": false,
-      "enrollment": "~20",
-      "description": "Graduate-level course covering the dynamics of the Earth's climate system, including atmospheric and ocean circulation, energy balance, and climate variability."
-    },
-    {
-      "course": "Guest Lectures: Mass, Momentum, and Energy Transport",
-      "courseNumber": "CBE-341",
-      "institution": "Princeton University",
-      "department": "Chemical and Biological Engineering",
-      "level": "undergraduate",
-      "yearsStart": 2011,
-      "yearsEnd": 2016,
-      "current": false,
-      "enrollment": "~30",
-      "description": "Annual guest lectures on climate science applications of transport phenomena, delivered as invited expert talks to undergraduate students."
+      "year": 2011
     }
   ],
-  "teachingMetrics": {
-    "teachingEffectiveness": 4.72,
-    "teachingEffectivenessDeptMean": 4.40,
-    "courseQuality": 4.64,
-    "courseQualityDeptMean": 4.33,
-    "totalStudents": 950,
-    "yearsTeaching": 10
-  },
-  "teachingPhilosophy": {
-    "overview": "We are living in an era of rapid information transformation. Content is more readily available to students, and their attention is continuously being diverted and sought after on multiple platforms and in a variety of formats. In such an environment, my teaching philosophy emphasizes qualities that are uniquely human: curiosity and creativity. As a lecturer at Rutgers University and Princeton University, I have come to understand that research and teaching are deeply intertwined. As we teach, we continuously build curiosity around the topic and grow a deeper understanding of the material.",
-    "keyPrinciples": [
-      {
-        "title": "Learning Through Questioning",
-        "description": "I take a Socratic approach in guiding students to arrive at their own conclusions. I view myself as a trail guide over the course of a semester, and my role is to lead students on a journey of exploration, encouraging them to notice, question, and explore along the way. I strongly encourage students to seek out evidence to support their views and reinforce what they are learning."
-      },
-      {
-        "title": "Inclusive and Adaptable Teaching",
-        "description": "Each student is unique and approaches learning in an individual way. I believe in understanding the diverse learning styles of my students and tailoring my lessons to meet their individual needs. My lectures are filled with analogies, personal anecdotes, and real-world examples, while being rooted in traditional theoretical, mathematical, and physical interpretations."
-      },
-      {
-        "title": "Developing Essential Skills",
-        "description": "Students must develop professional skills in addition to subject understanding. I incorporate Python coding exercises into problem sets and emphasize strong communication skills in feedback, helping students grow both technical abilities and scientific knowledge. Developing climate scientists of the future requires instilling both analytical rigor and communication clarity."
-      },
-      {
-        "title": "Reaching Beyond the Classroom",
-        "description": "My experience as a research scientist and broadcast meteorologist enables me to demonstrate how classroom concepts translate to real-world skills. I regularly invite alumni to participate in career panels, showcasing how meteorology complements other fields in weather risk analysis, energy forecasting, and science communication."
-      }
-    ]
-  },
-  "teachingEvidence": {
-    "summary": "Multiple lines of evidence demonstrate teaching effectiveness. Quantitative metrics from student surveys show average teaching effectiveness (4.72) and course quality (4.64) ratings consistently ranking near the top of a 5-point scale, outperforming departmental means in each semester.",
-    "themes": [
-      {
-        "title": "Generating Excitement and Inspiration",
-        "description": "Passion for weather and climate that inspires student interest through weekly weather discussions and sharing current research"
-      },
-      {
-        "title": "Teaching with Engagement",
-        "description": "Interactive discussions, questioning techniques, and constructive dialogue that builds rapport with students"
-      },
-      {
-        "title": "Supporting the Student",
-        "description": "Accessibility, compassion, and flexibility with office hours that promotes individual attention and accommodates diverse needs"
-      },
-      {
-        "title": "Reaching Beyond the Classroom",
-        "description": "Connecting concepts to real-world applications and careers through alumni panels and practical examples"
-      }
-    ],
-    "studentTestimonials": [
-      { "quote": "John Krasting may be one of the best Professors I've come across in my entire experience of Rutgers. He enables learning through his engaging personality and informative lessons.", "semester": "Fall 2020", "theme": "Overall Impact" },
-      { "quote": "The only problem I have is that he doesn't teach more classes.", "semester": "Fall 2020", "theme": "Overall Impact" },
-      { "quote": "Dr. Krasting has opened my eyes to the world of meteorology. I greatly appreciated learning all about the weather in his class, and has inspired me to learn more about meteorology.", "semester": "Fall 2024", "theme": "Overall Impact" },
-      { "quote": "Professor Krasting is perhaps one of the most passionate professors I have ever had the pleasure of learning with during my time at Rutgers. It is clear he loves what he teaches.", "semester": "Fall 2024", "theme": "Passion" },
-      { "quote": "Professor K's enthusiasm for the weather is infectious. He gets full on class discussions with the topics and the ways he presents them.", "semester": "Fall 2019", "theme": "Passion" },
-      { "quote": "My favorite part of the course was the Jeopardy-style review sessions for exams. They were a way for me to assess my knowledge while having fun and working as a team with my classmates.", "semester": "Fall 2021", "theme": "Engagement" },
-      { "quote": "The course made meteorology accessible to learn even for a non-science major.", "semester": "Fall 2020", "theme": "Engagement" },
-      { "quote": "This was my favorite course that I took this semester. Interesting material taught in a relatable and understandable way.", "semester": "Fall 2019", "theme": "Engagement" },
-      { "quote": "Professor Krasting always encouraged questions in a positive manner so it did not make anyone nervous to learn.", "semester": "Fall 2021", "theme": "Support" },
-      { "quote": "Whenever I asked questions after class, Professor Krasting made sure to answer my questions thoroughly.", "semester": "Fall 2022", "theme": "Support" },
-      { "quote": "The professor always forecasts next week's weather conditions. And when I talk with my friends, I look like a prophet.", "semester": "Fall 2019", "theme": "Real-World" },
-      { "quote": "My day to day has been impacted and I will never look at the weather the same. It is amazing that I understand the weather and meteorology on a deeper level than most.", "semester": "Fall 2019", "theme": "Real-World" }
-    ]
-  },
   "mentoring": {
     "postdocs": [
       {
@@ -365,20 +268,5 @@
       "endYear": 2022,
       "researchAreas": ["ocean-dynamics"]
     }
-  ],
-  "extensionOutreach": {
-    "title": "Science Communication & Public Outreach",
-    "overview": "Effective science communication requires translating complex concepts for diverse audiences. My experience as a broadcast meteorologist and research scientist at NOAA enables me to make climate science accessible and relevant. I believe in demonstrating how research impacts daily life, helping people understand the science behind weather and climate.",
-    "activities": [
-      "Speaking engagements at local schools and community organizations",
-      "Media interviews translating climate research for public understanding",
-      "Curriculum development connecting students with real-world climate data",
-      "Career guidance for students entering atmospheric sciences"
-    ],
-    "featuredImage": {
-      "src": "/images/pascack-event.png",
-      "alt": "Dr. John Krasting speaking to students at Pascack Valley Regional High School",
-      "caption": "Speaking to students at Pascack Valley Regional High School, Hillsdale, NJ — April 2019"
-    }
-  }
+  ]
 }

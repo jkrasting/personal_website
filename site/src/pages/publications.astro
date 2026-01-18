@@ -1,94 +1,52 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import PublicationsPage from '../components/publications/PublicationsPage';
+import Layout from '../layouts/Layout.astro';
+import { PublicationsPage } from '../components/publications/PublicationsPage';
 import { getCollection } from 'astro:content';
+import { researchAreaNames, getResearchAreaDotColor } from '../lib/researchAreaColors';
 
-// Get all publications and sort by year (descending)
-const allPublications = await getCollection('publications');
-const sortedPublications = allPublications.sort((a, b) => b.data.year - a.data.year);
+// Get all publications sorted by year (newest first)
+const allPapers = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
 
-// Metadata
-const pageTitle = "Publications | Dr. John P. Krasting";
-const pageDescription = "Peer-reviewed publications on sea level rise, ocean dynamics, and climate modeling.";
-
-// Transform publications for React component (plain objects)
-const publicationsData = sortedPublications.map(pub => ({
-  id: pub.data.id,
-  title: pub.data.title,
-  authors: pub.data.authors,
-  year: pub.data.year,
-  journal: pub.data.journal,
-  doi: pub.data.doi,
-  impactFactor: pub.data.impactFactor,
-  researchAreas: pub.data.researchAreas,
-  featured: pub.data.featured,
-  firstAuthor: pub.data.firstAuthor,
-  description: pub.data.description,
-  contributionStatement: pub.data.contributionStatement,
-  contributions: pub.data.contributions,
+// Transform publications data to match React component's expected format
+const publications = allPapers.map(paper => ({
+  id: paper.id,
+  title: paper.data.title,
+  authors: paper.data.authors,
+  year: paper.data.year,
+  journal: paper.data.venue, // Map 'venue' to 'journal'
+  doi: paper.data.doi,
+  impactFactor: undefined, // Not available in current schema
+  researchAreas: [], // Not available in current schema
+  featured: paper.data.featured,
+  firstAuthor: false, // Not available in current schema
+  description: paper.body || undefined,
 }));
 
-// Research areas legend with Rutgers palette colors
-const researchAreasLegend = [
-  { id: 'sea-level-rise', name: 'Sea Level Rise & Coastal Impacts', color: 'dot-blue' },
-  { id: 'ocean-dynamics', name: 'Ocean Dynamics & Circulation', color: 'dot-teal' },
-  { id: 'carbon-cycle', name: 'Carbon Cycle & Biogeochemistry', color: 'dot-yellow' },
-  { id: 'esm-development', name: 'Earth System Model Development', color: 'dot-gray' },
-  { id: 'model-diagnostics', name: 'Model Diagnostics & Evaluation', color: 'dot-scarlet' },
-];
+// Build research areas legend from the color mapping
+const researchAreasLegend = Object.entries(researchAreaNames).map(([id, name]) => ({
+  id,
+  name,
+  color: getResearchAreaDotColor(id),
+}));
 ---
 
-<PageLayout title={pageTitle} description={pageDescription}>
-  <div class="max-w-5xl mx-auto">
-    <!-- Page Header -->
-    <div class="text-center mb-12">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tighter mb-4">
-        Publications
-      </h1>
-      <p class="text-muted-foreground text-lg mb-6">
-        Peer-reviewed research in climate science
+<Layout title="Publications" description="Research publications by Dr. John P. Krasting in climate science, sea level rise, ocean dynamics, and Earth system modeling.">
+  <div class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Publications</h1>
+      <p class="text-lg text-gray-600">
+        Peer-reviewed research publications in climate science, ocean dynamics, and Earth system modeling.
       </p>
-      <div class="flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
-        <div class="flex items-center gap-2">
-          <span class="font-medium">{sortedPublications.length}</span>
-          <span>Publications</span>
-        </div>
-        <span class="text-muted-foreground/50">|</span>
-        <div class="flex items-center gap-2">
-          <span class="font-medium">h-31</span>
-          <span>Index</span>
-        </div>
-        <span class="text-muted-foreground/50">|</span>
-        <div class="flex items-center gap-2">
-          <span class="font-medium">i10-47</span>
-          <span>Index</span>
-        </div>
-      </div>
     </div>
 
-    <!-- Interactive Publications Component -->
     <PublicationsPage
-      client:load
-      publications={publicationsData}
+      publications={publications}
       researchAreasLegend={researchAreasLegend}
+      client:load
     />
 
-    <!-- Export Options -->
-    <div class="mt-12 p-6 bg-card rounded-lg border">
-      <h2 class="text-lg font-medium mb-4">Export Citations</h2>
-      <p class="text-sm text-muted-foreground mb-4">
-        Download citation information for reference management software.
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <a
-          href="https://scholar.google.com/citations"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:bg-accent"
-        >
-          View on Google Scholar
-        </a>
-      </div>
-    </div>
+    {publications.length === 0 && (
+      <p class="text-gray-500 text-center py-12">No publications found.</p>
+    )}
   </div>
-</PageLayout>
+</Layout>

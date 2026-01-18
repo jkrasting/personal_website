@@ -1,108 +1,191 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import Layout from '../layouts/Layout.astro';
 import cvData from '../data/cv-data.json';
+import { FileText, Download, Award, GraduationCap, Briefcase, BookOpen } from 'lucide-react';
 
-const pageTitle = "Curriculum Vitae | Dr. John P. Krasting";
-const pageDescription = "Complete CV for Dr. John P. Krasting, climate scientist specializing in sea level rise and ocean dynamics.";
+const pageTitle = "Curriculum Vitae";
+const pageDescription = "Download the full CV of Dr. John P. Krasting - Climate scientist, lecturer, and researcher at NOAA GFDL with 17+ years of experience.";
 
-// Calculate total funding
-const totalFunding = cvData.funding.reduce((sum, grant) => {
-  const amount = grant.amount || grant.totalAmount || grant.institutionalAmount || 0;
-  return sum + amount;
-}, 0);
+const { personal, metrics, awards, education } = cvData;
 ---
 
-<PageLayout title={pageTitle} description={pageDescription}>
-  <div class="max-w-4xl mx-auto">
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
     <!-- Page Header -->
     <div class="text-center mb-12">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tighter mb-4">
-        Curriculum Vitae
-      </h1>
-      <p class="text-muted-foreground text-lg mb-6">
-        {cvData.personal.name}, {cvData.personal.title}
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Curriculum Vitae</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        {personal.name}, {personal.title} - Climate Scientist & Educator
+      </p>
+    </div>
+
+    <!-- Download Section -->
+    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 mb-12 text-white text-center">
+      <FileText className="w-16 h-16 mx-auto mb-4 opacity-90" />
+      <h2 class="text-2xl font-bold mb-2">Full CV Available for Download</h2>
+      <p class="text-blue-100 mb-6 max-w-lg mx-auto">
+        Complete academic curriculum vitae including publications, grants, teaching, service, and professional activities.
       </p>
       <a
         href="/Krasting_CV.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background rounded-full font-medium hover:opacity-90 transition-opacity"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
+        download
       >
-        Download PDF
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7.50005 1.04999C7.74858 1.04999 7.95005 1.25146 7.95005 1.49999V8.41359L10.1819 6.18179C10.3576 6.00605 10.6425 6.00605 10.8182 6.18179C10.994 6.35753 10.994 6.64245 10.8182 6.81819L7.81825 9.81819C7.64251 9.99392 7.35759 9.99392 7.18185 9.81819L4.18185 6.81819C4.00611 6.64245 4.00611 6.35753 4.18185 6.18179C4.35759 6.00605 4.64251 6.00605 4.81825 6.18179L7.05005 8.41359V1.49999C7.05005 1.25146 7.25152 1.04999 7.50005 1.04999ZM2.5 10C2.77614 10 3 10.2239 3 10.5V12C3 12.5523 3.44772 13 4 13H11C11.5523 13 12 12.5523 12 12V10.5C12 10.2239 12.2239 10 12.5 10C12.7761 10 13 10.2239 13 10.5V12C13 13.1046 12.1046 14 11 14H4C2.89543 14 2 13.1046 2 12V10.5C2 10.2239 2.22386 10 2.5 10Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-        </svg>
+        <Download className="w-5 h-5" />
+        Download CV (PDF)
       </a>
     </div>
 
-    <!-- Education -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-medium mb-6 pb-2 border-b">Education</h2>
+    <!-- Summary Highlights -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">At a Glance</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
+          <div class="text-3xl font-bold text-blue-600 mb-1">{metrics.totalPublications}</div>
+          <div class="text-sm text-gray-600">Publications</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
+          <div class="text-3xl font-bold text-blue-600 mb-1">{metrics.hIndex}</div>
+          <div class="text-sm text-gray-600">h-index</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
+          <div class="text-3xl font-bold text-blue-600 mb-1">${(metrics.totalFunding / 1000000).toFixed(1)}M</div>
+          <div class="text-sm text-gray-600">Research Funding</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
+          <div class="text-3xl font-bold text-blue-600 mb-1">{metrics.yearsExperience}+</div>
+          <div class="text-sm text-gray-600">Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Positions -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <Briefcase className="w-6 h-6 text-blue-600" />
+        <h2 class="text-2xl font-bold text-gray-900">Current Positions</h2>
+      </div>
       <div class="space-y-4">
-        {cvData.personal.education.map((edu) => (
-          <div class="flex flex-col sm:flex-row sm:justify-between gap-1">
-            <div>
-              <h3 class="font-medium">{edu.degree} in {edu.field}</h3>
-              <p class="text-muted-foreground">{edu.institution}</p>
-            </div>
-            <span class="text-sm text-muted-foreground">{edu.year}</span>
+        {personal.positions.filter(p => p.current).map((position) => (
+          <div class="bg-white rounded-xl border border-gray-200 p-6">
+            <h3 class="text-lg font-semibold text-gray-900">{position.title}</h3>
+            <p class="text-blue-600 font-medium">{position.organization}</p>
+            {position.department && (
+              <p class="text-gray-600 text-sm">{position.department}</p>
+            )}
+            <p class="text-gray-500 text-sm mt-2">{position.startDate} - {position.endDate}</p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
 
-    <!-- Experience -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-medium mb-6 pb-2 border-b">Professional Experience</h2>
-      <div class="space-y-6">
-        {cvData.personal.positions.map((pos) => (
-          <div class="flex flex-col sm:flex-row sm:justify-between gap-1">
-            <div>
-              <h3 class="font-medium">{pos.title}</h3>
-              <p class="text-muted-foreground">{pos.organization}</p>
-            </div>
-            <span class="text-sm text-muted-foreground whitespace-nowrap">{pos.startDate} - {pos.endDate}</span>
-          </div>
-        ))}
+    <!-- Education -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <GraduationCap className="w-6 h-6 text-blue-600" />
+        <h2 class="text-2xl font-bold text-gray-900">Education</h2>
       </div>
-    </section>
-
-    <!-- Awards -->
-    {cvData.awards && cvData.awards.length > 0 && (
-      <section class="mb-12">
-        <h2 class="text-2xl font-medium mb-6 pb-2 border-b">Awards & Recognition</h2>
-        <div class="space-y-4">
-          {cvData.awards.map((award) => (
-            <div class="flex flex-col sm:flex-row sm:justify-between gap-1">
+      <div class="space-y-4">
+        {personal.education.map((edu) => (
+          <div class="bg-white rounded-xl border border-gray-200 p-6">
+            <div class="flex items-start justify-between">
               <div>
-                <h3 class="font-medium">{award.title}</h3>
-                <p class="text-muted-foreground">{award.organization}</p>
+                <h3 class="text-lg font-semibold text-gray-900">{edu.degree} in {edu.field}</h3>
+                <p class="text-gray-600">{edu.institution}</p>
               </div>
-              <span class="text-sm text-muted-foreground">{award.year}</span>
+              <span class="text-gray-500 font-medium">{edu.year}</span>
             </div>
-          ))}
-        </div>
-      </section>
-    )}
+          </div>
+        ))}
+      </div>
+    </div>
 
-    <!-- Research Funding -->
-    {cvData.funding && cvData.funding.length > 0 && (
-      <section class="mb-12">
-        <h2 class="text-2xl font-medium mb-6 pb-2 border-b">Research Funding</h2>
-        <p class="text-muted-foreground mb-4">
-          Total funding as PI/Co-PI: <span class="font-medium text-foreground">${(totalFunding / 1000000).toFixed(2)}M</span>
-        </p>
-        <div class="space-y-4">
-          {cvData.funding.slice(0, 5).map((grant) => (
-            <div>
-              <h3 class="font-medium">{grant.title}</h3>
-              <p class="text-sm text-muted-foreground">
-                {grant.funder} | {grant.role} | ${((grant.amount || grant.totalAmount || grant.institutionalAmount || 0) / 1000000).toFixed(2)}M
-              </p>
+    <!-- Selected Awards -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <Award className="w-6 h-6 text-blue-600" />
+        <h2 class="text-2xl font-bold text-gray-900">Selected Awards & Honors</h2>
+      </div>
+      <div class="space-y-4">
+        {awards.slice(0, 5).map((award) => (
+          <div class="bg-white rounded-xl border border-gray-200 p-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">{award.title}</h3>
+                <p class="text-gray-600">{award.organization}</p>
+                <p class="text-sm text-gray-500 mt-1">{award.description}</p>
+              </div>
+              <span class="text-blue-600 font-bold text-lg">{award.year}</span>
             </div>
-          ))}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CV Sections Overview -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <BookOpen className="w-6 h-6 text-blue-600" />
+        <h2 class="text-2xl font-bold text-gray-900">Full CV Contents</h2>
+      </div>
+      <div class="bg-gray-50 rounded-xl border border-gray-200 p-6">
+        <p class="text-gray-700 mb-4">
+          The complete CV includes detailed information on:
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Professional Experience & Employment History
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Complete Publication List ({metrics.totalPublications} publications)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Research Grants & Funding
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Teaching Experience
+            </li>
+          </ul>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Invited Talks & Conference Presentations
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Professional Service & Leadership
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Awards & Honors
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              Mentoring & Student Supervision
+            </li>
+          </ul>
         </div>
-      </section>
-    )}
+      </div>
+    </div>
+
+    <!-- Second Download CTA -->
+    <div class="text-center">
+      <a
+        href="/Krasting_CV.pdf"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        download
+      >
+        <Download className="w-5 h-5" />
+        Download Full CV (PDF)
+      </a>
+      <p class="text-gray-500 text-sm mt-3">
+        Last updated: January 2026
+      </p>
+    </div>
   </div>
-</PageLayout>
+</Layout>

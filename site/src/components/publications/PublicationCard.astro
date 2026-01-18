@@ -89,7 +89,7 @@ const formatAuthors = (authors: string[]) => {
         <Badge type="status" content="First Author" variant="subtle" size="sm" />
       )}
       {publication.featured && (
-        <span class="inline-flex items-center rounded-full border border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold transition-colors">
+        <span class="inline-flex items-center rounded-full border border-transparent bg-red-600 text-white px-2.5 py-0.5 text-xs font-semibold transition-colors">
           Featured
         </span>
       )}
@@ -97,7 +97,8 @@ const formatAuthors = (authors: string[]) => {
         publication.researchAreas.slice(0, 3).map((area) => {
           const colors = getResearchAreaColor(area);
           const displayName = getResearchAreaName(area);
-          return <Badge type="tag" content={displayName} size="sm" colorClasses={`${colors.badgeClass} border`} />;
+          const colorClasses = `${colors.bg} ${colors.text} ${colors.border} border`;
+          return <Badge type="tag" content={displayName} size="sm" colorClasses={colorClasses} />;
         })
       )}
       {publication.researchAreas && publication.researchAreas.length > 3 && (

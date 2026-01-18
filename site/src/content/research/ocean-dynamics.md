@@ -1,0 +1,19 @@
+---
+title: "Ocean Dynamics & Circulation"
+description: "Understanding ocean circulation, water mass transformation, and heat transport in a changing climate"
+order: 2
+---
+
+## Overview
+
+Ocean circulation governs Earth's climate by transporting heat, carbon, and nutrients across the globe. The Atlantic Meridional Overturning Circulation moves warm water northward and cold water southward, regulating regional climates from the Arctic to the tropics. The Antarctic Circumpolar Current connects ocean basins and ventilates the deep ocean. Water mass formation in polar regions drives global circulation and sequesters heat and carbon from the atmosphere. Understanding these fundamental processes—how they operate today and how they may change in a warming climate—is essential for projecting future climate, sea level, and ecosystem impacts. Dr. Krasting's research in ocean dynamics focuses on the physical mechanisms governing circulation, water mass transformation, and their roles in climate variability and change.
+
+Dr. Krasting employs advanced diagnostic frameworks to track heat, salt, and volume through ocean circulation pathways in high-resolution climate models. His work has pioneered the application of water mass transformation budgets to finite-volume ocean models, enabling quantitative analysis of how surface forcing creates and modifies ocean water masses. These diagnostics reveal the mechanistic links between surface processes (wind stress, heat fluxes, freshwater inputs) and interior ocean changes that drive circulation, heat uptake, and sea level. His research integrates model development, process diagnostics, and observational synthesis to understand phenomena ranging from the Antarctic Slope Current's response to ice sheet melt to the role of North Atlantic heat content in modulating US East Coast sea level.
+
+## Major Discoveries
+
+Dr. Krasting's ocean dynamics research has revealed critical mechanisms controlling climate system behavior. His work on the Antarctic Slope Current demonstrated its importance in mediating how ice sheet melt affects the Southern Ocean, showing that this narrow coastal current acts as a barrier that determines whether meltwater spreads offshore or remains near the ice sheet (*JGR: Oceans*, 2022). Research on storm-driven Southern Ocean processes revealed the seasonal timing of heat and carbon uptake, showing that intense winter storms drive summer uptake through ocean mixing and upwelling patterns (*J. Climate*, 2025). His investigation of US East Coast sea level established quantitative links to North Atlantic subtropical ocean heat content, improving seasonal prediction capabilities (*JGR: Oceans*, 2024). These process-level insights inform model development and enable more confident projections of climate impacts.
+
+## Current Work
+
+Ongoing work investigates how interannual storm variability affects Southern Ocean circulation and biogeochemistry, with a manuscript currently in NOAA internal review. Dr. Krasting is developing new diagnostics for tracking energy and water mass transformation in the next generation of GFDL ocean models (OM5), improving understanding of how mesoscale eddies and submesoscale processes affect large-scale circulation. Collaborations with Princeton University, University of Arizona, and University of Tasmania address Antarctic meltwater impacts on global circulation and steric sea level response. With three manuscripts in review or preparation and funding through 2027, his ocean dynamics research continues to advance fundamental understanding while informing climate projections used in IPCC assessments.

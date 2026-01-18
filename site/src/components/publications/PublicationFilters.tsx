@@ -96,7 +96,7 @@ export function PublicationFilters({
             type="text"
             placeholder="Search by title, authors, or keywords..."
             value={searchInput}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchInput(e.target.value)}
+            onChange={(e) => setSearchInput(e.target.value)}
             className="pl-10"
           />
           {searchInput && (

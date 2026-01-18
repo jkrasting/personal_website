@@ -1,16 +1,22 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
-import mdx from "@astrojs/mdx";
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+import tailwindcss from '@tailwindcss/vite';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  devToolbar: {
-    enabled: false,
+  compressHTML: true,
+  build: {
+    inlineStylesheets: 'always',
+    assetsInlineLimit: 10240, // 10KB to inline achievements.css (7.5KB)
   },
-  integrations: [
-    tailwind(),
-    react(),
-    mdx()
-  ],
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      assetsInlineLimit: 10240,
+    }
+  },
+
+  integrations: [react()]
 });

@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import HonorCard from '../components/HonorCard.astro';
+import { FileCode, Award, Github, ExternalLink, BookOpen, Database } from 'lucide-react';
+
+// Fetch Collections
+const softwares = (await getCollection('softwares'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const honors = (await getCollection('honors'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const sections = [
+  { id: 'software', title: 'Software & Data Products', icon: FileCode, count: softwares.length },
+  { id: 'honors', title: 'Awards & Honors', icon: Award, count: honors.length },
+];
+---
+
+<Layout title="Achievements">
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:py-20">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Achievements</h1>
+      <p class="text-lg text-gray-600">
+        Software tools, data products, and recognition for contributions to climate science.
+      </p>
+    </div>
+
+    <!-- Navigation Pills -->
+    <div class="flex flex-wrap justify-center gap-4 mb-16 sticky top-20 z-30 bg-white/80 backdrop-blur p-4 rounded-2xl border border-gray-100 shadow-sm">
+      {sections.map(section => (
+        <a
+          href={`#${section.id}`}
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm font-medium"
+        >
+          <section.icon className="w-4 h-4" />
+          <span>{section.title}</span>
+          <span class="bg-white px-2 py-0.5 rounded-full text-xs text-gray-400 shadow-sm">{section.count}</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="space-y-24">
+      <!-- Software & Data Products -->
+      <section id="software" class="scroll-mt-24">
+        <div class="flex items-center gap-3 mb-8">
+          <FileCode className="w-8 h-8 text-blue-600" />
+          <h2 class="text-3xl font-bold text-gray-900">Software & Data Products</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {softwares.map(software => (
+            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-lg shrink-0">
+                  {software.data.links?.doi ? (
+                    <Database className="w-6 h-6" />
+                  ) : (
+                    <FileCode className="w-6 h-6" />
+                  )}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg font-bold text-gray-900 leading-tight" title={software.data.title}>
+                    {software.data.title}
+                  </h3>
+                  <p class="text-sm text-gray-500 mt-1">{software.data.number}</p>
+                </div>
+              </div>
+
+              {software.data.description && (
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  {software.data.description}
+                </p>
+              )}
+
+              {/* Links Section */}
+              {software.data.links && (
+                <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100">
+                  {software.data.links.github && (
+                    <a
+                      href={software.data.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      GitHub
+                    </a>
+                  )}
+                  {software.data.links.pypi && (
+                    <a
+                      href={software.data.links.pypi}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      PyPI
+                    </a>
+                  )}
+                  {software.data.links.docs && (
+                    <a
+                      href={software.data.links.docs}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+                    >
+                      <BookOpen className="w-4 h-4" />
+                      Docs
+                    </a>
+                  )}
+                  {software.data.links.doi && (
+                    <a
+                      href={software.data.links.doi}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-600 text-white text-sm font-medium rounded-lg hover:bg-amber-700 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      DOI
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+          {softwares.length === 0 && <p class="text-gray-500 italic">No software products listed yet.</p>}
+        </div>
+      </section>
+
+      <!-- Awards & Honors -->
+      <section id="honors" class="scroll-mt-24">
+        <div class="flex items-center gap-3 mb-8">
+          <Award className="w-8 h-8 text-blue-600" />
+          <h2 class="text-3xl font-bold text-gray-900">Awards & Honors</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {honors.map(honor => <HonorCard honor={honor} />)}
+          {honors.length === 0 && <p class="text-gray-500 italic">No awards or honors listed yet.</p>}
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>
