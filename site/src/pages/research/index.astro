@@ -11,7 +11,7 @@ const researchAreas = (await getCollection('research')).sort((a, b) => a.data.or
     <div class="max-w-3xl mx-auto text-center mb-16">
       <h1 class="text-4xl font-bold text-gray-900 mb-4" data-i18n-key="nav.research">Research Areas</h1>
       <p class="text-lg text-gray-600" data-i18n-key="research.subtitle">
-        Our lab explores the frontiers of artificial intelligence, with a focus on computer vision and machine learning.
+        My research is devoted to advancing our understanding of the Earth system by developing and using comprehensive models to study its behavior. I joined the National Oceanic and Atmospheric Administration's (NOAA) Geophysical Fluid Dynamics Laboratory (GFDL) in 2009, where I lead research focusing on sea level rise, ocean dynamics, and carbon cycle biogeochemistry. My core interest is connecting the global eﬀects of climate change to improve our understanding of local impacts.
       </p>
     </div>
 
@@ -29,7 +29,7 @@ const researchAreas = (await getCollection('research')).sort((a, b) => a.data.or
           )}
           
           <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+            <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[var(--rutgers-blue-dark)] transition-colors">
               {area.data.title}
             </h2>
             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
@@ -37,7 +37,7 @@ const researchAreas = (await getCollection('research')).sort((a, b) => a.data.or
             </p>
             <a 
               href={`/research/${area.id.replace(/\.[^/.]+$/, "")}`} 
-              class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700"
+              class="inline-flex items-center text-sm font-medium text-[var(--rutgers-blue-dark)] hover:text-[var(--rutgers-blue-mid)]"
             >
               <span data-i18n-key="research.learnMore">Learn more</span> <ArrowRight className="ml-1 w-4 h-4" />
             </a>

@@ -33,6 +33,7 @@ site/src/
 
 ## Common Tasks
 - **Edit content**: Modify files in `site/src/content/`
+- **Edit UI text**: Update `site/src/i18n/ui.ts` (translations control most page text, not HTML templates)
 - **Rebuild & deploy**: `docker compose build && docker compose up -d`
 - **View logs**: `docker compose logs -f`
 - **Test locally**: Visit https://johnkrasting.com after deploy
