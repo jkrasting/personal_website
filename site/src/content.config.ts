@@ -159,6 +159,7 @@ const honors = defineCollection({
     year: z.string(), // Display year on badge
     type: z.enum(['Challenge Cup', 'Internet+', 'Other']).default('Other'),
     level: z.enum(['Special', 'First', 'Second', 'Third']).default('Third'),
+    logo: z.string().optional(), // Path to logo image
   }),
 });
 

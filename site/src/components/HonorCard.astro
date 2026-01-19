@@ -7,46 +7,57 @@ interface Props {
 }
 
 const { honor } = Astro.props;
-const { level, year, title, award } = honor.data;
+const { level, year, title, award, logo } = honor.data;
 const body = honor.body?.trim();
 
-const getTrophyConfig = (level: string) => {
+const getTrophyConfig = (level: string, awardName: string) => {
+  // Silver medals should use gray colors like bronze medals
+  if (awardName.includes('Silver Medal')) {
+    return { icon: Medal, color: 'text-gray-500', bg: 'from-gray-100 to-slate-200', border: 'border-gray-300' };
+  }
+
   switch (level) {
     case 'Special':
-      return { icon: Crown, color: 'text-purple-600', bg: 'from-purple-100 to-pink-100', border: 'border-purple-200' };
+      return { icon: Crown, color: 'text-[var(--rutgers-scarlet-dark)]', bg: 'from-[var(--rutgers-scarlet-light)] to-[var(--rutgers-scarlet-pale)]', border: 'border-[var(--rutgers-scarlet-pale)]' };
     case 'First':
-      return { icon: Trophy, color: 'text-yellow-500', bg: 'from-yellow-100 to-amber-100', border: 'border-amber-200' };
+      return { icon: Trophy, color: 'text-[var(--rutgers-yellow-dark)]', bg: 'from-[var(--rutgers-yellow-light)] to-[var(--rutgers-yellow-pale)]', border: 'border-[var(--rutgers-yellow-pale)]' };
     case 'Second':
       return { icon: Medal, color: 'text-gray-500', bg: 'from-gray-100 to-slate-200', border: 'border-gray-300' };
     case 'Third':
-      return { icon: Award, color: 'text-amber-700', bg: 'from-orange-100 to-amber-100', border: 'border-orange-200' };
+      return { icon: Award, color: 'text-[var(--rutgers-yellow-dark)]', bg: 'from-[var(--rutgers-yellow-light)] to-[var(--rutgers-yellow-pale)]', border: 'border-[var(--rutgers-yellow-pale)]' };
     default:
-      return { icon: Star, color: 'text-blue-500', bg: 'from-blue-50 to-indigo-50', border: 'border-blue-100' };
+      return { icon: Star, color: 'text-[var(--rutgers-blue-dark)]', bg: 'from-[var(--rutgers-blue-light)] to-[var(--rutgers-blue-pale)]', border: 'border-[var(--rutgers-blue-pale)]' };
   }
 };
 
-const config = getTrophyConfig(level);
+const config = getTrophyConfig(level, award);
 const Icon = config.icon;
 ---
 
 <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow group h-full">
   <div class="flex items-start gap-4 mb-3">
-    <div class={`flex-shrink-0 w-14 h-14 bg-gradient-to-br ${config.bg} rounded-full flex items-center justify-center ${config.color} border-4 border-white shadow-sm overflow-hidden relative ring-1 ${config.border}`}>
-       <Icon className="w-7 h-7" />
-    </div>
+    {logo ? (
+      <div class="flex-shrink-0 w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm overflow-hidden relative ring-1 ring-gray-200">
+        <img src={logo} alt={award} class="w-12 h-12 object-contain" />
+      </div>
+    ) : (
+      <div class={`flex-shrink-0 w-14 h-14 bg-gradient-to-br ${config.bg} rounded-full flex items-center justify-center ${config.color} border-4 border-white shadow-sm overflow-hidden relative ring-1 ${config.border}`}>
+         <Icon className="w-7 h-7" />
+      </div>
+    )}
     <div class="flex-1 min-w-0">
       <div class="flex items-center gap-2 mb-1">
-        <span class="px-2.5 py-0.5 text-xs font-bold bg-blue-50 text-blue-600 rounded-full border border-blue-100">
+        <span class="px-2.5 py-0.5 text-xs font-bold bg-[var(--rutgers-blue-light)] text-[var(--rutgers-blue-dark)] rounded-full border border-[var(--rutgers-blue-pale)]">
           {year}
         </span>
       </div>
       <p class={`font-semibold text-sm flex items-center gap-1 ${config.color}`}>
-        <Icon className="w-4 h-4" />
+        {!logo && <Icon className="w-4 h-4" />}
         {award}
       </p>
     </div>
   </div>
-  <h3 class="text-base font-bold text-gray-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">{title}</h3>
+  <h3 class="text-base font-bold text-gray-900 mb-2 leading-tight group-hover:text-[var(--rutgers-blue-dark)] transition-colors">{title}</h3>
   {body && (
     <p class="text-sm text-gray-600 mt-auto">{body}</p>
   )}

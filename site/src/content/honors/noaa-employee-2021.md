@@ -5,5 +5,6 @@ date: 2021-01-01
 year: "2021"
 type: "Other"
 level: "Special"
+logo: "/logos/noaa-logo.svg"
 ---
-NOAA Office of Oceanic and Atmospheric Research Employee of the Year Award.
+NOAA Oceanic and Atmospheric Research Employee of the Year for Model Diagnostics and Fostering New Research Collaborations on Sea Level.

@@ -1,9 +1,10 @@
 ---
 title: "Certified Broadcast Meteorologist"
 award: "CBM Seal"
-date: 2008-01-01
-year: "2008"
+date: 2006-01-01
+year: "2006"
 type: "Other"
 level: "First"
+logo: "/logos/cbm-logo.png"
 ---
-American Meteorological Society Certified Broadcast Meteorologist (CBM) Seal of Approval.
+Certified Broadcast Meteorologist Distinction from the American Meteorological Society.
