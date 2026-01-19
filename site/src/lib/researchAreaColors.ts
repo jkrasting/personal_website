@@ -17,31 +17,31 @@ export const researchAreaNames: Record<string, string> = {
 export const researchAreaColors: Record<string, { bg: string; text: string; border: string; badgeClass: string }> = {
   'sea-level-rise': {
     bg: 'bg-[var(--rutgers-blue-pale)]',
-    text: 'text-[var(--rutgers-blue-dark)]',
+    text: 'text-black',
     border: 'border-[var(--rutgers-blue-mid)]',
     badgeClass: 'badge-pale-blue',
   },
   'ocean-dynamics': {
     bg: 'bg-[var(--rutgers-teal-pale)]',
-    text: 'text-[var(--rutgers-teal-dark)]',
+    text: 'text-black',
     border: 'border-[var(--rutgers-teal-mid)]',
     badgeClass: 'badge-pale-teal',
   },
   'carbon-cycle': {
     bg: 'bg-[var(--rutgers-yellow-pale)]',
-    text: 'text-[var(--rutgers-yellow-dark)]',
+    text: 'text-black',
     border: 'border-[var(--rutgers-yellow-mid)]',
     badgeClass: 'badge-pale-yellow',
   },
   'esm-development': {
     bg: 'bg-[var(--rutgers-gray-pale)]',
-    text: 'text-[var(--rutgers-gray-dark)]',
+    text: 'text-black',
     border: 'border-[var(--rutgers-gray-mid)]',
     badgeClass: 'badge-pale-gray',
   },
   'model-diagnostics': {
     bg: 'bg-[var(--rutgers-scarlet-pale)]',
-    text: 'text-[var(--rutgers-scarlet-dark)]',
+    text: 'text-black',
     border: 'border-[var(--rutgers-scarlet-mid)]',
     badgeClass: 'badge-pale-scarlet',
   },
@@ -60,7 +60,7 @@ export function getResearchAreaName(areaSlug: string): string {
 export function getResearchAreaColor(areaSlug: string): { bg: string; text: string; border: string; badgeClass: string } {
   return researchAreaColors[areaSlug] || {
     bg: 'bg-[var(--rutgers-gray-pale)]',
-    text: 'text-[var(--rutgers-gray-dark)]',
+    text: 'text-black',
     border: 'border-[var(--rutgers-gray-mid)]',
     badgeClass: 'badge-pale-gray',
   };

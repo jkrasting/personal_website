@@ -20,11 +20,11 @@ const iconMap: Record<string, any> = {
 };
 
 const badgeStyles: Record<string, string> = {
-  gold: "bg-gradient-to-r from-[var(--rutgers-yellow-light)] to-[var(--rutgers-yellow-pale)] text-[var(--rutgers-yellow-dark)] border-[var(--rutgers-yellow-mid)] shadow-sm",
-  blue: "bg-[var(--rutgers-blue-light)] text-[var(--rutgers-blue-dark)] border-[var(--rutgers-blue-pale)]",
-  red: "bg-[var(--rutgers-scarlet-light)] text-[var(--rutgers-scarlet-dark)] border-[var(--rutgers-scarlet-pale)]",
-  green: "bg-[var(--rutgers-teal-light)] text-[var(--rutgers-teal-dark)] border-[var(--rutgers-teal-pale)]",
-  default: "bg-gray-50 text-gray-700 border-gray-200"
+  gold: "bg-gradient-to-r from-[var(--rutgers-yellow-light)] to-[var(--rutgers-yellow-pale)] text-black border-[var(--rutgers-yellow-mid)] shadow-sm",
+  blue: "bg-[var(--rutgers-blue-light)] text-black border-[var(--rutgers-blue-pale)]",
+  red: "bg-[var(--rutgers-scarlet-light)] text-black border-[var(--rutgers-scarlet-pale)]",
+  green: "bg-[var(--rutgers-teal-light)] text-black border-[var(--rutgers-teal-pale)]",
+  default: "bg-gray-50 text-black border-gray-200"
 };
 
 // Helper to format link label (e.g., "pdf" -> "PDF")
@@ -62,7 +62,7 @@ const formatLabel = (key: string) => {
       
       {/* Legacy award support (fallback) */}
       {award && !badges && (
-        <span class="px-2 py-0.5 rounded-full bg-gradient-to-r from-[var(--rutgers-yellow-light)] to-[var(--rutgers-yellow-pale)] text-[var(--rutgers-yellow-dark)] text-xs font-medium border border-[var(--rutgers-yellow-mid)] flex items-center gap-1 shadow-sm">
+        <span class="px-2 py-0.5 rounded-full bg-gradient-to-r from-[var(--rutgers-yellow-light)] to-[var(--rutgers-yellow-pale)] text-black text-xs font-medium border border-[var(--rutgers-yellow-mid)] flex items-center gap-1 shadow-sm">
           <Sparkles class="w-3 h-3" /> {award}
         </span>
       )}

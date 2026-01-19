@@ -29,9 +29,9 @@ const { title, authors, year, venue, links, cover, badges } = entry.data;
       <div class="absolute top-2 right-2 flex flex-col gap-1 items-end">
         {badges.map(badge => (
           <span class={`px-2 py-1 text-xs font-bold rounded shadow-sm backdrop-blur-md
-            ${badge.type === 'gold' ? 'bg-[var(--rutgers-yellow-pale)]/90 text-[var(--rutgers-yellow-dark)] border border-[var(--rutgers-yellow-mid)]' :
-              badge.type === 'blue' ? 'bg-[var(--rutgers-blue-pale)]/90 text-[var(--rutgers-blue-dark)] border border-[var(--rutgers-blue-mid)]' :
-              'bg-gray-100/90 text-gray-700 border border-gray-200'}`}>
+            ${badge.type === 'gold' ? 'bg-[var(--rutgers-yellow-pale)]/90 text-black border border-[var(--rutgers-yellow-mid)]' :
+              badge.type === 'blue' ? 'bg-[var(--rutgers-blue-pale)]/90 text-black border border-[var(--rutgers-blue-mid)]' :
+              'bg-gray-100/90 text-black border border-gray-200'}`}>
             {badge.text}
           </span>
         ))}

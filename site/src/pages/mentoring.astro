@@ -51,19 +51,19 @@ const outreach = [
     <!-- Quick Stats -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
       <div class="bg-[var(--rutgers-blue-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">{mentoringMetrics.totalPostdocs}</div>
+        <div class="text-3xl font-bold text-black mb-1">{mentoringMetrics.totalPostdocs}</div>
         <div class="text-sm text-gray-600">Postdocs Mentored</div>
       </div>
       <div class="bg-[var(--rutgers-teal-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-teal-dark)] mb-1">{mentoringMetrics.totalUndergrads}</div>
+        <div class="text-3xl font-bold text-black mb-1">{mentoringMetrics.totalUndergrads}</div>
         <div class="text-sm text-gray-600">Undergrads Mentored</div>
       </div>
       <div class="bg-[var(--rutgers-scarlet-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-scarlet-dark)] mb-1">{mentoringMetrics.publications}+</div>
+        <div class="text-3xl font-bold text-black mb-1">{mentoringMetrics.publications}+</div>
         <div class="text-sm text-gray-600">Publications with Mentees</div>
       </div>
       <div class="bg-[var(--rutgers-yellow-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-yellow-dark)] mb-1">100%</div>
+        <div class="text-3xl font-bold text-black mb-1">100%</div>
         <div class="text-sm text-gray-600">Mentees with Publications</div>
       </div>
     </div>
@@ -93,7 +93,7 @@ const outreach = [
             <div class="flex items-start justify-between mb-2">
               <h4 class="text-lg font-semibold text-gray-900">{postdoc.name}</h4>
               {postdoc.current && (
-                <span class="px-2 py-1 text-xs font-medium rounded bg-[var(--rutgers-teal-pale)] text-[var(--rutgers-teal-dark)]">Current</span>
+                <span class="px-2 py-1 text-xs font-medium rounded bg-[var(--rutgers-teal-pale)] text-black">Current</span>
               )}
             </div>
             <p class="text-sm text-gray-500 mb-2">{postdoc.institution}</p>
