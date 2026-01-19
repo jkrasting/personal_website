@@ -33,9 +33,9 @@ const testimonials = [
     context: "Fall 2024"
   },
   {
-    quote: "Every class opens with a discussion of current weather patterns, allowing us to apply knowledge learned.",
+    quote: "The professor always forecasts next week's weather conditions. And when I talk with my friends, I look like a prophet.",
     author: "Rutgers Student",
-    context: "Fall 2024"
+    context: "Fall 2019"
   },
   {
     quote: "Professor Krasting always encouraged questions in a positive manner so it did not make anyone nervous to learn.",
@@ -139,24 +139,13 @@ const testimonials = [
           <p class="text-gray-700 mb-4">
             An advanced graduate course exploring the physical principles governing Earth's climate system, with emphasis on ocean-atmosphere interactions, energy balance, and feedback mechanisms. Students work with state-of-the-art GFDL climate models to investigate key processes controlling climate variability and change.
           </p>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <h4 class="font-semibold text-sm text-gray-900 mb-2">Key Topics:</h4>
-              <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                <li>Ocean heat uptake and steric sea level rise</li>
-                <li>Meridional overturning circulation</li>
-                <li>Climate feedbacks and sensitivity</li>
-                <li>Ocean carbon cycle dynamics</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-sm text-gray-900 mb-2">Materials Developed:</h4>
-              <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                <li>GFDL CM4/ESM4 model experiments</li>
-                <li>Process-oriented diagnostic modules</li>
-                <li>Python-based analysis workflows</li>
-              </ul>
-            </div>
+          <div>
+            <h4 class="font-semibold text-sm text-gray-900 mb-2">Key Topics:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+              <li>Global climate controls</li>
+              <li>Climate system interactions, feedbacks, and models</li>
+              <li>Climate variability and change</li>
+            </ul>
           </div>
         </div>
 
@@ -176,24 +165,16 @@ const testimonials = [
           <p class="text-gray-700 mb-4">
             A foundational undergraduate course introducing atmospheric science to students from diverse majors. The course balances physical principles with practical applications, preparing students to understand weather forecasts, climate change, and extreme events. Enrollment typically ranges from 60-80 students per semester.
           </p>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <h4 class="font-semibold text-sm text-gray-900 mb-2">Key Topics:</h4>
-              <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                <li>Atmospheric structure and thermodynamics</li>
-                <li>Weather systems and severe weather</li>
-                <li>Climate zones and global circulation</li>
-                <li>Human impacts on climate</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-sm text-gray-900 mb-2">Student Outcomes:</h4>
-              <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                <li>Multiple students placed in graduate programs</li>
-                <li>Recruitment into NOAA internships</li>
-                <li>Consistent positive feedback</li>
-              </ul>
-            </div>
+          <div>
+            <h4 class="font-semibold text-sm text-gray-900 mb-2">Key Topics:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+              <li>Foundations in atmospheric science</li>
+              <li>Atmospheric vertical structure</li>
+              <li>Elementary thermodynamics</li>
+              <li>Weather systems</li>
+              <li>Ocean-atmosphere interactions</li>
+              <li>Earth's climate</li>
+            </ul>
           </div>
         </div>
 
@@ -210,9 +191,19 @@ const testimonials = [
             <span class="px-3 py-1 text-xs font-medium rounded-full bg-[var(--rutgers-blue-pale)] text-[var(--rutgers-blue-dark)]">Graduate</span>
           </div>
           <p class="text-sm text-gray-500 mb-4"><em>2011</em></p>
-          <p class="text-gray-700">
+          <p class="text-gray-700 mb-4">
             A graduate seminar covering the fundamental physics of Earth's climate system, designed for students in atmospheric science, oceanography, and environmental engineering. Emphasized quantitative understanding through mathematical derivation and numerical modeling exercises.
           </p>
+          <div>
+            <h4 class="font-semibold text-sm text-gray-900 mb-2">Key Topics:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+              <li>Overview of the climate system and study of climate variations</li>
+              <li>Radiative transfer, Earth's energy balance, and atmospheric circulation</li>
+              <li>Land surface processes, land ecology, and ocean circulation</li>
+              <li>El Niño variability, Arctic climate processes, and climate modeling</li>
+              <li>Projections of future climate change</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -224,18 +215,16 @@ const testimonials = [
         <h2 class="text-3xl font-bold text-gray-900">Teaching Effectiveness</h2>
       </div>
       <div class="bg-gradient-to-br from-[var(--rutgers-blue-light)] to-[var(--rutgers-blue-pale)] rounded-xl p-8">
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
           <div class="text-center">
-            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">{teachingMetrics.effectivenessScore}/5.0</div>
-            <div class="text-gray-600">Average Teaching Effectiveness</div>
+            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">4.72</div>
+            <div class="text-gray-600 mb-1">Mean Instructor Rating (5.0 max)</div>
+            <div class="text-sm text-gray-500">Departmental Mean: 4.40</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">{teachingMetrics.studentsPlaced}+</div>
-            <div class="text-gray-600">Students Placed in Graduate Programs</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">950+</div>
-            <div class="text-gray-600">Students Taught</div>
+            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">4.64</div>
+            <div class="text-gray-600 mb-1">Mean Course Quality Rating (5.0 max)</div>
+            <div class="text-sm text-gray-500">Departmental Mean: 4.33</div>
           </div>
         </div>
 
