@@ -31,6 +31,7 @@ export const SITE = {
     { text: 'Publications', link: '/publications', key: 'publications' },
     { text: 'Research', link: '/research', key: 'research' },
     { text: 'Teaching', link: '/teaching', key: 'teaching' },
+    { text: 'Mentoring', link: '/mentoring', key: 'mentoring' },
     { text: 'Achievements', link: '/achievements', key: 'achievements' },
     { text: 'CV', link: '/cv', key: 'cv' },
     { text: 'Search', link: '/search', key: 'search' },

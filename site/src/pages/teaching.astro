@@ -1,22 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import cvData from '../data/cv-data.json';
-import { GraduationCap, Users, BookOpen, Award, Star, Quote, Building2, Megaphone } from 'lucide-react';
+import { GraduationCap, BookOpen, Star, Quote } from 'lucide-react';
 
 // Metadata
-const pageTitle = "Teaching & Mentoring";
-const pageDescription = "Teaching climate science at Princeton and Rutgers. Mentoring postdocs and undergraduates through competitive research programs. Hands-on climate modeling approach.";
+const pageTitle = "Teaching";
+const pageDescription = "Teaching climate science at Princeton and Rutgers. Hands-on climate modeling approach with emphasis on curiosity and creativity.";
 
-// Extract teaching and mentoring data
-const { teaching, mentoring, metrics } = cvData;
+// Extract teaching data
+const { teaching, metrics } = cvData;
 
 // Teaching metrics
 const teachingMetrics = {
   yearsTeaching: metrics.yearsTeaching,
   coursesCurrently: teaching.filter(t => t.current).length,
-  totalPostdocs: mentoring.postdocs.length,
-  totalUndergrads: mentoring.undergrads.length,
-  effectivenessScore: 4.5, // Out of 5
+  effectivenessScore: 4.72,
   studentsPlaced: 8
 };
 
@@ -33,34 +31,15 @@ const testimonials = [
     context: "Environmental Sciences Major"
   }
 ];
-
-// Outreach activities
-const outreach = [
-  {
-    title: "NOAA Climate Literacy Ambassador",
-    description: "Presenting climate science research to public audiences and policymakers",
-    years: "2018-Present"
-  },
-  {
-    title: "Science Fair Judge",
-    description: "Regional and state science fair competitions in New Jersey",
-    years: "2015-Present"
-  },
-  {
-    title: "Graduate Student Seminar Series",
-    description: "Regular presentations to Princeton AOS and Rutgers graduate students on career development",
-    years: "2019-Present"
-  }
-];
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <div class="max-w-7xl mx-auto px-4 py-12 sm:py-20">
     <!-- Page Header -->
     <div class="max-w-3xl mx-auto text-center mb-16">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Teaching & Mentoring</h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Teaching</h1>
       <p class="text-xl text-gray-600">
-        {teachingMetrics.yearsTeaching} years of teaching climate science through hands-on modeling and research mentorship
+        {teachingMetrics.yearsTeaching} years of teaching climate science through hands-on modeling and experiential learning
       </p>
     </div>
 
@@ -75,12 +54,12 @@ const outreach = [
         <div class="text-sm text-gray-600">Current Courses</div>
       </div>
       <div class="bg-[var(--rutgers-scarlet-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-scarlet-dark)] mb-1">{teachingMetrics.totalPostdocs}</div>
-        <div class="text-sm text-gray-600">Postdocs Mentored</div>
+        <div class="text-3xl font-bold text-[var(--rutgers-scarlet-dark)] mb-1">{teachingMetrics.effectivenessScore}</div>
+        <div class="text-sm text-gray-600">Avg. Evaluation (out of 5)</div>
       </div>
       <div class="bg-[var(--rutgers-yellow-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-yellow-dark)] mb-1">{teachingMetrics.totalUndergrads}</div>
-        <div class="text-sm text-gray-600">Undergrads Mentored</div>
+        <div class="text-3xl font-bold text-[var(--rutgers-yellow-dark)] mb-1">{teachingMetrics.studentsPlaced}+</div>
+        <div class="text-sm text-gray-600">Students in Grad Programs</div>
       </div>
     </div>
 
@@ -236,15 +215,15 @@ const outreach = [
         <div class="grid md:grid-cols-3 gap-6 mb-8">
           <div class="text-center">
             <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">{teachingMetrics.effectivenessScore}/5.0</div>
-            <div class="text-gray-600">Student Evaluation Score</div>
+            <div class="text-gray-600">Average Teaching Effectiveness</div>
           </div>
           <div class="text-center">
             <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">{teachingMetrics.studentsPlaced}+</div>
             <div class="text-gray-600">Students Placed in Graduate Programs</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">100%</div>
-            <div class="text-gray-600">Mentees with Publications</div>
+            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">950+</div>
+            <div class="text-gray-600">Students Taught</div>
           </div>
         </div>
 
@@ -265,143 +244,6 @@ const outreach = [
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mentoring -->
-    <section class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <Users className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
-        <h2 class="text-3xl font-bold text-gray-900">Mentoring</h2>
-      </div>
-
-      <!-- Postdoctoral Researchers -->
-      <div class="mb-12">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Postdoctoral Researchers</h3>
-        <p class="text-gray-600 mb-6">
-          My mentoring philosophy emphasizes developing independence while providing strong scientific guidance. I work closely with postdocs to refine research questions, interpret results, and craft compelling narratives for publication, while encouraging them to take ownership of their projects.
-        </p>
-        <div class="grid md:grid-cols-2 gap-4">
-          {mentoring.postdocs.map((postdoc) => (
-            <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
-              <div class="flex items-start justify-between mb-2">
-                <h4 class="text-lg font-semibold text-gray-900">{postdoc.name}</h4>
-                {postdoc.current && (
-                  <span class="px-2 py-1 text-xs font-medium rounded bg-[var(--rutgers-teal-pale)] text-[var(--rutgers-teal-dark)]">Current</span>
-                )}
-              </div>
-              <p class="text-sm text-gray-500 mb-2">{postdoc.institution}</p>
-              <p class="text-sm text-gray-700 mb-3">
-                <strong>Project:</strong> {postdoc.project}
-              </p>
-              <div class="flex items-center gap-4 text-sm text-gray-500">
-                <span>
-                  {postdoc.yearsStart}{postdoc.yearsEnd ? `-${postdoc.yearsEnd}` : '-present'}
-                </span>
-                <span class="text-gray-300">|</span>
-                <span>{postdoc.advisingEffort}</span>
-              </div>
-              {postdoc.fellowship && (
-                <div class="mt-3 flex items-center gap-2 text-sm">
-                  <Award className="w-4 h-4 text-amber-500" />
-                  <span class="text-amber-700">{postdoc.fellowship}</span>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Undergraduate Researchers -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Undergraduate Researchers</h3>
-        <p class="text-gray-600 mb-6">
-          I have mentored undergraduate students through competitive summer research programs (NOAA Ernest F. Hollings Scholarship Program and Princeton CIMES Summer Internship). These intensive 10-12 week experiences provide hands-on training in climate model analysis, scientific programming, and research communication.
-        </p>
-        <div class="space-y-4">
-          {mentoring.undergrads.map((student) => (
-            <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
-              <div class="flex items-start justify-between mb-2">
-                <h4 class="text-lg font-semibold text-gray-900">{student.name}</h4>
-                <span class="px-2 py-1 text-xs font-medium rounded bg-gray-100 text-gray-600">{student.year}</span>
-              </div>
-              <p class="text-sm text-gray-500 mb-2">{student.institution}</p>
-              <p class="text-sm text-[var(--rutgers-blue-dark)] mb-2">{student.program}</p>
-              <p class="text-sm text-gray-700">{student.project}</p>
-              {student.honorsThesisCommittee && (
-                <div class="mt-3 text-sm font-medium text-purple-600">
-                  Served on honors thesis committee
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Outreach -->
-    <section class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <Megaphone className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
-        <h2 class="text-3xl font-bold text-gray-900">Outreach & Science Communication</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-4">
-        {outreach.map((activity) => (
-          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">{activity.title}</h3>
-            <p class="text-sm text-gray-600 mb-3">{activity.description}</p>
-            <p class="text-sm text-gray-500">{activity.years}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <!-- Mentoring Outcomes Summary -->
-    <section>
-      <div class="bg-gray-50 rounded-xl border border-gray-200 p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Mentoring Outcomes Summary</h3>
-        <div class="grid md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <h4 class="font-semibold text-gray-900 mb-3">Postdoctoral Researchers:</h4>
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>{mentoring.postdocs.length} postdocs mentored (3 as primary advisor, 1 co-advised)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>8+ publications resulting from mentored research</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>Multiple awards and fellowships secured by mentees</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-semibold text-gray-900 mb-3">Undergraduate Researchers:</h4>
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>{mentoring.undergrads.length} undergraduates mentored through competitive programs</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>1 co-authored publication in high-impact journal</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>Multiple conference presentations at national meetings</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-gray-200">
-          <h4 class="font-semibold text-gray-900 mb-3">Mentoring Philosophy:</h4>
-          <p class="text-sm text-gray-700 leading-relaxed">
-            Strong mentoring requires balancing guidance with independence. I provide clear direction on research questions and methods while encouraging mentees to develop their own scientific voice. Regular meetings focus on both technical skills (programming, data analysis, model interpretation) and professional development (writing, presenting, networking). The measure of successful mentoring is not just publications produced, but scientists developed--researchers who can formulate questions, design investigations, and communicate findings independently.
-          </p>
         </div>
       </div>
     </section>
