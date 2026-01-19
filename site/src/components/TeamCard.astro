@@ -9,13 +9,13 @@ interface Props {
 const { member } = Astro.props;
 const { name, role, avatar, bio, email, website, linkedin, github, twitter, googleScholar } = member.data;
 
-// Color mapping for title badges
+// Color mapping for title badges - using Rutgers palette
 const badgeColors = [
-  "text-blue-700 bg-blue-50 border-blue-100",
-  "text-purple-700 bg-purple-50 border-purple-100",
-  "text-emerald-700 bg-emerald-50 border-emerald-100",
-  "text-amber-700 bg-amber-50 border-amber-100",
-  "text-rose-700 bg-rose-50 border-rose-100"
+  "text-[var(--rutgers-blue-dark)] bg-[var(--rutgers-blue-light)] border-[var(--rutgers-blue-pale)]",
+  "text-[var(--rutgers-scarlet-dark)] bg-[var(--rutgers-scarlet-light)] border-[var(--rutgers-scarlet-pale)]",
+  "text-[var(--rutgers-teal-dark)] bg-[var(--rutgers-teal-light)] border-[var(--rutgers-teal-pale)]",
+  "text-[var(--rutgers-yellow-dark)] bg-[var(--rutgers-yellow-light)] border-[var(--rutgers-yellow-pale)]",
+  "text-[var(--rutgers-gray-dark)] bg-[var(--rutgers-gray-light)] border-[var(--rutgers-gray-pale)]"
 ];
 ---
 
@@ -35,22 +35,22 @@ const badgeColors = [
     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 backdrop-blur-[2px] pointer-events-none">
       <div class="pointer-events-auto flex flex-wrap justify-center gap-2 px-2">
       {email && (
-        <a href={`mailto:${email}`} class="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 hover:scale-110 transition-all" title="Email" aria-label="Email">
+        <a href={`mailto:${email}`} class="p-2 bg-white rounded-full text-gray-700 hover:text-[var(--rutgers-blue-dark)] hover:scale-110 transition-all" title="Email" aria-label="Email">
           <Mail className="w-4 h-4" />
         </a>
       )}
       {website && (
-        <a href={website} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 hover:scale-110 transition-all" title="Website" aria-label="Website">
+        <a href={website} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-[var(--rutgers-blue-dark)] hover:scale-110 transition-all" title="Website" aria-label="Website">
           <Globe className="w-4 h-4" />
         </a>
       )}
       {linkedin && (
-        <a href={linkedin} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 hover:scale-110 transition-all" title="LinkedIn" aria-label="LinkedIn">
+        <a href={linkedin} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-[var(--rutgers-blue-dark)] hover:scale-110 transition-all" title="LinkedIn" aria-label="LinkedIn">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
       )}
       {github && (
-        <a href={github} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 hover:scale-110 transition-all" title="GitHub" aria-label="GitHub">
+        <a href={github} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-[var(--rutgers-blue-dark)] hover:scale-110 transition-all" title="GitHub" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
         </a>
       )}
@@ -60,7 +60,7 @@ const badgeColors = [
         </a>
       )}
       {googleScholar && (
-        <a href={googleScholar} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 hover:scale-110 transition-all" title="Google Scholar" aria-label="Google Scholar">
+        <a href={googleScholar} target="_blank" class="p-2 bg-white rounded-full text-gray-700 hover:text-[var(--rutgers-blue-dark)] hover:scale-110 transition-all" title="Google Scholar" aria-label="Google Scholar">
           <GraduationCap className="w-4 h-4" />
         </a>
       )}
@@ -69,7 +69,7 @@ const badgeColors = [
   </div>
 
   <!-- Info -->
-  <a href={`/team/${member.id.replace(/\.[^/.]+$/, "")}`} class="hover:underline decoration-blue-600 underline-offset-2 mb-2">
+  <a href={`/team/${member.id.replace(/\.[^/.]+$/, "")}`} class="hover:underline decoration-[var(--rutgers-blue-dark)] underline-offset-2 mb-2">
     <h3 class="text-lg font-semibold text-gray-900">{name}</h3>
   </a>
   

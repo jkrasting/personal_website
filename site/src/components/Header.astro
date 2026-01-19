@@ -31,7 +31,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
         <a href="/" class="flex items-center gap-2 group">
           {LOGO_IMAGE.enable && SITE.logo && <img src={SITE.logo} alt="Logo" class="h-8 w-8 object-contain" />}
           <div class="flex flex-col sm:flex-row sm:items-end sm:gap-2 leading-tight">
-            <span class="font-bold text-gray-900 text-lg leading-tight group-hover:text-blue-600 transition-colors">
+            <span class="font-bold text-gray-900 text-lg leading-tight group-hover:text-[var(--rutgers-blue-dark)] transition-colors">
               {SITE.labName}
             </span>
             <span class="hidden sm:inline text-gray-500 text-sm font-light pb-0.5">
@@ -48,7 +48,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
             return (
               <a 
                 href={item.link} 
-                class="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-full transition-colors"
+                class="p-2 text-gray-600 hover:text-[var(--rutgers-blue-dark)] hover:bg-gray-50 rounded-full transition-colors"
                 aria-label={item.text}
               >
                 <Search className="w-5 h-5" />
@@ -58,7 +58,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
           return (
             <a 
               href={item.link} 
-              class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              class="text-sm font-medium text-gray-600 hover:text-[var(--rutgers-blue-dark)] transition-colors"
               data-i18n-key={`nav.${item.key}`}
             >
               {item.text}
@@ -70,7 +70,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
         {customPages && customPages.map(item => (
            <a 
              href={item.link} 
-            class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+            class="text-sm font-medium text-gray-600 hover:text-[var(--rutgers-blue-dark)] transition-colors"
              data-i18n-key={item.key} 
            >
              {item.text}
@@ -95,11 +95,11 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
               <div class="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
                 {Object.entries(languages).map(([code, label]) => (
                   <button
-                    class="w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors lang-option flex items-center justify-between group/item"
+                    class="w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-[var(--rutgers-blue-light)] hover:text-[var(--rutgers-blue-dark)] transition-colors lang-option flex items-center justify-between group/item"
                     data-lang={code}
                   >
                     <span>{label}</span>
-                    <Check className="w-4 h-4 text-blue-600 opacity-0 group-[.active]/item:opacity-100 transition-opacity" />
+                    <Check className="w-4 h-4 text-[var(--rutgers-blue-dark)] opacity-0 group-[.active]/item:opacity-100 transition-opacity" />
                   </button>
                 ))}
               </div>
@@ -154,7 +154,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
       {nav.map((item) => (
         <a 
           href={item.link} 
-          class="flex items-center justify-between w-full py-4 px-4 text-lg font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50 rounded-xl transition-all border-b border-gray-100 last:border-0"
+          class="flex items-center justify-between w-full py-4 px-4 text-lg font-medium text-gray-800 hover:text-[var(--rutgers-blue-dark)] hover:bg-gray-50 rounded-xl transition-all border-b border-gray-100 last:border-0"
           data-i18n-key={`nav.${item.key}`}
           onclick="window.closeMobileMenu()"
         >
@@ -167,7 +167,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
       {customPages && customPages.map((item) => (
         <a 
           href={item.link} 
-          class="flex items-center justify-between w-full py-4 px-4 text-lg font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50 rounded-xl transition-all border-b border-gray-100 last:border-0"
+          class="flex items-center justify-between w-full py-4 px-4 text-lg font-medium text-gray-800 hover:text-[var(--rutgers-blue-dark)] hover:bg-gray-50 rounded-xl transition-all border-b border-gray-100 last:border-0"
           data-i18n-key={item.key}
           onclick="window.closeMobileMenu()"
         >
@@ -182,7 +182,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
           <div class="grid grid-cols-2 gap-3">
             {Object.entries(languages).map(([code, label]) => (
               <button
-                class="px-4 py-3 rounded-xl text-base font-medium border border-gray-200 text-gray-600 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50 transition-all lang-option mobile-lang-option text-center"
+                class="px-4 py-3 rounded-xl text-base font-medium border border-gray-200 text-gray-600 hover:border-[var(--rutgers-blue-dark)] hover:text-[var(--rutgers-blue-dark)] hover:bg-[var(--rutgers-blue-light)] transition-all lang-option mobile-lang-option text-center"
                 data-lang={code}
                 onclick="window.setLanguage && window.setLanguage(this.getAttribute('data-lang')); window.closeMobileMenu()"
               >
@@ -331,9 +331,9 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
       document.querySelectorAll('.lang-option').forEach(btn => {
         const btnLang = btn.getAttribute('data-lang');
         if (btnLang === lang) {
-          btn.classList.add('text-blue-600', 'bg-blue-50', 'border-blue-200');
+          btn.classList.add('text-[var(--rutgers-blue-dark)]', 'bg-[var(--rutgers-blue-light)]', 'border-[var(--rutgers-blue-pale)]');
         } else {
-          btn.classList.remove('text-blue-600', 'bg-blue-50', 'border-blue-200');
+          btn.classList.remove('text-[var(--rutgers-blue-dark)]', 'bg-[var(--rutgers-blue-light)]', 'border-[var(--rutgers-blue-pale)]');
         }
       });
     }

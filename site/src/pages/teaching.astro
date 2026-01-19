@@ -2,13 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import cvData from '../data/cv-data.json';
 import { GraduationCap, BookOpen, Star, Quote } from 'lucide-react';
+import { getDynamicMetrics } from '../lib/cvMetrics';
 
 // Metadata
 const pageTitle = "Teaching";
 const pageDescription = "Teaching climate science at Princeton and Rutgers. Hands-on climate modeling approach with emphasis on curiosity and creativity.";
 
 // Extract teaching data
-const { teaching, metrics } = cvData;
+const { teaching } = cvData;
+const metrics = await getDynamicMetrics(cvData.metrics);
 
 // Teaching metrics
 const teachingMetrics = {

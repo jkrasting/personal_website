@@ -2,11 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import cvData from '../data/cv-data.json';
 import { FileText, Download, Award, GraduationCap, Briefcase, BookOpen } from 'lucide-react';
+import { getDynamicMetrics } from '../lib/cvMetrics';
 
 const pageTitle = "Curriculum Vitae";
 const pageDescription = "Download the full CV of Dr. John P. Krasting - Climate scientist, lecturer, and researcher at NOAA GFDL with 17+ years of experience.";
 
-const { personal, metrics, awards, education } = cvData;
+const { personal, awards, education } = cvData;
+const metrics = await getDynamicMetrics(cvData.metrics);
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -20,7 +22,7 @@ const { personal, metrics, awards, education } = cvData;
     </div>
 
     <!-- Download Section -->
-    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 mb-12 text-white text-center">
+    <div class="bg-gradient-to-br from-[var(--rutgers-blue-dark)] to-[var(--rutgers-blue-mid)] rounded-2xl p-8 mb-12 text-white text-center">
       <FileText className="w-16 h-16 mx-auto mb-4 opacity-90" />
       <h2 class="text-2xl font-bold mb-2">Full CV Available for Download</h2>
       <p class="text-blue-100 mb-6 max-w-lg mx-auto">
@@ -28,7 +30,7 @@ const { personal, metrics, awards, education } = cvData;
       </p>
       <a
         href="/Krasting_CV.pdf"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-white text-[var(--rutgers-blue-dark)] rounded-lg font-semibold hover:bg-[var(--rutgers-blue-pale)] transition-colors shadow-lg hover:shadow-xl"
         download
       >
         <Download className="w-5 h-5" />
@@ -41,19 +43,19 @@ const { personal, metrics, awards, education } = cvData;
       <h2 class="text-2xl font-bold text-gray-900 mb-6">At a Glance</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
-          <div class="text-3xl font-bold text-blue-600 mb-1">{metrics.totalPublications}</div>
+          <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">{metrics.totalPublications}</div>
           <div class="text-sm text-gray-600">Publications</div>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
-          <div class="text-3xl font-bold text-blue-600 mb-1">{metrics.hIndex}</div>
+          <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">{metrics.hIndex}</div>
           <div class="text-sm text-gray-600">h-index</div>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
-          <div class="text-3xl font-bold text-blue-600 mb-1">${(metrics.totalFunding / 1000000).toFixed(1)}M</div>
+          <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">${(metrics.totalFunding / 1000000).toFixed(1)}M</div>
           <div class="text-sm text-gray-600">Research Funding</div>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-6 text-center">
-          <div class="text-3xl font-bold text-blue-600 mb-1">{metrics.yearsExperience}+</div>
+          <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">{metrics.yearsExperience}+</div>
           <div class="text-sm text-gray-600">Years Experience</div>
         </div>
       </div>
@@ -62,14 +64,14 @@ const { personal, metrics, awards, education } = cvData;
     <!-- Current Positions -->
     <div class="mb-12">
       <div class="flex items-center gap-3 mb-6">
-        <Briefcase className="w-6 h-6 text-blue-600" />
+        <Briefcase className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-2xl font-bold text-gray-900">Current Positions</h2>
       </div>
       <div class="space-y-4">
         {personal.positions.filter(p => p.current).map((position) => (
           <div class="bg-white rounded-xl border border-gray-200 p-6">
             <h3 class="text-lg font-semibold text-gray-900">{position.title}</h3>
-            <p class="text-blue-600 font-medium">{position.organization}</p>
+            <p class="text-[var(--rutgers-blue-dark)] font-medium">{position.organization}</p>
             {position.department && (
               <p class="text-gray-600 text-sm">{position.department}</p>
             )}
@@ -82,7 +84,7 @@ const { personal, metrics, awards, education } = cvData;
     <!-- Education -->
     <div class="mb-12">
       <div class="flex items-center gap-3 mb-6">
-        <GraduationCap className="w-6 h-6 text-blue-600" />
+        <GraduationCap className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-2xl font-bold text-gray-900">Education</h2>
       </div>
       <div class="space-y-4">
@@ -103,7 +105,7 @@ const { personal, metrics, awards, education } = cvData;
     <!-- Selected Awards -->
     <div class="mb-12">
       <div class="flex items-center gap-3 mb-6">
-        <Award className="w-6 h-6 text-blue-600" />
+        <Award className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-2xl font-bold text-gray-900">Selected Awards & Honors</h2>
       </div>
       <div class="space-y-4">
@@ -115,7 +117,7 @@ const { personal, metrics, awards, education } = cvData;
                 <p class="text-gray-600">{award.organization}</p>
                 <p class="text-sm text-gray-500 mt-1">{award.description}</p>
               </div>
-              <span class="text-blue-600 font-bold text-lg">{award.year}</span>
+              <span class="text-[var(--rutgers-blue-dark)] font-bold text-lg">{award.year}</span>
             </div>
           </div>
         ))}
@@ -125,7 +127,7 @@ const { personal, metrics, awards, education } = cvData;
     <!-- CV Sections Overview -->
     <div class="mb-12">
       <div class="flex items-center gap-3 mb-6">
-        <BookOpen className="w-6 h-6 text-blue-600" />
+        <BookOpen className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-2xl font-bold text-gray-900">Full CV Contents</h2>
       </div>
       <div class="bg-gray-50 rounded-xl border border-gray-200 p-6">
@@ -135,37 +137,37 @@ const { personal, metrics, awards, education } = cvData;
         <div class="grid md:grid-cols-2 gap-4">
           <ul class="space-y-2 text-gray-600">
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Professional Experience & Employment History
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Complete Publication List ({metrics.totalPublications} publications)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Research Grants & Funding
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Teaching Experience
             </li>
           </ul>
           <ul class="space-y-2 text-gray-600">
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Invited Talks & Conference Presentations
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Professional Service & Leadership
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Awards & Honors
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span class="w-2 h-2 bg-[var(--rutgers-blue-dark)] rounded-full"></span>
               Mentoring & Student Supervision
             </li>
           </ul>
@@ -177,7 +179,7 @@ const { personal, metrics, awards, education } = cvData;
     <div class="text-center">
       <a
         href="/Krasting_CV.pdf"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-[var(--rutgers-blue-dark)] text-white rounded-lg font-medium hover:bg-[var(--rutgers-blue-mid)] transition-colors"
         download
       >
         <Download className="w-5 h-5" />

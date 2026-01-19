@@ -31,7 +31,7 @@ const sections = [
       {sections.map(section => (
         <a
           href={`#${section.id}`}
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm font-medium"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 text-gray-600 hover:bg-[var(--rutgers-blue-light)] hover:text-[var(--rutgers-blue-dark)] transition-colors text-sm font-medium"
         >
           <section.icon className="w-4 h-4" />
           <span>{section.title}</span>
@@ -44,14 +44,14 @@ const sections = [
       <!-- Software & Data Products -->
       <section id="software" class="scroll-mt-24">
         <div class="flex items-center gap-3 mb-8">
-          <FileCode className="w-8 h-8 text-blue-600" />
+          <FileCode className="w-8 h-8 text-[var(--rutgers-blue-dark)]" />
           <h2 class="text-3xl font-bold text-gray-900">Software & Data Products</h2>
         </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {softwares.map(software => (
             <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="flex items-start gap-4 mb-4">
-                <div class="p-3 bg-blue-50 text-blue-600 rounded-lg shrink-0">
+                <div class="p-3 bg-[var(--rutgers-blue-light)] text-[var(--rutgers-blue-dark)] rounded-lg shrink-0">
                   {software.data.links?.doi ? (
                     <Database className="w-6 h-6" />
                   ) : (
@@ -91,7 +91,7 @@ const sections = [
                       href={software.data.links.pypi}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--rutgers-blue-dark)] text-white text-sm font-medium rounded-lg hover:bg-[var(--rutgers-blue-mid)] transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       PyPI
@@ -102,7 +102,7 @@ const sections = [
                       href={software.data.links.docs}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--rutgers-teal-dark)] text-white text-sm font-medium rounded-lg hover:bg-[var(--rutgers-teal-mid)] transition-colors"
                     >
                       <BookOpen className="w-4 h-4" />
                       Docs
@@ -113,7 +113,7 @@ const sections = [
                       href={software.data.links.doi}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-600 text-white text-sm font-medium rounded-lg hover:bg-amber-700 transition-colors"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--rutgers-yellow-dark)] text-white text-sm font-medium rounded-lg hover:bg-[var(--rutgers-yellow-mid)] transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       DOI
@@ -130,7 +130,7 @@ const sections = [
       <!-- Awards & Honors -->
       <section id="honors" class="scroll-mt-24">
         <div class="flex items-center gap-3 mb-8">
-          <Award className="w-8 h-8 text-blue-600" />
+          <Award className="w-8 h-8 text-[var(--rutgers-blue-dark)]" />
           <h2 class="text-3xl font-bold text-gray-900">Awards & Honors</h2>
         </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
