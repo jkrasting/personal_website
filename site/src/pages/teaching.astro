@@ -66,20 +66,20 @@ const outreach = [
 
     <!-- Quick Stats -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-      <div class="bg-blue-50 rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-blue-600 mb-1">{teachingMetrics.yearsTeaching}</div>
+      <div class="bg-[var(--rutgers-blue-light)] rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">{teachingMetrics.yearsTeaching}</div>
         <div class="text-sm text-gray-600">Years Teaching</div>
       </div>
-      <div class="bg-green-50 rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-green-600 mb-1">{teachingMetrics.coursesCurrently}</div>
+      <div class="bg-[var(--rutgers-teal-light)] rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-[var(--rutgers-teal-dark)] mb-1">{teachingMetrics.coursesCurrently}</div>
         <div class="text-sm text-gray-600">Current Courses</div>
       </div>
-      <div class="bg-purple-50 rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-purple-600 mb-1">{teachingMetrics.totalPostdocs}</div>
+      <div class="bg-[var(--rutgers-scarlet-light)] rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-[var(--rutgers-scarlet-dark)] mb-1">{teachingMetrics.totalPostdocs}</div>
         <div class="text-sm text-gray-600">Postdocs Mentored</div>
       </div>
-      <div class="bg-amber-50 rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-amber-600 mb-1">{teachingMetrics.totalUndergrads}</div>
+      <div class="bg-[var(--rutgers-yellow-light)] rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-[var(--rutgers-yellow-dark)] mb-1">{teachingMetrics.totalUndergrads}</div>
         <div class="text-sm text-gray-600">Undergrads Mentored</div>
       </div>
     </div>
@@ -87,37 +87,62 @@ const outreach = [
     <!-- Teaching Philosophy -->
     <section class="mb-16">
       <div class="flex items-center gap-3 mb-6">
-        <BookOpen className="w-6 h-6 text-blue-600" />
+        <BookOpen className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Teaching Philosophy</h2>
       </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-8 space-y-4 text-gray-700 leading-relaxed">
+      <div class="bg-white rounded-xl border border-gray-200 p-8 space-y-6 text-gray-700 leading-relaxed">
         <p>
-          I believe that climate science is fundamentally a discipline best learned through direct engagement with the systems we study. My teaching philosophy centers on <strong>learning by doing</strong>--using hands-on climate modeling exercises to build physical intuition before introducing mathematical formalism. Too often, students encounter climate dynamics as a wall of equations disconnected from the real atmosphere and ocean. Instead, I guide students to explore climate models interactively, developing intuition about processes like ocean heat uptake or atmospheric circulation patterns through computational experiments.
+          We are living in an era of rapid information transformation. Content is more readily available to students, and their attention is continuously being diverted and sought after on multiple platforms and in a variety of formats—from print to video to AI-generated content. In such an environment, my teaching philosophy emphasizes qualities that are uniquely human: <strong>curiosity and creativity</strong>.
         </p>
         <p>
-          My courses emphasize connections between fundamental physical principles and pressing societal challenges. When teaching about ocean dynamics, we don't just derive equations--we examine how Antarctic ice sheet melt affects coastal sea level in New Jersey, or how changing ocean circulation patterns impact fisheries. Assessment focuses on scientific reasoning rather than rote calculation; students write research proposals, critique published papers, and present model-based investigations to their peers.
+          As a lecturer in the Department of Environmental Sciences at Rutgers University and in the Atmospheric and Oceanic Sciences Program at Princeton University, I have come to understand that research and teaching are deeply intertwined. As we teach, we continuously build curiosity around the topic and grow a deeper understanding of the material. This process can generate creative and innovative ideas, as well as new solutions. To do this in the classroom, one must be an effective communicator. With a unique combination of skills, I can leverage my former experience as a broadcast meteorologist, which has enabled me to understand the value of messaging and the importance of engagement when conveying complex scientific content.
         </p>
         <p>
-          Over {teachingMetrics.yearsTeaching} years of teaching at Rutgers and Princeton, I've continuously refined my pedagogy based on student feedback and advances in climate modeling. I use a flipped classroom model where students engage with climate model output before class and use class time for collaborative problem-solving. The students I've mentored--from summer interns to postdoctoral researchers--consistently become co-authors on published papers, demonstrating that hands-on training in research methods translates to genuine scholarly contributions.
+          To educate and teach others, I strive to strike a balance between critical thinking and fundamental theory, while fostering ongoing curiosity and creativity.
         </p>
+
+        <h3 class="text-lg font-semibold text-gray-900 pt-2">Learning Through Questioning</h3>
+        <p>
+          In the classroom, I take a Socratic approach in guiding students to arrive at their own conclusions. I view myself as a trail guide over the course of a semester, and my role is to lead students on a journey of exploration, encouraging them to notice, question, and explore along the way. I strongly encourage the students to seek out evidence to support their views and to reinforce what they are learning.
+        </p>
+        <p>
+          I facilitate in-class discussions where students can safely engage with each other, practice posing and answering questions, and learn from one another. With thought-provoking questions, I guide students to discover relationships between different elements and processes of the Earth system rather than memorizing isolated facts.
+        </p>
+
+        <h3 class="text-lg font-semibold text-gray-900 pt-2">Inclusive and Adaptable Teaching</h3>
+        <p>
+          Each student is unique and approaches learning in an individual way. I believe in understanding the diverse learning styles of my students and tailoring my lessons and lectures to meet their individual needs. My lectures are often filled with analogies, allegories, personal anecdotes, and real-world examples that draw on my experiences communicating science to diverse audiences through outreach and extension activities, while also being rooted deeply in traditional theoretical, mathematical, and physical interpretations.
+        </p>
+        <p>
+          I recognize that students demonstrate understanding in different ways, and I design my lectures and assessments accordingly. I also believe in creating a safe environment where students feel comfortable sharing what they know, as well as what they do not know. I believe in being generous with my time and being accessible to all students outside of class for additional assistance or further discussions. I apply this philosophy to individual mentoring activities with graduate students and postdoctoral researchers, where I create environments that foster the practice and growth of their analytical and problem-solving skills on research projects that push the boundaries of their understanding.
+        </p>
+
+        <h3 class="text-lg font-semibold text-gray-900 pt-2">Developing Essential Skills</h3>
+        <p>
+          Students must also develop professional skills in addition to a basic understanding of the subject. For example, in my graduate course at Princeton, I have incorporated Python coding exercises into my problem sets. I use these assignments as opportunities to provide feedback to my students on the importance of good coding practices and documentation, helping them grow both their technical abilities and scientific knowledge. I emphasize the importance of strong communication skills and effective presentations in the feedback I provide to students, whether they are presenting a weather discussion in my introductory undergraduate course at Rutgers or a final presentation in my graduate course. I strive to provide all my students and mentees with the tools and skills that will enable them to have flourishing careers and achieve a greater return on their investment in research and education.
+        </p>
+
       </div>
     </section>
 
     <!-- Courses Taught -->
     <section class="mb-16">
       <div class="flex items-center gap-3 mb-6">
-        <GraduationCap className="w-6 h-6 text-blue-600" />
+        <GraduationCap className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Courses Taught</h2>
       </div>
       <div class="space-y-6">
         <!-- Climate Dynamics (Princeton) -->
         <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
           <div class="flex items-start justify-between mb-3">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">Climate Dynamics (AOS-562)</h3>
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="/logos/princeton-logo.svg" alt="Princeton University" class="h-8 w-auto" />
+                <h3 class="text-xl font-semibold text-gray-900">Climate Dynamics (AOS-562)</h3>
+              </div>
               <p class="text-gray-600">Princeton University, Atmospheric and Oceanic Sciences Program</p>
             </div>
-            <span class="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700">Graduate</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-[var(--rutgers-blue-pale)] text-[var(--rutgers-blue-dark)]">Graduate</span>
           </div>
           <p class="text-sm text-gray-500 mb-4"><em>2025-present</em></p>
           <p class="text-gray-700 mb-4">
@@ -147,11 +172,14 @@ const outreach = [
         <!-- Introduction to Meteorology (Rutgers) -->
         <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
           <div class="flex items-start justify-between mb-3">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">Introduction to Meteorology (11:670:101)</h3>
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="/logos/rutgers-logo.svg" alt="Rutgers University" class="h-8 w-auto" />
+                <h3 class="text-xl font-semibold text-gray-900">Introduction to Meteorology (11:670:101)</h3>
+              </div>
               <p class="text-gray-600">Rutgers University, Department of Environmental Sciences</p>
             </div>
-            <span class="px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700">Undergraduate</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-[var(--rutgers-teal-pale)] text-[var(--rutgers-teal-dark)]">Undergraduate</span>
           </div>
           <p class="text-sm text-gray-500 mb-4"><em>2015-present</em></p>
           <p class="text-gray-700 mb-4">
@@ -181,11 +209,14 @@ const outreach = [
         <!-- Climate Dynamics (Rutgers - 2011) -->
         <div class="bg-white rounded-xl border border-gray-200 p-6 opacity-80">
           <div class="flex items-start justify-between mb-3">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">Climate Dynamics (16:107:545)</h3>
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="/logos/rutgers-logo.svg" alt="Rutgers University" class="h-8 w-auto" />
+                <h3 class="text-xl font-semibold text-gray-900">Climate Dynamics (16:107:545)</h3>
+              </div>
               <p class="text-gray-600">Rutgers University, Department of Environmental Sciences</p>
             </div>
-            <span class="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700">Graduate</span>
+            <span class="px-3 py-1 text-xs font-medium rounded-full bg-[var(--rutgers-blue-pale)] text-[var(--rutgers-blue-dark)]">Graduate</span>
           </div>
           <p class="text-sm text-gray-500 mb-4"><em>2011</em></p>
           <p class="text-gray-700">
@@ -198,21 +229,21 @@ const outreach = [
     <!-- Teaching Effectiveness -->
     <section class="mb-16">
       <div class="flex items-center gap-3 mb-6">
-        <Star className="w-6 h-6 text-blue-600" />
+        <Star className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Teaching Effectiveness</h2>
       </div>
-      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8">
+      <div class="bg-gradient-to-br from-[var(--rutgers-blue-light)] to-[var(--rutgers-blue-pale)] rounded-xl p-8">
         <div class="grid md:grid-cols-3 gap-6 mb-8">
           <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">{teachingMetrics.effectivenessScore}/5.0</div>
+            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">{teachingMetrics.effectivenessScore}/5.0</div>
             <div class="text-gray-600">Student Evaluation Score</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">{teachingMetrics.studentsPlaced}+</div>
+            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">{teachingMetrics.studentsPlaced}+</div>
             <div class="text-gray-600">Students Placed in Graduate Programs</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+            <div class="text-4xl font-bold text-[var(--rutgers-blue-dark)] mb-2">100%</div>
             <div class="text-gray-600">Mentees with Publications</div>
           </div>
         </div>
@@ -220,7 +251,7 @@ const outreach = [
         <!-- Testimonials -->
         <div class="space-y-4">
           <div class="flex items-center gap-2 mb-4">
-            <Quote className="w-5 h-5 text-blue-600" />
+            <Quote className="w-5 h-5 text-[var(--rutgers-blue-dark)]" />
             <h3 class="text-lg font-semibold text-gray-900">Student Testimonials</h3>
           </div>
           <div class="grid md:grid-cols-2 gap-4">
@@ -241,7 +272,7 @@ const outreach = [
     <!-- Mentoring -->
     <section class="mb-16">
       <div class="flex items-center gap-3 mb-6">
-        <Users className="w-6 h-6 text-blue-600" />
+        <Users className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Mentoring</h2>
       </div>
 
@@ -257,7 +288,7 @@ const outreach = [
               <div class="flex items-start justify-between mb-2">
                 <h4 class="text-lg font-semibold text-gray-900">{postdoc.name}</h4>
                 {postdoc.current && (
-                  <span class="px-2 py-1 text-xs font-medium rounded bg-green-100 text-green-700">Current</span>
+                  <span class="px-2 py-1 text-xs font-medium rounded bg-[var(--rutgers-teal-pale)] text-[var(--rutgers-teal-dark)]">Current</span>
                 )}
               </div>
               <p class="text-sm text-gray-500 mb-2">{postdoc.institution}</p>
@@ -296,7 +327,7 @@ const outreach = [
                 <span class="px-2 py-1 text-xs font-medium rounded bg-gray-100 text-gray-600">{student.year}</span>
               </div>
               <p class="text-sm text-gray-500 mb-2">{student.institution}</p>
-              <p class="text-sm text-blue-600 mb-2">{student.program}</p>
+              <p class="text-sm text-[var(--rutgers-blue-dark)] mb-2">{student.program}</p>
               <p class="text-sm text-gray-700">{student.project}</p>
               {student.honorsThesisCommittee && (
                 <div class="mt-3 text-sm font-medium text-purple-600">
@@ -312,7 +343,7 @@ const outreach = [
     <!-- Outreach -->
     <section class="mb-16">
       <div class="flex items-center gap-3 mb-6">
-        <Megaphone className="w-6 h-6 text-blue-600" />
+        <Megaphone className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Outreach & Science Communication</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-4">
@@ -335,15 +366,15 @@ const outreach = [
             <h4 class="font-semibold text-gray-900 mb-3">Postdoctoral Researchers:</h4>
             <ul class="space-y-2 text-sm text-gray-700">
               <li class="flex items-start gap-2">
-                <span class="text-blue-600 mt-1">&#8226;</span>
+                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
                 <span>{mentoring.postdocs.length} postdocs mentored (3 as primary advisor, 1 co-advised)</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-blue-600 mt-1">&#8226;</span>
+                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
                 <span>8+ publications resulting from mentored research</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-blue-600 mt-1">&#8226;</span>
+                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
                 <span>Multiple awards and fellowships secured by mentees</span>
               </li>
             </ul>
@@ -352,15 +383,15 @@ const outreach = [
             <h4 class="font-semibold text-gray-900 mb-3">Undergraduate Researchers:</h4>
             <ul class="space-y-2 text-sm text-gray-700">
               <li class="flex items-start gap-2">
-                <span class="text-blue-600 mt-1">&#8226;</span>
+                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
                 <span>{mentoring.undergrads.length} undergraduates mentored through competitive programs</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-blue-600 mt-1">&#8226;</span>
+                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
                 <span>1 co-authored publication in high-impact journal</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-blue-600 mt-1">&#8226;</span>
+                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
                 <span>Multiple conference presentations at national meetings</span>
               </li>
             </ul>
@@ -379,7 +410,7 @@ const outreach = [
     <section class="mt-12 text-center">
       <a
         href="/teaching_portfolio.pdf"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-[var(--rutgers-blue-dark)] text-white rounded-lg font-medium hover:bg-[var(--rutgers-blue-mid)] transition-colors"
         download
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
