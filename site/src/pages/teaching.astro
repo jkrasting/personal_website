@@ -23,14 +23,44 @@ const teachingMetrics = {
 // Student testimonials
 const testimonials = [
   {
-    quote: "Dr. Krasting's hands-on approach to climate modeling made abstract concepts concrete. His guidance during my Hollings internship laid the foundation for my graduate research.",
-    author: "Former Hollings Scholar",
-    context: "Now Ph.D. student in Atmospheric Science"
+    quote: "John Krasting may be one of the best Professors I've come across in my entire experience of Rutgers. He enables learning through his engaging personality and informative lessons.",
+    author: "Rutgers Student",
+    context: "Fall 2020"
   },
   {
-    quote: "The Introduction to Meteorology course sparked my interest in climate science. Dr. Krasting's ability to connect classroom concepts to real-world climate challenges was exceptional.",
-    author: "Rutgers Undergraduate",
-    context: "Environmental Sciences Major"
+    quote: "Professor Krasting is perhaps one of the most passionate professors I have ever had the pleasure of learning with during my time at Rutgers. It is clear he loves what he teaches, and it pours over into the quality of his teaching, which is fantastic.",
+    author: "Rutgers Student",
+    context: "Fall 2024"
+  },
+  {
+    quote: "Every class opens with a discussion of current weather patterns, allowing us to apply knowledge learned.",
+    author: "Rutgers Student",
+    context: "Fall 2024"
+  },
+  {
+    quote: "Professor Krasting always encouraged questions in a positive manner so it did not make anyone nervous to learn.",
+    author: "Rutgers Student",
+    context: "Fall 2021"
+  },
+  {
+    quote: "My favorite part of the course was the Jeopardy-style review sessions for exams. They were a way for me to assess my knowledge while having fun and working as a team with my classmates.",
+    author: "Rutgers Student",
+    context: "Fall 2021"
+  },
+  {
+    quote: "My day to day has been impacted and I will never look at the weather the same. It is amazing that I understand the weather and meteorology on a deeper level than most.",
+    author: "Rutgers Student",
+    context: "Fall 2019"
+  },
+  {
+    quote: "Dr. Krasting has opened my eyes to the world of meteorology. I greatly appreciated learning all about the weather in his class, and has inspired me to learn more about meteorology.",
+    author: "Rutgers Student",
+    context: "Fall 2024"
+  },
+  {
+    quote: "It was the most interactive course I had by far, in terms of interacting with other students and with the professor. In times where interaction has been very limited, it was really refreshing.",
+    author: "Rutgers Student",
+    context: "Fall 2020"
   }
 ];
 ---
@@ -41,28 +71,8 @@ const testimonials = [
     <div class="max-w-3xl mx-auto text-center mb-16">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Teaching</h1>
       <p class="text-xl text-gray-600">
-        {teachingMetrics.yearsTeaching} years of teaching climate science through hands-on modeling and experiential learning
+        {teachingMetrics.yearsTeaching} years of effectively teaching meteorology and climate dynamics through dynamic lectures, real-world experiences, and a focus on the individual student.
       </p>
-    </div>
-
-    <!-- Quick Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-      <div class="bg-[var(--rutgers-blue-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-blue-dark)] mb-1">{teachingMetrics.yearsTeaching}</div>
-        <div class="text-sm text-gray-600">Years Teaching</div>
-      </div>
-      <div class="bg-[var(--rutgers-teal-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-teal-dark)] mb-1">{teachingMetrics.coursesCurrently}</div>
-        <div class="text-sm text-gray-600">Current Courses</div>
-      </div>
-      <div class="bg-[var(--rutgers-scarlet-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-scarlet-dark)] mb-1">{teachingMetrics.effectivenessScore}</div>
-        <div class="text-sm text-gray-600">Avg. Evaluation (out of 5)</div>
-      </div>
-      <div class="bg-[var(--rutgers-yellow-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-[var(--rutgers-yellow-dark)] mb-1">{teachingMetrics.studentsPlaced}+</div>
-        <div class="text-sm text-gray-600">Students in Grad Programs</div>
-      </div>
     </div>
 
     <!-- Teaching Philosophy -->
