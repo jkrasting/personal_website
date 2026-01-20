@@ -118,6 +118,15 @@ const research = defineCollection({
     description: z.string(),
     cover: image().optional(),
     order: z.number().default(100),
+    keyPublications: z.array(z.object({
+      title: z.string(),
+      authors: z.string(),
+      journal: z.string(),
+      year: z.number(),
+      doi: z.string(),
+      significance: z.string(),
+      firstAuthor: z.boolean().optional(),
+    })).optional(),
   }),
 });
 

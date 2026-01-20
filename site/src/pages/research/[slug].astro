@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
+import KeyPublicationCard from '../../components/KeyPublicationCard.astro';
 
 export async function getStaticPaths() {
   const researchAreas = await getCollection('research');
@@ -12,6 +13,7 @@ export async function getStaticPaths() {
 
 const { area } = Astro.props;
 const { Content } = await render(area);
+const keyPublications = area.data.keyPublications || [];
 ---
 
 <Layout title={area.data.title}>
@@ -33,5 +35,16 @@ const { Content } = await render(area);
     <div class="prose prose-lg prose-blue max-w-none text-gray-700">
       <Content />
     </div>
+
+    {keyPublications.length > 0 && (
+      <section class="mt-16 pt-8 border-t border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Key Publications</h2>
+        <div class="space-y-2">
+          {keyPublications.map((pub, index) => (
+            <KeyPublicationCard publication={pub} number={index + 1} />
+          ))}
+        </div>
+      </section>
+    )}
   </article>
 </Layout>
