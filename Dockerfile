@@ -28,6 +28,9 @@ FROM nginx:alpine
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Copy htpasswd file for teaching portfolio authentication
+COPY .htpasswd /etc/nginx/.htpasswd
+
 # Copy built site from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
@@ -37,7 +40,8 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 
 # Set proper permissions for nginx user
 RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chmod -R 755 /usr/share/nginx/html
+    chmod -R 755 /usr/share/nginx/html && \
+    chmod 644 /etc/nginx/.htpasswd
 
 # Expose port 80
 EXPOSE 80
