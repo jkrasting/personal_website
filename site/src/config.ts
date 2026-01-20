@@ -12,7 +12,6 @@ export const SITE = {
 
   // Lab Info
   labName: 'Dr. John P. Krasting',
-  university: 'NOAA GFDL | Princeton University | Rutgers University',
   logo: '/assets/Earth.png', // Logo path
   avatar: '/assets/Earth.png', // Avatar for SEO/Schema
   email: 'John.Krasting@noaa.gov',

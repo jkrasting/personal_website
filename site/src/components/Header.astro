@@ -56,9 +56,9 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
             );
           }
           return (
-            <a 
-              href={item.link} 
-              class="text-sm font-medium text-gray-600 hover:text-[var(--rutgers-blue-dark)] transition-colors"
+            <a
+              href={item.link}
+              class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-[var(--rutgers-blue-light)] hover:text-[var(--rutgers-blue-dark)] rounded-full transition-all"
               data-i18n-key={`nav.${item.key}`}
             >
               {item.text}
@@ -68,10 +68,10 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
         
         <!-- Custom Pages -->
         {customPages && customPages.map(item => (
-           <a 
-             href={item.link} 
-            class="text-sm font-medium text-gray-600 hover:text-[var(--rutgers-blue-dark)] transition-colors"
-             data-i18n-key={item.key} 
+           <a
+             href={item.link}
+            class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-[var(--rutgers-blue-light)] hover:text-[var(--rutgers-blue-dark)] rounded-full transition-all"
+             data-i18n-key={item.key}
            >
              {item.text}
            </a>
