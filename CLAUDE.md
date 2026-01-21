@@ -1,9 +1,9 @@
 # Dr. John P. Krasting Academic Website
 
 ## Quick Reference
-- **Site**: https://johnkrasting.com (LIVE)
+- **Site**: https://www.johnkrasting.com (LIVE) - canonical URL uses www
 - **Build**: `docker compose build && docker compose up -d`
-- **Auth**: Password "elmer" in `site/src/components/SessionAuth.astro` (remove before public launch)
+- **Sitemap**: https://www.johnkrasting.com/sitemap-index.xml (submitted to Google Search Console)
 
 ## Critical Constraints
 
