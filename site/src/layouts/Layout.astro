@@ -15,20 +15,8 @@ const pageTitle = title ? `${title} | ${SITE.labName}` : `${SITE.labName} - ${SI
 // Canonical URL - ensure www version
 const canonicalURL = new URL(Astro.url.pathname, SITE.website);
 
-// Define dynamic OG Image
-// If it's the homepage, use index.png. Otherwise, try to map the path to a slug.
-// For simplification, we'll just default to index.png for the home page, and generate specific ones for known routes.
-// However, to be robust, let's assume we have an og image for every page that maps to our static paths in og/[...slug].ts.
-// But standard pages like /research match /og/research.
-// What about nested pages like /research/cv? Our OG generator doesn't handle them yet (it only has static pages list).
-// So we will use a fallback.
-const currentPath = Astro.url.pathname.replace(/^\/|\/$/g, '');
-const ogSlug = currentPath === '' ? 'index' : currentPath;
-// Check if the current path is one of our supported OG pages (index, research, team, publications, news, join).
-// If not, fallback to index.
-const supportedOgPages = ['index', 'research', 'team', 'publications', 'news', 'join'];
-const finalOgSlug = supportedOgPages.includes(ogSlug) ? ogSlug : 'index';
-const ogImage = new URL(`/og/${finalOgSlug}.png`, Astro.url);
+// Static OG image for all pages
+const ogImage = new URL('/og-image.png', SITE.website);
 
 // Enhanced Person Schema for homepage (with NJ positioning)
 const personSchema = {

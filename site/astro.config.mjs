@@ -22,8 +22,6 @@ export default defineConfig({
 
   integrations: [
     react(),
-    sitemap({
-      filter: (page) => !page.includes('/og/'), // Exclude OG image routes from sitemap
-    }),
+    sitemap(),
   ]
 });
