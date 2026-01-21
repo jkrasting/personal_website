@@ -3,9 +3,11 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://www.johnkrasting.com',
   compressHTML: true,
   build: {
     inlineStylesheets: 'always',
@@ -18,5 +20,10 @@ export default defineConfig({
     }
   },
 
-  integrations: [react()]
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => !page.includes('/og/'), // Exclude OG image routes from sitemap
+    }),
+  ]
 });

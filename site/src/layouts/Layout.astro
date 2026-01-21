@@ -12,6 +12,9 @@ interface Props {
 const { title, description = SITE.description } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE.labName}` : `${SITE.labName} - ${SITE.university}`;
 
+// Canonical URL - ensure www version
+const canonicalURL = new URL(Astro.url.pathname, SITE.website);
+
 // Define dynamic OG Image
 // If it's the homepage, use index.png. Otherwise, try to map the path to a slug.
 // For simplification, we'll just default to index.png for the home page, and generate specific ones for known routes.
@@ -26,6 +29,117 @@ const ogSlug = currentPath === '' ? 'index' : currentPath;
 const supportedOgPages = ['index', 'research', 'team', 'publications', 'news', 'join'];
 const finalOgSlug = supportedOgPages.includes(ogSlug) ? ogSlug : 'index';
 const ogImage = new URL(`/og/${finalOgSlug}.png`, Astro.url);
+
+// Enhanced Person Schema for homepage (with NJ positioning)
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr. John P. Krasting",
+  "givenName": "John",
+  "familyName": "Krasting",
+  "honorificPrefix": "Dr.",
+  "url": SITE.website,
+  "image": new URL(SITE.avatar || SITE.logo, SITE.website).href,
+  "sameAs": [
+    "https://orcid.org/0000-0002-7344-9293",
+    "https://scholar.google.com/citations?user=u8yBuncAAAAJ",
+    "https://github.com/jkrasting"
+  ],
+  "jobTitle": "Physical Scientist",
+  "description": "Climate scientist specializing in sea level rise, ocean dynamics, and Earth system modeling. Expert in regional climate impacts for the Mid-Atlantic and New Jersey.",
+  "worksFor": [
+    {
+      "@type": "GovernmentOrganization",
+      "name": "NOAA Geophysical Fluid Dynamics Laboratory",
+      "url": "https://www.gfdl.noaa.gov/",
+      "parentOrganization": {
+        "@type": "GovernmentOrganization",
+        "name": "National Oceanic and Atmospheric Administration",
+        "url": "https://www.noaa.gov/"
+      }
+    }
+  ],
+  "affiliation": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Princeton University",
+      "url": "https://www.princeton.edu/"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Rutgers, The State University of New Jersey",
+      "url": "https://www.rutgers.edu/"
+    }
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "NOAA Geophysical Fluid Dynamics Laboratory",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Princeton",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "New Jersey"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Mid-Atlantic United States"
+    }
+  ],
+  "knowsAbout": [
+    "climate science",
+    "sea level rise",
+    "ocean dynamics",
+    "Earth system modeling",
+    "climate change impacts",
+    "New Jersey climate",
+    "Mid-Atlantic climate patterns",
+    "regional climate modeling",
+    "coastal flooding",
+    "carbon cycle"
+  ],
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "University of Delaware",
+      "url": "https://www.udel.edu/"
+    }
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "educationalLevel": "Ph.D.",
+      "about": "Physical Ocean Science and Engineering"
+    }
+  ]
+};
+
+// WebSite Schema with SearchAction
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dr. John P. Krasting - Climate Scientist",
+  "url": SITE.website,
+  "description": SITE.description,
+  "author": {
+    "@type": "Person",
+    "name": "Dr. John P. Krasting"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${SITE.website}search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
 <!doctype html>
@@ -33,43 +147,42 @@ const ogImage = new URL(`/og/${finalOgSlug}.png`, Astro.url);
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Dr. John P. Krasting" />
+    <meta name="theme-color" content="#1e3a5f" />
+    <meta name="keywords" content="John Krasting, climate scientist, NOAA GFDL, sea level rise, ocean dynamics, Earth system modeling, climate change, New Jersey climate, NJ climate science, Mid-Atlantic climate, Princeton, Rutgers University, regional climate modeling, coastal flooding, state climatology" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Dr. John P. Krasting" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
 
+    <!-- Structured Data: WebSite Schema (all pages) -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+    <!-- Structured Data: Person Schema (homepage only) -->
     {
       Astro.url.pathname === '/' && (
-        <script is:inline type="application/ld+json" set:html={JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": SITE.author,
-          "url": SITE.website,
-          "image": new URL(SITE.avatar || SITE.logo, SITE.website).href,
-          "jobTitle": "Principal Investigator",
-          "worksFor": {
-            "@type": "Organization",
-            "name": SITE.labName,
-            "url": SITE.website
-          },
-          "description": SITE.description
-        })} />
+        <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
       )
     }
   </head>

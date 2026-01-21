@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { PublicationsPage } from '../components/publications/PublicationsPage';
 import { getCollection } from 'astro:content';
 import { researchAreaNames, getResearchAreaDotColor } from '../lib/researchAreaColors';
+import { SITE } from '../config';
 
 // Get all publications sorted by year (newest first)
 const allPapers = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
@@ -30,10 +31,97 @@ const researchAreasLegend = Object.entries(researchAreaNames).map(([id, name]) =
   name,
   color: getResearchAreaDotColor(id),
 }));
+
+// Generate ScholarlyArticle schema for each publication
+const publicationSchemas = allPapers.map(paper => ({
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": paper.data.title,
+  "name": paper.data.title,
+  "author": paper.data.authors.map(author => ({
+    "@type": "Person",
+    "name": author
+  })),
+  "datePublished": paper.data.year.toString(),
+  "publisher": {
+    "@type": "Organization",
+    "name": paper.data.venue
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": paper.data.venue
+  },
+  ...(paper.data.doi && {
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": paper.data.doi
+    },
+    "url": `https://doi.org/${paper.data.doi}`
+  })
+}));
+
+// ItemList schema for the publications collection
+const publicationsListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Publications by Dr. John P. Krasting",
+  "description": "Peer-reviewed research publications in climate science, ocean dynamics, and Earth system modeling.",
+  "numberOfItems": allPapers.length,
+  "itemListElement": allPapers.slice(0, 10).map((paper, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "ScholarlyArticle",
+      "headline": paper.data.title,
+      "author": paper.data.authors.map(author => ({
+        "@type": "Person",
+        "name": author
+      })),
+      "datePublished": paper.data.year.toString(),
+      ...(paper.data.doi && { "url": `https://doi.org/${paper.data.doi}` })
+    }
+  }))
+};
+
+// BreadcrumbList Schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": SITE.website
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": `${SITE.website}publications/`
+    }
+  ]
+};
 ---
 
 <Layout title="Publications" description="Research publications by Dr. John P. Krasting in climate science, sea level rise, ocean dynamics, and Earth system modeling.">
+  <!-- Structured Data: BreadcrumbList -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Structured Data: Publications ItemList -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(publicationsListSchema)} />
+
   <div class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
+    <!-- Visible Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="mb-8">
+      <ol class="flex items-center text-sm text-gray-500">
+        <li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
+        <li class="mx-2">/</li>
+        <li class="text-gray-900 font-medium">Publications</li>
+      </ol>
+    </nav>
+
     <div class="mb-12">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Publications</h1>
       <p class="text-lg text-gray-600">

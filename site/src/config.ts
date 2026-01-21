@@ -1,7 +1,7 @@
 import heroImage from './assets/shore.jpg';
 
 export const SITE = {
-  website: 'https://johnkrasting.com/',
+  website: 'https://www.johnkrasting.com/',
   author: 'Dr. John P. Krasting',
   description: 'Climate scientist at NOAA GFDL specializing in sea level rise, ocean dynamics, and Earth system modeling.',
   title: 'Dr. John P. Krasting',

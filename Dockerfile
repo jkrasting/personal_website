@@ -8,7 +8,7 @@ WORKDIR /app
 COPY site/package*.json ./
 
 # Install dependencies (including devDependencies for build tools like pagefind)
-RUN npm ci
+RUN npm install
 
 # Copy source files
 COPY site/ ./

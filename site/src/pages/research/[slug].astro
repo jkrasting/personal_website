@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
 import KeyPublicationCard from '../../components/KeyPublicationCard.astro';
+import { SITE } from '../../config';
 
 export async function getStaticPaths() {
   const researchAreas = await getCollection('research');
@@ -14,13 +15,48 @@ export async function getStaticPaths() {
 const { area } = Astro.props;
 const { Content } = await render(area);
 const keyPublications = area.data.keyPublications || [];
+
+// BreadcrumbList Schema for research detail pages
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": SITE.website
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": `${SITE.website}research/`
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": area.data.title,
+      "item": `${SITE.website}research/${area.id.replace(/\.[^/.]+$/, "")}/`
+    }
+  ]
+};
 ---
 
-<Layout title={area.data.title}>
+<Layout title={area.data.title} description={area.data.description}>
+  <!-- BreadcrumbList Schema -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
   <article class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
-    <a href="/research" class="inline-flex items-center text-sm text-gray-500 hover:text-blue-600 mb-8 transition-colors">
-      &larr; Back to Research
-    </a>
+    <nav aria-label="Breadcrumb" class="mb-8">
+      <ol class="flex items-center text-sm text-gray-500">
+        <li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
+        <li class="mx-2">/</li>
+        <li><a href="/research" class="hover:text-blue-600 transition-colors">Research</a></li>
+        <li class="mx-2">/</li>
+        <li class="text-gray-900 font-medium">{area.data.title}</li>
+      </ol>
+    </nav>
 
     <header class="mb-12">
       <h1 class="text-4xl font-bold text-gray-900 mb-6">{area.data.title}</h1>
