@@ -31,7 +31,7 @@ keyPublications:
     firstAuthor: true
 ---
 
-Model diagnostics give us critical insight into why climate models behave as they do.  Getting the "right answer for the right reason" is essential to improving the models and building trust in their projections. Traditional benchmark evaluation metrics often mask compensating errors that must be addressed in climate models. Process-oriented diagnostics (PODs) target specific mechanisms (e.g., convection responses or ocean mixing) to reveal strengths and weaknesses in model process representation.  This allows the model developer to focus on exactly here models need improvement and how the simulations best apply to real-world physics.
+Model diagnostics give us critical insight into why climate models behave as they do.  Getting the "right answer for the right reason" is essential to improving the models and building trust in their projections. Traditional benchmark evaluation metrics often mask compensating errors that must be addressed in climate models. Process-oriented diagnostics (PODs) target specific mechanisms (e.g., convection responses or ocean mixing) to reveal strengths and weaknesses in model process representation.  This allows the model developer to focus on exactly where models need improvement and how the simulations best apply to real-world physics.
 
 <br/>
 
