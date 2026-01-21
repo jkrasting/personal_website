@@ -48,32 +48,12 @@ const outreach = [
       </p>
     </div>
 
-    <!-- Quick Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-      <div class="bg-[var(--rutgers-blue-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-black mb-1">{mentoringMetrics.totalPostdocs}</div>
-        <div class="text-sm text-gray-600">Postdocs Mentored</div>
-      </div>
-      <div class="bg-[var(--rutgers-teal-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-black mb-1">{mentoringMetrics.totalUndergrads}</div>
-        <div class="text-sm text-gray-600">Undergrads Mentored</div>
-      </div>
-      <div class="bg-[var(--rutgers-scarlet-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-black mb-1">{mentoringMetrics.publications}+</div>
-        <div class="text-sm text-gray-600">Publications with Mentees</div>
-      </div>
-      <div class="bg-[var(--rutgers-yellow-light)] rounded-xl p-6 text-center">
-        <div class="text-3xl font-bold text-black mb-1">100%</div>
-        <div class="text-sm text-gray-600">Mentees with Publications</div>
-      </div>
-    </div>
-
     <!-- Mentoring Philosophy -->
     <section class="mb-16">
       <div class="bg-white rounded-xl border border-gray-200 p-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">Mentoring Philosophy</h2>
         <p class="text-gray-700 leading-relaxed">
-          Strong mentoring requires balancing guidance with independence. I provide clear direction on research questions and methods while encouraging mentees to develop their own scientific voice. Regular meetings focus on both technical skills (programming, data analysis, model interpretation) and professional development (writing, presenting, networking). The measure of successful mentoring is not just publications produced, but scientists developed—researchers who can formulate questions, design investigations, and communicate findings independently.
+          I strive to provide all my students and mentees with the tools and skills that will enable them to have flourishing careers and achieve a greater return on their investment in research and education.
         </p>
       </div>
     </section>
@@ -84,9 +64,6 @@ const outreach = [
         <Users className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Postdoctoral Researchers</h2>
       </div>
-      <p class="text-gray-600 mb-6">
-        My mentoring philosophy emphasizes developing independence while providing strong scientific guidance. I work closely with postdocs to refine research questions, interpret results, and craft compelling narratives for publication, while encouraging them to take ownership of their projects.
-      </p>
       <div class="grid md:grid-cols-2 gap-4">
         {mentoring.postdocs.map((postdoc) => (
           <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
@@ -123,9 +100,6 @@ const outreach = [
         <Users className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
         <h2 class="text-3xl font-bold text-gray-900">Undergraduate Researchers</h2>
       </div>
-      <p class="text-gray-600 mb-6">
-        I have mentored undergraduate students through competitive summer research programs (NOAA Ernest F. Hollings Scholarship Program and Princeton CIMES Summer Internship). These intensive 10-12 week experiences provide hands-on training in climate model analysis, scientific programming, and research communication.
-      </p>
       <div class="space-y-4">
         {mentoring.undergrads.map((student) => (
           <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
@@ -143,66 +117,6 @@ const outreach = [
             )}
           </div>
         ))}
-      </div>
-    </section>
-
-    <!-- Outreach -->
-    <section class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <Megaphone className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
-        <h2 class="text-3xl font-bold text-gray-900">Outreach & Science Communication</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-4">
-        {outreach.map((activity) => (
-          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">{activity.title}</h3>
-            <p class="text-sm text-gray-600 mb-3">{activity.description}</p>
-            <p class="text-sm text-gray-500">{activity.years}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <!-- Mentoring Outcomes Summary -->
-    <section>
-      <div class="bg-gray-50 rounded-xl border border-gray-200 p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Mentoring Outcomes Summary</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div>
-            <h4 class="font-semibold text-gray-900 mb-3">Postdoctoral Researchers:</h4>
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>{mentoring.postdocs.length} postdocs mentored (3 as primary advisor, 1 co-advised)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>8+ publications resulting from mentored research</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>Multiple awards and fellowships secured by mentees</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-semibold text-gray-900 mb-3">Undergraduate Researchers:</h4>
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>{mentoring.undergrads.length} undergraduates mentored through competitive programs</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>1 co-authored publication in high-impact journal</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-[var(--rutgers-blue-dark)] mt-1">&#8226;</span>
-                <span>Multiple conference presentations at national meetings</span>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
   </div>

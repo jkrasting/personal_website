@@ -48,7 +48,7 @@ export const ui = {
     'activities.title': 'Team Activities',
     'activities.subtitle': 'Seminars, academic talks, and team building events.',
     
-    'research.subtitle': 'My research is devoted to advancing our understanding of the Earth system by developing and using comprehensive models to study its behavior. I joined the National Oceanic and Atmospheric Administration\'s (NOAA) Geophysical Fluid Dynamics Laboratory (GFDL) in 2009, where I lead research focusing on sea level rise, ocean dynamics, and carbon cycle biogeochemistry. My core interest is connecting the global eﬀects of climate change to improve our understanding of local impacts.',
+    'research.subtitle': 'Research focuses on developing comprehensive models to simulate sea level rise, ocean dynamics, and carbon cycle biogeochemistry in order to understand the global effects of climate change and local impacts.',
     'research.learnMore': 'Learn More',
     'research.noAreas': 'No research areas defined.',
     
@@ -139,7 +139,7 @@ export const ui = {
     'activities.title': '团队活动',
     'activities.subtitle': '研讨会、学术讲座和团建活动。',
 
-    'research.subtitle': 'My research is devoted to advancing our understanding of the Earth system by developing and using comprehensive models to study its behavior. I joined the National Oceanic and Atmospheric Administration\'s (NOAA) Geophysical Fluid Dynamics Laboratory (GFDL) in 2009, where I lead research focusing on sea level rise, ocean dynamics, and carbon cycle biogeochemistry. My core interest is connecting the global eﬀects of climate change to improve our understanding of local impacts.',
+    'research.subtitle': 'Research focuses on developing comprehensive models to simulate sea level rise, ocean dynamics, and carbon cycle biogeochemistry in order to understand the global effects of climate change and local impacts.',
     'research.learnMore': '了解更多',
     'research.noAreas': '暂无研究领域。',
     'join.title': '加入我们',

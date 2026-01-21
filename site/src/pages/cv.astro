@@ -81,6 +81,26 @@ const metrics = await getDynamicMetrics(cvData.metrics);
       </div>
     </div>
 
+    <!-- Previous Positions -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <Briefcase className="w-6 h-6 text-[var(--rutgers-blue-dark)]" />
+        <h2 class="text-2xl font-bold text-gray-900">Previous Positions</h2>
+      </div>
+      <div class="space-y-4">
+        {personal.positions.filter(p => !p.current).map((position) => (
+          <div class="bg-white rounded-xl border border-gray-200 p-6">
+            <h3 class="text-lg font-semibold text-gray-900">{position.title}</h3>
+            <p class="text-[var(--rutgers-blue-dark)] font-medium">{position.organization}</p>
+            {position.department && (
+              <p class="text-gray-600 text-sm">{position.department}</p>
+            )}
+            <p class="text-gray-500 text-sm mt-2">{position.startDate} - {position.endDate}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
     <!-- Education -->
     <div class="mb-12">
       <div class="flex items-center gap-3 mb-6">

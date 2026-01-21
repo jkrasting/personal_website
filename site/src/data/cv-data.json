@@ -17,7 +17,7 @@
         "current": true
       },
       {
-        "title": "Lecturer",
+        "title": "Guest Lecturer",
         "organization": "Princeton University",
         "department": "Atmospheric and Oceanic Sciences Program",
         "location": "Princeton, NJ",
@@ -26,13 +26,29 @@
         "current": true
       },
       {
-        "title": "Adjunct Lecturer",
+        "title": "Lecturer",
         "organization": "Rutgers University",
         "department": "Department of Environmental Sciences",
         "location": "New Brunswick, NJ",
         "startDate": "2015",
         "endDate": "Present",
         "current": true
+      },
+      {
+        "title": "Physical Scientist, ZP-III",
+        "organization": "NOAA / Geophysical Fluid Dynamics Laboratory (GFDL)",
+        "location": "Princeton, NJ",
+        "startDate": "2011",
+        "endDate": "2015",
+        "current": false
+      },
+      {
+        "title": "Contractor (through AOS Program, Princeton University)",
+        "organization": "NOAA / Geophysical Fluid Dynamics Laboratory (GFDL)",
+        "location": "Princeton, NJ",
+        "startDate": "2009",
+        "endDate": "2011",
+        "current": false
       }
     ],
     "education": [

@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
-import SessionAuth from '../components/SessionAuth.astro';
 import { SITE } from '../config';
 import { ui, defaultLang } from '../i18n/ui';
 
@@ -75,7 +74,6 @@ const ogImage = new URL(`/og/${finalOgSlug}.png`, Astro.url);
     }
   </head>
   <body class="min-h-screen flex flex-col">
-    <SessionAuth />
     <Header />
     <main class="flex-grow" data-pagefind-body>
       <slot />
