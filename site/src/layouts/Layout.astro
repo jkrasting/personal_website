@@ -134,7 +134,7 @@ const websiteSchema = {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.google-analytics.com https://analytics.google.com;" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
@@ -173,6 +173,57 @@ const websiteSchema = {
         <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
       )
     }
+
+    <!-- Google Analytics 4 with Consent Mode (EEA-aware) -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // EEA country codes (EU + Iceland, Liechtenstein, Norway + UK for GDPR equivalent)
+      window.EEA_COUNTRIES = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB'];
+
+      // Check for saved consent
+      const savedConsent = localStorage.getItem('analytics-consent');
+
+      // Set initial consent state
+      // - If previously granted: use granted
+      // - If previously denied (EEA user who declined): use denied
+      // - If no decision yet: default to denied (will be updated after geo-check)
+      gtag('consent', 'default', {
+        'analytics_storage': savedConsent === 'granted' ? 'granted' : (savedConsent === 'denied' ? 'denied' : 'denied'),
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+
+      // For non-EEA visitors without saved consent, auto-grant after geo-check
+      if (!savedConsent) {
+        fetch('/cdn-cgi/trace')
+          .then(r => r.text())
+          .then(data => {
+            const match = data.match(/loc=(\w+)/);
+            const country = match ? match[1] : null;
+            window.visitorCountry = country;
+
+            if (country && !window.EEA_COUNTRIES.includes(country)) {
+              // Non-EEA visitor: auto-grant consent
+              localStorage.setItem('analytics-consent', 'granted');
+              localStorage.setItem('analytics-region', 'non-eea');
+              gtag('consent', 'update', { 'analytics_storage': 'granted' });
+            }
+          })
+          .catch(() => {
+            // If geo-detection fails, keep default (denied) - safer for compliance
+          });
+      }
+    </script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-B6HWQ9WGD2"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B6HWQ9WGD2');
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
@@ -229,6 +280,66 @@ const websiteSchema = {
       const currentLang = getStoredLang();
       // Run immediately to avoid flash
       window.setLanguage(currentLang);
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="consent-banner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50 hidden">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-center sm:text-left">
+          This site uses analytics cookies to understand visitor patterns. No data is sold or shared for advertising.
+        </p>
+        <div class="flex gap-3 shrink-0">
+          <button id="consent-decline" class="px-4 py-2 text-sm border border-gray-400 rounded hover:bg-gray-700 transition-colors">
+            Decline
+          </button>
+          <button id="consent-accept" class="px-4 py-2 text-sm bg-blue-600 rounded hover:bg-blue-700 transition-colors">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function() {
+        const banner = document.getElementById('consent-banner');
+        const savedConsent = localStorage.getItem('analytics-consent');
+
+        // Only show banner if no consent decision AND visitor is in EEA
+        if (!savedConsent) {
+          // Check visitor location via Cloudflare
+          fetch('/cdn-cgi/trace')
+            .then(r => r.text())
+            .then(data => {
+              const match = data.match(/loc=(\w+)/);
+              const country = match ? match[1] : null;
+
+              // Show banner only for EEA visitors
+              if (country && window.EEA_COUNTRIES && window.EEA_COUNTRIES.includes(country)) {
+                banner.classList.remove('hidden');
+              }
+              // Non-EEA visitors: banner stays hidden, consent auto-granted by head script
+            })
+            .catch(() => {
+              // On error, show banner to be safe (assume EEA)
+              banner.classList.remove('hidden');
+            });
+        }
+
+        // Handle accept
+        document.getElementById('consent-accept').addEventListener('click', function() {
+          localStorage.setItem('analytics-consent', 'granted');
+          localStorage.setItem('analytics-region', 'eea');
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+          banner.classList.add('hidden');
+        });
+
+        // Handle decline
+        document.getElementById('consent-decline').addEventListener('click', function() {
+          localStorage.setItem('analytics-consent', 'denied');
+          localStorage.setItem('analytics-region', 'eea');
+          banner.classList.add('hidden');
+        });
+      })();
     </script>
   </body>
 </html>
